@@ -179,8 +179,8 @@
     border-left: none
 .priceSection
   position: relative
-  background-color: $secondary
-  padding-bottom: 10rem
+  background: linear-gradient(90deg, $primary, $secondary)
+  padding-bottom: 5rem
   & h1, p
     color: $white
   & .container
@@ -196,6 +196,104 @@
     position: relative
     padding-top: 7rem
     padding-bottom: 2rem
+  & .priceCardArea
+    margin-top: 4rem
+  & .priceCard
+    background-color: $white
+    padding: .25rem
+    color: $greyDarker
+    & .priceCardHeader
+      background: linear-gradient(90deg, $primary, $secondary)
+      color: $white
+      & .padder
+        padding: .5rem 1rem 0 1rem
+        margin-bottom: -.5rem
+        & .brandName
+          font-variant: all-small-caps
+          font-weight: lighter
+        & .title
+          font-size: .75rem
+        & h2
+          margin-top: -.5rem
+      & .backgroundImage
+        margin-bottom: -1px
+        margin-top: 1px
+    & .priceCardBody
+      text-align: center
+      & .desc
+        margin-top: 1rem
+        height: 9rem
+      & hr
+        width: 50%
+        color: $greyLight
+      & .gratis
+        font-weight: bolder
+        color: $primary
+      & .oldPrice
+        margin-bottom: 2rem
+      & .btn
+        display: block
+        width: calc(100% - 2rem)
+        background-color: $cyanDark
+        border-radius: 3rem
+        color: $white
+        font-weight: $bold
+        margin: 1rem
+      & .blue-btn
+        background: linear-gradient(90deg, $primary, $secondary)
+
+  & .conditions
+    margin-top: 5rem
+    color: $white
+
+.contactSection
+  top: calc(100vw * 22.7 / 241.5)
+  position: relative
+  background-color: $white
+  padding-bottom: 2rem
+  margin-bottom: 5rem
+  color: $greyDarker
+  & .backgroundImage
+    top: calc(-100vw * 22.7 / 241.5)
+    position: absolute
+    z-index: 10
+    width: 100vw
+  & .contactHeader
+    padding-top: 5rem
+    font-weight: $bolder
+    color: $primary
+  & h5, p
+    margin: 2rem 0
+  & .twitter
+    width: 2rem
+    height: 2rem
+    margin-top: 1rem
+
+// for creating a predictable spacing above the footer after all the relative elements
+.aboveFooter
+  width: 100vw
+  background-color: $white
+  height: 3rem
+
+// footer
+.footer
+  position: relative
+  bottom: 0
+  padding: 2rem
+  color: $white
+  display: flex
+  justify-content: space-between
+  background: linear-gradient(90deg, $primary, $secondary)
+  & .menu
+    & .menu-list
+      display: flex
+      margin: 0
+      list-style: none
+      flex-direction: row
+  & .brandName
+    font-variant: all-small-caps
+  & .logo
+    margin: 0 1rem
 
 // logo wall
 .logoWall
@@ -213,6 +311,13 @@
 
 .is-white
   color: $white
+
+.is-cyan
+  color: $cyanDark
+
+
+.is-smaller
+  font-size: .75rem
 
 .has-text-centered
   text-align: center !important
