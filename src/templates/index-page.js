@@ -41,18 +41,18 @@ export const IndexPageTemplate = ({
           </div>
           <div className="col-12 col-md-6 col-lg-5">
             <div className="scrollNav row">
-              <Link className="navbar-item" to="/">
-                Benefits
-              </Link>
-              <Link className="navbar-item" to="/">
+              <a className="navbar-item" href="#benefits">
+                  Benefits
+              </a>
+              <a className="navbar-item" href="#specification">
                 Spezifikationen
-              </Link>
-              <Link className="navbar-item" to="/">
+              </a>
+              <a className="navbar-item" href="#price">
                 Preise
-              </Link>
-              <Link className="navbar-item" to="/">
+              </a>
+              <a className="navbar-item" href="#contact">
                 Kontakt
-              </Link>
+              </a>
             </div>
             <div className="headerDescription">
               <h1>Attraktive Situationspläne für den öffentlichen Verkehr</h1>
@@ -66,39 +66,55 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="benefitsSection">
+    <section className="benefitsSection" id="benefits">
         <img className="backgroundImage" src={layout_bg_1} alt="" />
             <div className="cardViewer">
                 <h1>CardViewer</h1>
                 </div>
                 <div className="container">
                 <div className="logoWall">
-                  <span>LOGO</span>
+                  <span>Zufriedene Kunden</span>
                   <span>LOGO</span>
                   <span>LOGO</span>
                   <span>LOGO</span>
             </div>
             <h1 className="is-bolder benefitsHeader rightColumn">Benefits</h1>
             <div className="thinColumnScroller">
-                <Link className="navbar-item" to="/">
-                    Benefits
-                </Link>
-                <Link className="navbar-item" to="/">
-                    Spezifikationen
-                </Link>
-                <Link className="navbar-item" to="/">
-                    Preise
-                </Link>
-                <Link className="navbar-item" to="/">
-                    Kontakt
-                </Link>
+                <a className="navbar-item" href="#benefits">
+                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 24H0V0h24v24z"/>
+                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
+                    </svg>
+                    <span>Benefits</span>
+                </a>
+                <a className="navbar-item" href="#specification">
+                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 24H0V0h24v24z"/>
+                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
+                    </svg>
+                    <span>Spezifikationen</span>
+                </a>
+                <a className="navbar-item" href="#price">
+                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 24H0V0h24v24z"/>
+                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
+                    </svg>
+                    <span>Preise</span>
+                </a>
+                <a className="navbar-item" href="#contact">
+                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M24 24H0V0h24v24z"/>
+                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
+                    </svg>
+                    <span>Kontakt</span>
+                </a>
             </div>
             <div className="accordion rightColumn">
 
             </div>
         </div>
     </section>
-    <section className="spezifikationSection">
+    <section className="spezifikationSection" id="specification">
         <img className="backgroundImage" src={layout_bg_2} alt="" />
         <div className="container">
             <div className="rightColumn">
@@ -135,7 +151,7 @@ export const IndexPageTemplate = ({
         </div>
         <img className="backgroundImage bottomImage" src={layout_bg_3} alt="" />
     </section>
-      <section className="priceSection">
+      <section className="priceSection" id="price">
           <div className="container">
               <div className="rightColumn">
                   <img className="discountBadge" src={discount_badge} alt="" />
@@ -268,7 +284,7 @@ export const IndexPageTemplate = ({
               </div>
           </div>
       </section>
-      <section className="contactSection">
+      <section className="contactSection" id="contact">
           <img className="backgroundImage" src={layout_bg_2} alt="" />
           <div className="container">
               <div className="rightColumn">

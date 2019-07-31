@@ -126,8 +126,15 @@
     display: flex
     flex-direction: column
     width: $thinColumnWidth
+    & .navbar-item
+      display: flex
     & a
      color: $greyDark
+    & span
+      display: block
+    & .listNavImage
+      margin-right: 1rem
+
   & .accordion
     height: 100px
     background: #28b2a2
@@ -192,6 +199,8 @@
     top: -2rem
     width: calc(100vw * 40 / 241.5)
     height: calc(100vw * 40 / 241.5)
+    max-height: 200px
+    max-width: 200px
   & .priceHeader
     position: relative
     padding-top: 7rem
@@ -298,6 +307,9 @@
 // logo wall
 .logoWall
   text-align: end
+  margin-left: 50%
+  display: flex
+  justify-content: space-around
 
 // global helpers
 .is-transparent
