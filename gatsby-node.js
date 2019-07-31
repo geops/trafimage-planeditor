@@ -46,6 +46,8 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
+exports.resolvableExtensions = () => ['.json']
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
