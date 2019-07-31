@@ -96,6 +96,29 @@
       background-color: $white
       color: $secondary
 
+//scroller
+.scroller
+  position: relative
+  & .thinColumnScroller
+    z-index: 100
+    position: absolute
+    width: $thinColumnWidth
+    top: 30rem
+    left: 5rem
+    & .navbar-item
+      display: flex
+    & a
+      color: $greyDark
+    & .active
+      color: $red !important
+    & span
+      display: block
+    & .listNavImage
+      margin-right: 1rem
+  & .fixed
+    position: fixed
+    top: calc(30rem + 100)
+
 // benefits
 .benefitsSection
   top: calc(100vw * 22.7 / 241.5)
@@ -121,23 +144,11 @@
     z-index: 10
   & .benefitsHeader
     margin-top: 10rem
-    margin-bottom: 20rem
-  & .thinColumnScroller
-    display: flex
-    flex-direction: column
-    width: $thinColumnWidth
-    & .navbar-item
-      display: flex
-    & a
-     color: $greyDark
-    & span
-      display: block
-    & .listNavImage
-      margin-right: 1rem
-
+    margin-bottom: 25rem
   & .accordion
     height: 100px
     background: #28b2a2
+
 .spezifikationSection
   top: calc(100vw * 22.7 / 241.5)
   position: relative

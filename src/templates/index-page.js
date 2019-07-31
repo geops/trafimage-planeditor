@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import layout_bg_1 from '../img/layoutBG_1.svg'
+import OnePage from '../components/OnePage'
+import Benefits from '../components/Benefits'
 import layout_bg_2 from '../img/layoutBG_2.svg'
 import layout_bg_3 from '../img/layoutBG_3.svg'
 import discount_badge from '../img/discountBadge_1.svg'
@@ -66,54 +65,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="benefitsSection" id="benefits">
-        <img className="backgroundImage" src={layout_bg_1} alt="" />
-            <div className="cardViewer">
-                <h1>CardViewer</h1>
-                </div>
-                <div className="container">
-                <div className="logoWall">
-                  <span>Zufriedene Kunden</span>
-                  <span>LOGO</span>
-                  <span>LOGO</span>
-                  <span>LOGO</span>
-            </div>
-            <h1 className="is-bolder benefitsHeader rightColumn">Benefits</h1>
-            <div className="thinColumnScroller">
-                <a className="navbar-item" href="#benefits">
-                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M24 24H0V0h24v24z"/>
-                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
-                    </svg>
-                    <span>Benefits</span>
-                </a>
-                <a className="navbar-item" href="#specification">
-                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M24 24H0V0h24v24z"/>
-                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
-                    </svg>
-                    <span>Spezifikationen</span>
-                </a>
-                <a className="navbar-item" href="#price">
-                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M24 24H0V0h24v24z"/>
-                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
-                    </svg>
-                    <span>Preise</span>
-                </a>
-                <a className="navbar-item" href="#contact">
-                    <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M24 24H0V0h24v24z"/>
-                        <circle fill="currentColor" cx="12" cy="12" r="8"/>
-                    </svg>
-                    <span>Kontakt</span>
-                </a>
-            </div>
-            <div className="accordion rightColumn">
-
-            </div>
-        </div>
-    </section>
+  <Benefits />
     <section className="spezifikationSection" id="specification">
         <img className="backgroundImage" src={layout_bg_2} alt="" />
         <div className="container">
@@ -327,21 +279,21 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+    const { frontmatter } = data.markdownRemark
 
-  return (
-    <Layout>
-      <IndexPageTemplate
-        title={frontmatter.title}
-        brand={frontmatter.brand}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
-    </Layout>
-  )
+    return (
+        <OnePage>
+            <IndexPageTemplate
+                title={frontmatter.title}
+                brand={frontmatter.brand}
+                heading={frontmatter.heading}
+                subheading={frontmatter.subheading}
+                mainpitch={frontmatter.mainpitch}
+                description={frontmatter.description}
+                intro={frontmatter.intro}
+            />
+        </OnePage>
+    )
 }
 
 IndexPage.propTypes = {
