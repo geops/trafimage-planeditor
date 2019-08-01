@@ -21,14 +21,14 @@ const OnePage = ({ children }) => {
         />
         <link
           rel="icon"
-          type="image/png"
-          href="/img/baseline-place-24px.png"
+          type="image/svg"
+          href="/img/baseline-place-24px.svg"
           sizes="32x32"
         />
         <link
           rel="icon"
-          type="image/png"
-          href="/img/baseline-place-24px.png"
+          type="image/svg"
+          href="/img/baseline-place-24px.svg"
           sizes="16x16"
         />
 
@@ -46,7 +46,7 @@ const OnePage = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-        <Footer />
+      <Footer />
     </div>
   )
 }

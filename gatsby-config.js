@@ -1,4 +1,5 @@
 var proxy = require('http-proxy-middleware')
+const languages = require('./src/data/languages');
 
 module.exports = {
   siteMetadata: {
@@ -66,6 +67,15 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        useLangKeyLayout: false,
+        prefixDefault: true
+      }
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
