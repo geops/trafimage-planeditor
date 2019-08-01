@@ -4,8 +4,6 @@ const Scroller = class extends React.Component {
   TOP_MARGIN = 50
 
   handleScroll = () => {
-    console.log(this.windowBottom)
-    console.log(window.scrollY)
     if(window.scrollY < this.benefits){
       this.benefitsScroller.classList.remove('active')
       this.specificationScroller.classList.remove('active')
@@ -34,7 +32,10 @@ const Scroller = class extends React.Component {
     }
     if(window.scrollY < this.benefits + this.TOP_MARGIN){
       this.scroller.classList.remove('fixed')
+      this.scroller.style.marginLeft = 0
     } else {
+      this.scroller.style.marginLeft = document.getElementsByClassName('container')[0].getBoundingClientRect().x
+      console.log(this.scroller.style.left)
       this.scroller.classList.add('fixed')
     }
   }

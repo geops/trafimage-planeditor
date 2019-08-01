@@ -7,6 +7,7 @@ import layout_bg_2 from '../img/layoutBG_2.svg'
 import layout_bg_3 from '../img/layoutBG_3.svg'
 import discount_badge from '../img/discountBadge_1.svg'
 import twitter from '../img/Twitter_Logo_Blue.svg'
+import card_1 from "../img/cards/trackeramsterdam.png";
 
 export const IndexPageTemplate = ({
   title,
@@ -21,7 +22,7 @@ export const IndexPageTemplate = ({
     <section className="topSection">
       <div className="container">
         <div className="row is-white">
-          <div className="col-12 col-md-6 col-lg-7">
+          <div className="col-12 col-lg-7">
             <div className="row">
               <div className="headerBadge">
                 <span className="brandName">{brand}</span>
@@ -34,11 +35,15 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
             </div>
-            <div className="cardViewer">
-              <h1>CardViewer</h1>
+            <div className="cardViewContainer" >
+                <div className="cardViewer" >
+                    <img className="l1" src={card_1} alt="" />
+                    <img className="" src={card_1} alt="" />
+                    <img className="l-1 base" src={card_1} alt="" />
+                </div>
             </div>
           </div>
-          <div className="col-12 col-md-6 col-lg-5">
+          <div className="col-12 col-lg-5">
             <div className="scrollNav row">
               <a className="navbar-item" href="#benefits">
                   Benefits
@@ -110,7 +115,7 @@ export const IndexPageTemplate = ({
                   <h1 className="is-bolder priceHeader">Preise</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   <div className="priceCardArea row">
-                      <div className="col-6 col-sm-3">
+                      <div className="col-6 col-lg-3">
                           <div className="priceCard">
                               <div className="priceCardHeader">
                                   <div className="padder">
@@ -131,7 +136,7 @@ export const IndexPageTemplate = ({
                               </div>
                           </div>
                       </div>
-                      <div className="col-6 col-sm-3">
+                      <div className="col-6 col-lg-3">
                           <div className="priceCard">
                               <div className="priceCardHeader">
                                   <div className="padder">
@@ -161,7 +166,7 @@ export const IndexPageTemplate = ({
                               </div>
                           </div>
                       </div>
-                      <div className="col-6 col-sm-3">
+                      <div className="col-6 col-lg-3">
                           <div className="priceCard">
                               <div className="priceCardHeader">
                                   <div className="padder">
@@ -191,7 +196,7 @@ export const IndexPageTemplate = ({
                               </div>
                           </div>
                       </div>
-                      <div className="col-6 col-sm-3">
+                      <div className="col-6 col-lg-3">
                           <div className="priceCard">
                               <div className="priceCardHeader">
                                   <div className="padder">
