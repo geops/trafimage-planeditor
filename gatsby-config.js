@@ -19,6 +19,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        useLangKeyLayout: false,
+        prefixDefault: true
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
@@ -67,15 +76,6 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        langKeyForNull: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: true
-      }
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
