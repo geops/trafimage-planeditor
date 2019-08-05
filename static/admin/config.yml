@@ -9,18 +9,14 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/pages/index.js"
         label: "Landing Page"
         name: "index"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
+          - {label: LangKey, name: langKey, widget: string, default: "/"}
           - {label: Title, name: title, widget: string}
-          - {label: Brand, name: brand, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {
+          - {label: Brand, name: brand, widget: string} - {
             label: Benefits,
             name: benefits,
             widget: list,

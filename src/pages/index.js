@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-
-import OnePage from '../components/OnePage'
+import Layout from '../components/Layout'
 import Benefits from '../components/Benefits'
+
 import layout_bg_2 from '../img/layoutBG_2.svg'
 import layout_bg_3 from '../img/layoutBG_3.svg'
 import discount_badge from '../img/discountBadge_1.svg'
@@ -278,45 +276,29 @@ IndexPageTemplate.propTypes = {
   benefits: PropTypes.array,
 }
 
-const IndexPage = ({ data }) => {
-    const { frontmatter } = data.markdownRemark
-    console.log(addLocaleData(en))
+const Index = ({ pathContext: { locale }, data }) => {
     return (
-        <OnePage>
+        <Layout locale={locale}>
             <IndexPageTemplate
-                title={frontmatter.title}
-                brand={frontmatter.brand}
-                heading={frontmatter.heading}
-                mainpitch={frontmatter.mainpitch}
-                description={frontmatter.description}
-                benefits={frontmatter.benefits}
             />
-        </OnePage>
+        </Layout>
     )
 }
 
-IndexPage.propTypes = {
+Index.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.shape({
-        frontmatter: PropTypes.object,
+            frontmatter: PropTypes.object,
         }),
     }),
 }
 
-export default IndexPage
+export default Index
 
-export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }){
-      frontmatter {
-        title
-        brand
-        benefits {
-          heading
-          subheading
-          text
-        }
-      }
+export const query = graphql`
+  query data($locale: String) {
+    file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
+      id
     }
   }
 `
