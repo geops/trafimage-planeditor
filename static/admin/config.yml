@@ -5,18 +5,19 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+publish_mode: editorial_workflow
+
 collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/index.js"
-        label: "Landing Page"
-        name: "index"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
-          - {label: Title, name: title, widget: string}
-          - {label: Brand, name: brand, widget: string}
-          - {
+  - name: "translations"
+    label: "Translations"
+    extension: "json"
+    folder: "data/index"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
+      - {label: Title, name: title, widget: string}
+      - {label: Brand, name: brand, widget: string}
+      - {
             label: Benefits,
             name: benefits,
             widget: list,
@@ -33,4 +34,3 @@ collections:
                 }
               ]
             }
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
