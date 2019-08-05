@@ -8,29 +8,29 @@ public_folder: /img
 publish_mode: editorial_workflow
 
 collections:
-  - name: "translations"
-    label: "Translations"
+  - label: "Translations"
+    name: "translations"
+    folder: "src/data/index"
     extension: "json"
-    folder: "data/index"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
-      - {label: Title, name: title, widget: string}
-      - {label: Brand, name: brand, widget: string}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Brand", name: "brand", widget: "string"}
       - {
-            label: Benefits,
-            name: benefits,
-            widget: list,
+            label: "Benefits",
+            name: "benefits",
+            widget: "list",
             fields:
               [
                 {
-                  label: Heading, name: heading, widget: string
+                  label: "Heading", name: "heading", widget: "string"
                 },
                 {
-                  label: SubHeading, name: subheading, widget: string
+                  label: "SubHeading", name: "subheading", widget: "string"
                 },
                 {
-                  label: Text, name: text, widget: text
+                  label: "Text", name: "text", widget: "text"
                 }
               ]
             }
