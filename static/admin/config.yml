@@ -37,7 +37,7 @@ collections:
           ]
       }
       - {
-        label: "Generic Text Fields",
+        label: "Allgemeine Bezeichnungen",
         name: "generic",
         widget: "object",
         fields:
@@ -83,7 +83,7 @@ collections:
     extension: "json"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sprache", name: "title", widget: "string"}
       - {
         label: "Benefits",
         name: "benefits",
@@ -91,10 +91,10 @@ collections:
         fields:
           [
           {
-            label: "Heading", name: "heading", widget: "string"
+            label: "Überschrift Hauptteil", name: "heading", widget: "string"
           },
           {
-            label: "SubHeading", name: "subheading", widget: "string"
+            label: "Überschrift Sekundärteil", name: "subheading", widget: "string"
           },
           {
             label: "Text", name: "text", widget: "text"
