@@ -1,18 +1,31 @@
 {
   "templateKey": "index-page",
-  "title": "PlanEditor DE",
+  "title": "PlanEditor",
   "brand": "Trafimage",
-  "benefits":
-  [
-    {
-    "heading": "Erstellen",
-    "subheading": "von Situationsplänen",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-    "heading": "Indivuelle Definition",
-    "subheading": "von Ausschnitten und Auflösungen",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    }
-  ]
+  "content": {
+    "page header": "Attraktive Situationspläne für den öffentlichen Verkehr",
+    "Support": "Support",
+    "Login": "Login,",
+    "Benefits": "Benefits",
+    "Spezifikationen": "Spezifikationen",
+    "Preise": "Preise",
+    "Kontakt": "Kontakt",
+    "Demozungang": "Demozungang"
+  },
+  "generic": {
+    "Support": "Support",
+    "Login": "Login,",
+    "unterstützt durch": "supported by",
+    "Benefits": "Benefits",
+    "Spezifikationen": "Spezifikationen",
+    "Preise": "Preise",
+    "Kontakt": "Kontakt",
+    "Demozungang": "Demozungang",
+    "Preismodelle": "Preismodelle",
+    "Zufriedene Kunden": "Zufriedene Kunden",
+    "Noch Fragen ?": "Noch Fragen ?",
+    "Impressum": "Impressum",
+    "Der": "Der",
+    "wird unterstützt durch": "wird unterstützt durch"
+  }
 }

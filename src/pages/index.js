@@ -13,16 +13,26 @@ import Scroller from "../components/Scroller";
 import layout_bg_1 from "../img/layoutBG_1.svg";
 
 // import benefits data, for the language needed
-import en_benefits from '../data/benefits/en.json'
-import de_benefits from '../data/benefits/de.json'
+import fr_benefits from '../data/benefits/de.json'
+import de_benefits from '../data/benefits/fr.json'
+import en_benefits from "../data/benefits/en";
 
-export const IndexPageTemplate = ({
-    title,
-    brand,
-    heading,
-    benefits
-}) => {
-    console.log(benefits)
+export const IndexPageTemplate = ({locale}) => {
+    let benefits
+    switch(locale) {
+        case 'fr': {
+            benefits = fr_benefits.benefits
+            break;
+        }
+        case 'de': {
+            benefits = de_benefits.benefits
+            break;
+        }
+        default: {
+            benefits = en_benefits.benefits
+            break;
+        }
+    }
     return (
         <div style={{position:'relative'}}>
             <section className="topSection">
@@ -31,10 +41,10 @@ export const IndexPageTemplate = ({
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 <div className="headerBadge">
-                                    <span className="brandName"><FormattedMessage id="brand" /></span>
-                                    <h1 className="is-bolder"><FormattedMessage id="title" /></h1>
+                                    <span className="brandName">Trafimage</span>
+                                    <h1 className="is-bolder">PlanEditor</h1>
                                     <div className="subtext">
-                                        <span>unterstützt durch </span>
+                                        <span><FormattedMessage id="unterstützt durch" /></span>
                                         <span className="is-bold">evoq</span>
                                         <span> | </span>
                                         <span className="is-bold">geops</span>
@@ -52,24 +62,24 @@ export const IndexPageTemplate = ({
                         <div className="col-12 col-lg-5">
                             <div className="scrollNav row">
                                 <a className="navbar-item" href="#benefits">
-                                    Benefits
+                                    <FormattedMessage id="Benefits" />
                                 </a>
                                 <a className="navbar-item" href="#specification">
-                                    Spezifikationen
+                                    <FormattedMessage id="Spezifikationen" />
                                 </a>
                                 <a className="navbar-item" href="#price">
-                                    Preise
+                                    <FormattedMessage id="Preise" />
                                 </a>
                                 <a className="navbar-item" href="#contact">
-                                    Kontakt
+                                    <FormattedMessage id="Kontakt" />
                                 </a>
                             </div>
                             <div className="headerDescription">
-                                <h1>Attraktive Situationspläne für den öffentlichen Verkehr</h1>
+                                <h1><FormattedMessage id="page header" /></h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                                 <div className="alignContainer row">
-                                    <button className="btn">Demozungang</button>
-                                    <button className="btn">Preismodelle</button>
+                                    <button className="btn"><FormattedMessage id="Demozungang" /></button>
+                                    <button className="btn"><FormattedMessage id="Preismodelle" /></button>
                                 </div>
                             </div>
                         </div>
@@ -85,23 +95,25 @@ export const IndexPageTemplate = ({
                     </div>
                 </div>
                 <div className="container">
+                    {/* TODO implement logos */}
                     <div className="logoWall">
-                        <span>Zufriedene Kunden</span>
+                        <span><FormattedMessage id="Zufriedene Kunden" /></span>
                         <span>LOGO</span>
                         <span>LOGO</span>
                         <span>LOGO</span>
                     </div>
-                    <h1 className="is-bolder benefitsHeader rightColumn">Benefits</h1>
+                    <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="Benefits" /></h1>
                     <div className="accordion rightColumn">
-                        {/*{benefits && benefits.map( benefit  => (*/}
-                        {/*    <div className="item">*/}
-                        {/*        <h5>*/}
-                        {/*            <span className="is-bolder">{benefit.heading}</span>*/}
-                        {/*            <span>{benefit.subheading}</span>*/}
-                        {/*        </h5>*/}
-                        {/*        <p>{benefit.text}</p>*/}
-                        {/*    </div>*/}
-                        {/*))}*/}
+                        {benefits && benefits.map( (benefit, id) => (
+                            // TODO style benefit list to match design
+                            <div className="item" key={id}>
+                                <h5>
+                                    <span className="is-bolder">{benefit.heading}</span>
+                                    <span>{benefit.subheading}</span>
+                                </h5>
+                                <p>{benefit.text}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -279,7 +291,7 @@ export const IndexPageTemplate = ({
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
                 <div className="container">
                     <div className="rightColumn">
-                        <h1 className="is-bolder contactHeader">Noch Fragen ?</h1>
+                        <h1 className="is-bolder contactHeader"><FormattedMessage id="Noch Fragen ?" /></h1>
                         <h5>Wir freuen uns über Ihre Kontaktaufnahme und helfen bei<br />Fragen gerne weiter.</h5>
                         <p>
                             <span className="is-bolder">Ihr persönlicher Kontakt</span><br />
@@ -314,11 +326,9 @@ IndexPageTemplate.propTypes = {
 }
 
 const Index = ({ pathContext: { locale } }) => {
-    console.log(<FormattedMessage id="benefits" />)
     return (
         <Layout locale={locale}>
-            <IndexPageTemplate
-            />
+            <IndexPageTemplate locale={locale} />
         </Layout>
     )
 }

@@ -1,18 +1,16 @@
 {
   "templateKey": "index-page",
-  "title": "PlanEditor EN",
+  "title": "PlanEditor",
   "brand": "Trafimage",
-  "benefits":
-  [
-    {
-      "heading": "Erstellen",
-      "subheading": "von Situationsplänen",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      "heading": "Indivuelle Definition",
-      "subheading": "von Ausschnitten und Auflösungen",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    }
-  ]
+  "generic": {
+    "unterstützt durch": "supported by",
+    "Support": "Support",
+    "Login": "Login,",
+    "Benefits": "Benefits",
+    "Spezifikationen": "Specifications",
+    "Preise": "Price",
+    "Kontakt": "Contact",
+    "Demo Access": "Demo Access",
+    "Price": "Price"
+  }
 }

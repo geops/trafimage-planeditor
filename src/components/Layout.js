@@ -32,7 +32,7 @@ const Layout = ({ locale, children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang={locale} />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -64,12 +64,12 @@ const Layout = ({ locale, children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
-        </Helmet>
-        <Navbar />
-        <IntlProvider locale={locale} messages={languages[locale]}>
-            {children}
-        </IntlProvider>
-        <Footer />
+      </Helmet>
+      <Navbar locale={locale} messages={languages[locale]} />
+      <IntlProvider locale={locale} messages={languages[locale]}>
+        {children}
+      </IntlProvider>
+      <Footer locale={locale} messages={languages[locale]} />
     </div>
   )
 }

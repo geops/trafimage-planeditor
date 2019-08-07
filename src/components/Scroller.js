@@ -1,4 +1,5 @@
 import React from 'react'
+import {FormattedMessage} from 'react-intl'
 
 const Scroller = class extends React.Component {
   TOP_MARGIN = 50
@@ -66,28 +67,28 @@ const Scroller = class extends React.Component {
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span>Benefits</span>
+              <span><FormattedMessage id="Benefits" /></span>
             </a>
             <a className="navbar-item" href="#specification" id="specificationScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span>Spezifikationen</span>
+              <span><FormattedMessage id="Spezifikationen" /></span>
             </a>
             <a className="navbar-item" href="#price" id="priceScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span>Preise</span>
+              <span><FormattedMessage id="Preise" /></span>
             </a>
             <a className="navbar-item" href="#contact" id="contactScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span>Kontakt</span>
+              <span><FormattedMessage id="Kontakt" /></span>
             </a>
           </div>
         </div>

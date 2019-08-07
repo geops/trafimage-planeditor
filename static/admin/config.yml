@@ -17,41 +17,40 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Brand", name: "brand", widget: "string"}
-      - {
-            label: "Benefits",
-            name: "benefits",
-            widget: "list",
-            fields:
-              [
-                {
-                  label: "Heading", name: "heading", widget: "string"
-                },
-                {
-                  label: "SubHeading", name: "subheading", widget: "string"
-                },
-                {
-                  label: "Text", name: "text", widget: "text"
-                }
-              ]
-            }
-      - {
-        label: " Elements",
-        name: "common",
-        widget: "list",
+      - - {
+        label: "Index Page Content",
+        name: "content",
+        widget: "object",
         fields:
           [
-          {
-            label: "Heading", name: "heading", widget: "string"
-          },
-          {
-            label: "SubHeading", name: "subheading", widget: "string"
-          },
-          {
-            label: "Text", name: "text", widget: "text"
-          }
+          {label: "page header", name: "page header", widget: "string"},
           ]
       }
-  - label: "Benefits"
+      - {
+        label: "Generic Text Fields",
+        name: "generic",
+        widget: "object",
+        fields:
+          [
+            {label: "Support", name: "Support", widget: "string"},
+            {label: "Login", name: "Login", widget: "text"},
+            {label: "unterstützt durch", name: "unterstützt durch", widget: "string"},
+            {label: "Benefits", name: "Benefits", widget: "string"},
+            {label: "Spezifikationen", name: "Spezifikationen", widget: "string"},
+            {label: "Preise", name: "Preise", widget: "string"},
+            {label: "Kontakt", name: "Kontakt", widget: "string"},
+            {label: "Demozungang", name: "Demozungang", widget: "string"},
+            {label: "Preismodelle", name: "Preismodelle", widget: "string"},
+            {label: "Zufriedene Kunden", name: "Zufriedene Kunden", widget: "string"},
+            {label: "Noch Fragen ?", name: "Noch Fragen ?", widget: "string"},
+            {label: "Impressum", name: "Impressum", widget: "string"},
+            {label: "Der", name: "Der", widget: "string"},
+            {label: "Impressum", name: "Impressum", widget: "string"},
+            {label: "Impressum", name: "Impressum", widget: "string"},
+            {label: "wird unterstützt durch", name: "wird unterstützt durch", widget: "string"}
+          ]
+      }
+  - label: "Benefits Locale"
     name: "benefits"
     folder: "src/data/benefits"
     extension: "json"
