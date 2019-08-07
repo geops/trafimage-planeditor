@@ -44,7 +44,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <span className="brandName">Trafimage</span>
                                     <h1 className="is-bolder">PlanEditor</h1>
                                     <div className="subtext">
-                                        <span><FormattedMessage id="unterstützt durch" /></span>
+                                        <span><FormattedMessage id="generic.unterstützt durch" /></span>
                                         <span className="is-bold">evoq</span>
                                         <span> | </span>
                                         <span className="is-bold">geops</span>
@@ -62,24 +62,24 @@ export const IndexPageTemplate = ({locale}) => {
                         <div className="col-12 col-lg-5">
                             <div className="scrollNav row">
                                 <a className="navbar-item" href="#benefits">
-                                    <FormattedMessage id="Benefits" />
+                                    <FormattedMessage id="generic.Benefits" />
                                 </a>
                                 <a className="navbar-item" href="#specification">
-                                    <FormattedMessage id="Spezifikationen" />
+                                    <FormattedMessage id="generic.Spezifikationen" />
                                 </a>
                                 <a className="navbar-item" href="#price">
-                                    <FormattedMessage id="Preise" />
+                                    <FormattedMessage id="generic.Preise" />
                                 </a>
                                 <a className="navbar-item" href="#contact">
-                                    <FormattedMessage id="Kontakt" />
+                                    <FormattedMessage id="generic.Kontakt" />
                                 </a>
                             </div>
                             <div className="headerDescription">
-                                <h1><FormattedMessage id="page header" /></h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <h1><FormattedMessage id="content.page header" /></h1>
+                                <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
-                                    <button className="btn"><FormattedMessage id="Demozungang" /></button>
-                                    <button className="btn"><FormattedMessage id="Preismodelle" /></button>
+                                    <button className="btn"><FormattedMessage id="generic.Demozungang" /></button>
+                                    <button className="btn"><FormattedMessage id="generic.Preismodelle" /></button>
                                 </div>
                             </div>
                         </div>
@@ -97,12 +97,12 @@ export const IndexPageTemplate = ({locale}) => {
                 <div className="container">
                     {/* TODO implement logos */}
                     <div className="logoWall">
-                        <span><FormattedMessage id="Zufriedene Kunden" /></span>
+                        <span><FormattedMessage id="generic.Zufriedene Kunden" /></span>
                         <span>LOGO</span>
                         <span>LOGO</span>
                         <span>LOGO</span>
                     </div>
-                    <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="Benefits" /></h1>
+                    <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="generic.Benefits" /></h1>
                     <div className="accordion rightColumn">
                         {benefits && benefits.map( (benefit, id) => (
                             // TODO style benefit list to match design
@@ -121,32 +121,47 @@ export const IndexPageTemplate = ({locale}) => {
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
                 <div className="container">
                     <div className="rightColumn">
-                        <h1 className="is-bolder speziHeader">Spezifikationen</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h1 className="is-bolder speziHeader"><FormattedMessage id="generic.Spezifikationen" /></h1>
+                        <p><FormattedMessage id="content.specification description" /></p>
                         <div className="row specRow">
                             <div className="specCol first col-12 col-sm-4">
-                                <h5 className="is-bolder">Vorgebene Elemente</h5>
+                                <h5 className="is-bolder">
+                                    <FormattedMessage
+                                        id="content.specification col1 header"
+                                        defaultMessage="Vorgebene Elemente"
+                                    />
+                                </h5>
+                                {/* TODO create specification list widget for cms input */}
                                 <ul>
-                                    <li><span>Hintergrundbild inkl.</span></li>
-                                    <li><span>Nordpfeil, Massstabsbalken</span></li>
-                                    <li><span>Copyright</span></li>
-                                    <li><span>Schriftarten</span></li>
+                                    <FormattedMessage
+                                        id="content.specification col1 text"
+                                    />
                                 </ul>
                             </div>
                             <div className="specCol col-12 col-sm-4">
-                                <h5 className="is-bolder">Frei verwendbare Elemente</h5>
+                                <h5 className="is-bolder">
+                                    <FormattedMessage
+                                        id="content.specification col2 header"
+                                        defaultMessage="Frei verwendbare Elemente"
+                                    />
+                                </h5>
                                 <ul>
-                                    <li><span>Piktogramme</span></li>
-                                    <li><span>Linien (Wegführung)</span></li>
-                                    <li><span>Situationsschild</span></li>
+                                    <FormattedMessage
+                                        id="content.specification col2 text"
+                                    />
                                 </ul>
                             </div>
                             <div className="specCol col-12 col-sm-4">
-                                <h5 className="is-bolder">Technisches</h5>
+                                <h5 className="is-bolder">
+                                    <FormattedMessage
+                                        id="content.specification col3 header"
+                                        defaultMessage="Technisches"
+                                    />
+                                </h5>
                                 <ul>
-                                    <li><span>Bildausgabe: PDF</span></li>
-                                    <li><span>FOrmat: XX cm x XX cm</span></li>
-                                    <li><span>Auflösung: 300 dpi</span></li>
+                                    <FormattedMessage
+                                        id="content.specification col3 text"
+                                    />
                                 </ul>
                             </div>
                         </div>
@@ -158,9 +173,10 @@ export const IndexPageTemplate = ({locale}) => {
                 <div className="container">
                     <div className="rightColumn">
                         <img className="discountBadge" src={discount_badge} alt="" />
-                        <h1 className="is-bolder priceHeader">Preise</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <h1 className="is-bolder priceHeader"><FormattedMessage id="generic.Preise" /></h1>
+                        <p><FormattedMessage id="price description" /></p>
                         <div className="priceCardArea row">
+                            {/* TODO create price box widget and content, refer to geOps for strategy */}
                             <div className="col-6 col-lg-3">
                                 <div className="priceCard">
                                     <div className="priceCardHeader">
@@ -274,14 +290,20 @@ export const IndexPageTemplate = ({locale}) => {
                             </div>
                         </div>
                         <div className="conditions is-smaller">
-                            <p>* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl <br />tatsächlich mit PlanEditor bearbeiteter Haltestellen</p>
-                            <span className="is-bolder">Im Preis inbegriffen sind:</span>
+                            <p><FormattedMessage
+                                id="content.conditions text"
+                                defaultMessage="* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br/>tatsächlich mit PlanEditor bearbeiteter Haltestellen"
+                            /></p>
+                            <span className="is-bolder"><FormattedMessage id="generic.Im Preis inbegriffen sind:" /></span>
                             <ul>
-                                <li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>
+                                <FormattedMessage
+                                    id="content.included in price"
+                                    defaultMessage="<li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>
                                 <li>Wartung und Betrieb des Portals</li>
                                 <li>Automatische Übernahme von Weiterentwicklungen</li>
                                 <li>Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)</li>
-                                <li>Benutzerverwaltung</li>
+                                <li>Benutzerverwaltung</li>"
+                                />
                             </ul>
                         </div>
                     </div>
@@ -291,23 +313,23 @@ export const IndexPageTemplate = ({locale}) => {
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
                 <div className="container">
                     <div className="rightColumn">
-                        <h1 className="is-bolder contactHeader"><FormattedMessage id="Noch Fragen ?" /></h1>
+                        <h1 className="is-bolder contactHeader"><FormattedMessage id="generic.Noch Fragen ?" /></h1>
                         <h5>Wir freuen uns über Ihre Kontaktaufnahme und helfen bei<br />Fragen gerne weiter.</h5>
                         <p>
-                            <span className="is-bolder">Ihr persönlicher Kontakt</span><br />
+                            <span className="is-bolder"><FormattedMessage id="generic.Ihr persönlicher Kontakt" /></span><br />
                             <span className="">Mario Härtwig</span><br />
                             <span className="">T 00 000 00 00</span><br />
                             <span className="">E mario.haertwig@geops.de</span>
                         </p>
                         <p>
-                            <span className="is-bolder">Kontakt</span><br />
+                            <span className="is-bolder"><FormattedMessage id="generic.Kontakt" /></span><br />
                             <span className="">geOps AG</span><br />
                             <span className="">Eggstr. 42</span><br />
                             <span className="">4402 Frankendorf</span><br />
                             <span className="">info@geops.ch</span>
                         </p>
                         <p>
-                            <span className="is-bolder">Besuchen Sie uns auf Twitter</span><br />
+                            <span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
                             <img className="twitter" src={twitter} alt="" />
                         </p>
                     </div>

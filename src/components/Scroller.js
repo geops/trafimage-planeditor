@@ -67,28 +67,28 @@ const Scroller = class extends React.Component {
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span><FormattedMessage id="Benefits" /></span>
+              <span><FormattedMessage id="generic.Benefits" /></span>
             </a>
             <a className="navbar-item" href="#specification" id="specificationScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span><FormattedMessage id="Spezifikationen" /></span>
+              <span><FormattedMessage id="generic.Spezifikationen" /></span>
             </a>
             <a className="navbar-item" href="#price" id="priceScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span><FormattedMessage id="Preise" /></span>
+              <span><FormattedMessage id="generic.Preise" /></span>
             </a>
             <a className="navbar-item" href="#contact" id="contactScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span><FormattedMessage id="Kontakt" /></span>
+              <span><FormattedMessage id="generic.Kontakt" /></span>
             </a>
           </div>
         </div>

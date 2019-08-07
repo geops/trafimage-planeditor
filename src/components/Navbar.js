@@ -20,7 +20,7 @@ const Navbar = class extends React.Component {
           <div className="container">
             <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/">
-                <FormattedMessage id="generic.Support" />
+                <FormattedMessage id="Support" />
               </Link>
               <Link className="navbar-item" to="/">
                 <FormattedMessage id="Login" />

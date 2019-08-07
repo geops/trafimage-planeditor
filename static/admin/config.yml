@@ -8,8 +8,8 @@ public_folder: /img
 publish_mode: editorial_workflow
 
 collections:
-  - label: "Translations"
-    name: "translations"
+  - label: "Inhalt"
+    name: "inhalt"
     folder: "src/data/index"
     extension: "json"
     create: true
@@ -17,13 +17,24 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Brand", name: "brand", widget: "string"}
-      - - {
+      - {
         label: "Index Page Content",
         name: "content",
         widget: "object",
         fields:
           [
-          {label: "page header", name: "page header", widget: "string"},
+            {label: "page header", name: "page header", widget: "string"},
+            {label: "page header description", name: "page header description", widget: "string"},
+            {label: "specification description", name: "specification description", widget: "string"},
+            {label: "specification col1 header", name: "specification col1 header", widget: "string"},
+            {label: "specification col1 text", name: "specification col1 text", widget: "markdown"},
+            {label: "specification col2 header", name: "specification col2 header", widget: "string"},
+            {label: "specification col2 text", name: "specification col2 text", widget: "markdown"},
+            {label: "specification col3 header", name: "specification col3 header", widget: "string"},
+            {label: "specification col3 text", name: "specification col3 text", widget: "markdown"},
+            {label: "price description", name: "price description", widget: "string"},
+            {label: "conditions text", name: "conditions text", widget: "markdown"},
+            {label: "included in price", name: "included in price", widget: "markdown"},
           ]
       }
       - {
@@ -32,8 +43,16 @@ collections:
         widget: "object",
         fields:
           [
-            {label: "Support", name: "Support", widget: "string"},
-            {label: "Login", name: "Login", widget: "text"},
+            {
+              label: "Navbar",
+              name: "navbar",
+              widget: "object",
+              fields:
+                [
+                  {label: "Support", name: "Support", widget: "string"},
+                  {label: "Login", name: "Login", widget: "text"},
+                ]
+            },
             {label: "unterstützt durch", name: "unterstützt durch", widget: "string"},
             {label: "Benefits", name: "Benefits", widget: "string"},
             {label: "Spezifikationen", name: "Spezifikationen", widget: "string"},
@@ -42,12 +61,21 @@ collections:
             {label: "Demozungang", name: "Demozungang", widget: "string"},
             {label: "Preismodelle", name: "Preismodelle", widget: "string"},
             {label: "Zufriedene Kunden", name: "Zufriedene Kunden", widget: "string"},
+            {label: "Im Preis inbegriffen sind:", name: "Im Preis inbegriffen sind:", widget: "string"},
             {label: "Noch Fragen ?", name: "Noch Fragen ?", widget: "string"},
-            {label: "Impressum", name: "Impressum", widget: "string"},
-            {label: "Der", name: "Der", widget: "string"},
-            {label: "Impressum", name: "Impressum", widget: "string"},
-            {label: "Impressum", name: "Impressum", widget: "string"},
-            {label: "wird unterstützt durch", name: "wird unterstützt durch", widget: "string"}
+            {label: "Ihr persönlicher Kontakt", name: "Ihr persönlicher Kontakt", widget: "string"},
+            {label: "Besuchen Sie uns auf Twitter", name: "Besuchen Sie uns auf Twitter", widget: "string"},
+            {
+              label: "Footer",
+              name: "footer",
+              widget: "object",
+              fields:
+                [
+                  {label: "Impressum", name: "Impressum", widget: "string"},
+                  {label: "Der", name: "Der", widget: "string"},
+                  {label: "wird unterstützt durch", name: "wird unterstützt durch", widget: "string"}
+                ]
+            }
           ]
       }
   - label: "Benefits Locale"
