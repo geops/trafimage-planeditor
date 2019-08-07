@@ -9,5 +9,10 @@ module.exports = {
 		path: 'de',
 		locale: 'de',
 		language: 'Deutsch'
+	},
+	fr: {
+		path: 'fr',
+		locale: 'fr',
+		language: 'Français'
 	}
 }
