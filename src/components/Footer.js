@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const Footer = class extends React.Component {
   state = {
     locale: this.props.locale,
-    messages: this.props.messages
+    messages: this.props.messages['generic']['footer']
   }
   
   render() {

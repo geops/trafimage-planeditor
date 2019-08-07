@@ -6,7 +6,7 @@ import login from '../img/sign-in-alt-solid.svg'
 const Navbar = class extends React.Component {
   state = {
     locale: this.props.locale,
-    messages: this.props.messages
+    messages: this.props.messages['generic']['navbar']
   }
   
   render() {

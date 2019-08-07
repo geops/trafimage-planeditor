@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { IntlProvider, addLocaleData } from 'react-intl'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
@@ -7,16 +8,14 @@ import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
 
 // Locale data
-import enData from 'react-intl/locale-data/en'
-import deData from 'react-intl/locale-data/de'
+import deData from 'react-intl/locale-data/en'
 
 // Messages
-import en from '../data/index/en.json'
 import de from '../data/index/de.json'
 
-const languages = { en, de }
+const languages = { de }
 
-addLocaleData([...enData, ...deData])
+addLocaleData([...deData])
 
 // TODO - if necessary - create dynamic language import.
 //  The below code did not work for that purpose
@@ -29,7 +28,7 @@ addLocaleData([...enData, ...deData])
 
 // flattening json data here provides a solution for the react-intl
 // inability to traverse nested data whilst constructing FormattedMessage's
-// without having to refactor pthe project structure
+// without having to refactor the project structure
 JSON.flatten = function (data) {
     var result = {};
     
@@ -39,7 +38,7 @@ JSON.flatten = function (data) {
         } else if (Array.isArray(cur)) {
             for (var i = 0, l = cur.length; i < l; i++)
                 recurse(cur[i], prop + "[" + i + "]");
-            if (l == 0) result[prop] = [];
+            if (l === 0) result[prop] = [];
         } else {
             var isEmpty = true;
             for (var p in cur) {
@@ -55,6 +54,7 @@ JSON.flatten = function (data) {
 
 const Layout = ({ locale, children }) => {
   const { title, description } = useSiteMetadata()
+  const pageMessages = JSON.flatten(languages[locale])
   return (
     <div>
       <Helmet>
@@ -91,11 +91,11 @@ const Layout = ({ locale, children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar locale={locale} messages={languages[locale].generic.navbar} />
-      <IntlProvider locale={locale} messages={JSON.flatten(languages[locale])}>
+      <Navbar locale={locale} messages={languages[locale]} />
+      <IntlProvider locale={locale} messages={pageMessages}>
         {children}
       </IntlProvider>
-      <Footer locale={locale} messages={languages[locale].generic.footer} />
+      <Footer locale={locale} messages={languages[locale]} />
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
 
 import Layout from '../components/Layout'
@@ -15,7 +14,6 @@ import layout_bg_1 from "../img/layoutBG_1.svg";
 // import benefits data, for the language needed
 import fr_benefits from '../data/benefits/de.json'
 import de_benefits from '../data/benefits/fr.json'
-import en_benefits from "../data/benefits/en";
 
 export const IndexPageTemplate = ({locale}) => {
     let benefits
@@ -24,12 +22,8 @@ export const IndexPageTemplate = ({locale}) => {
             benefits = fr_benefits.benefits
             break;
         }
-        case 'de': {
-            benefits = de_benefits.benefits
-            break;
-        }
         default: {
-            benefits = en_benefits.benefits
+            benefits = de_benefits.benefits
             break;
         }
     }
@@ -340,14 +334,7 @@ export const IndexPageTemplate = ({locale}) => {
     )
 }
 
-IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
-  brand: PropTypes.string,
-  heading: PropTypes.string,
-  benefits: PropTypes.array,
-}
-
-const Index = ({ pathContext: { locale } }) => {
+const Index = ({ pageContext: { locale } }) => {
     return (
         <Layout locale={locale}>
             <IndexPageTemplate locale={locale} />
@@ -355,20 +342,4 @@ const Index = ({ pathContext: { locale } }) => {
     )
 }
 
-Index.propTypes = {
-    data: PropTypes.shape({
-        markdownRemark: PropTypes.shape({
-            frontmatter: PropTypes.object,
-        }),
-    }),
-}
-
 export default Index
-
-export const query = graphql`
-  query data($locale: String) {
-    file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
-      id
-    }
-  }
-`
