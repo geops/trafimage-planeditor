@@ -19,10 +19,8 @@
   "generic": {
     "navbar": {
       "Support": "Support",
-      "Login": "Login,"
+      "Login": "Login"
     },
-    "Support": "Support",
-    "Login": "Login",
     "unterstützt durch": "supported by",
     "Benefits": "Benefits",
     "Spezifikationen": "Spezifikationen",
