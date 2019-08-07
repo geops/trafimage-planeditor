@@ -6,7 +6,7 @@ import login from '../img/sign-in-alt-solid.svg'
 const Navbar = class extends React.Component {
   state = {
     locale: this.props.locale,
-    messages: this.props.messages['generic']['navbar']
+    messages: this.props.messages
   }
   
   render() {
@@ -20,17 +20,16 @@ const Navbar = class extends React.Component {
           <div className="container">
             <div className="navbar-end has-text-centered">
               <Link className="navbar-item" to="/">
-                <FormattedMessage id="Support" />
+                <FormattedMessage id="generic.navbar.Support" />
               </Link>
               <Link className="navbar-item" to="/">
-                <FormattedMessage id="Login" />
+                <FormattedMessage id="generic.navbar.Login" />
                 <img className="icon is-small is-white" src={login} alt="" />
               </Link>
             </div>
           </div>
         </nav>
       </IntlProvider>
-      
     )
   }
 }

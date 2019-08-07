@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { IntlProvider, addLocaleData } from 'react-intl'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
@@ -8,7 +7,7 @@ import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
 
 // Locale data
-import deData from 'react-intl/locale-data/en'
+import deData from 'react-intl/locale-data/de'
 
 // Messages
 import de from '../data/index/de.json'
@@ -28,7 +27,7 @@ addLocaleData([...deData])
 
 // flattening json data here provides a solution for the react-intl
 // inability to traverse nested data whilst constructing FormattedMessage's
-// without having to refactor the project structure
+// without having to refactor pthe project structure
 JSON.flatten = function (data) {
     var result = {};
     
@@ -54,7 +53,7 @@ JSON.flatten = function (data) {
 
 const Layout = ({ locale, children }) => {
   const { title, description } = useSiteMetadata()
-  const pageMessages = JSON.flatten(languages[locale])
+  const localeMessages = JSON.flatten(languages[locale])
   return (
     <div>
       <Helmet>
@@ -91,11 +90,11 @@ const Layout = ({ locale, children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar locale={locale} messages={languages[locale]} />
-      <IntlProvider locale={locale} messages={pageMessages}>
+      <Navbar locale={locale} messages={localeMessages} />
+      <IntlProvider locale={locale} messages={localeMessages}>
         {children}
       </IntlProvider>
-      <Footer locale={locale} messages={languages[locale]} />
+      <Footer locale={locale} messages={localeMessages} />
     </div>
   )
 }

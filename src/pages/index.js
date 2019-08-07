@@ -168,7 +168,7 @@ export const IndexPageTemplate = ({locale}) => {
                     <div className="rightColumn">
                         <img className="discountBadge" src={discount_badge} alt="" />
                         <h1 className="is-bolder priceHeader"><FormattedMessage id="generic.Preise" /></h1>
-                        <p><FormattedMessage id="price description" /></p>
+                        <p><FormattedMessage id="content.price description" /></p>
                         <div className="priceCardArea row">
                             {/* TODO create price box widget and content, refer to geOps for strategy */}
                             <div className="col-6 col-lg-3">
