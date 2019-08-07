@@ -135,10 +135,10 @@ export const IndexPageTemplate = ({locale}) => {
                 </div>
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
             </section> {/* benefits section */}
-            <section className="spezifikationSection" id="specification">
+            <section className="featureSection" id="features">
                 <div className="container">
                     <div className="rightColumn">
-                        <h1 className="is-bolder speziHeader"><FormattedMessage id="generic.So funktioniert's" /></h1>
+                        <h1 className="is-bolder featuresHeader"><FormattedMessage id="generic.So funktioniert's" /></h1>
                         <p><FormattedMessage id="content.specification description" /></p>
                         <div className="accordion rightColumn">
                             {features && features.map( (feature, id) => (

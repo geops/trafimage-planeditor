@@ -99,23 +99,23 @@ collections:
           ]
       }
   - label: "Feature Locales"
-      name: "features"
-      folder: "src/data/features"
-      extension: "json"
-      create: true
-      fields:
-        - {label: "Sprache", name: "title", widget: "string"}
-        - {
-          label: "Features",
-          name: "features",
-          widget: "list",
-          fields:
-            [
-            {
-              label: "Überschrift", name: "heading", widget: "markdown"
-            },
-            {
-              label: "Text", name: "text", widget: "text"
-            }
-            ]
+    name: "features"
+    folder: "src/data/features"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Sprache", name: "title", widget: "string"}
+      - {
+        label: "Features",
+        name: "features",
+        widget: "list",
+        fields:
+          [
+          {
+            label: "Überschrift", name: "heading", widget: "markdown"
+          },
+          {
+            label: "Text", name: "text", widget: "text"
+          }
+          ]
         }
