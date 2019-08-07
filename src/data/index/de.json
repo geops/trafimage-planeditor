@@ -6,30 +6,30 @@
     "page header description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "specification description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "price description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "conditions text": "* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br />tatsächlich mit PlanEditor bearbeiteter Haltestellen",
+    "conditions text": "Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl\n\ntatsächlich mit PlanEditor bearbeiteter Haltestellen",
     "included in price": "<li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>\n<li>Wartung und Betrieb des Portals</li>\n<li>Automatische Übernahme von Weiterentwicklungen</li>\n<li>Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)</li>\n<li>Benutzerverwaltung</li>"
   },
   "generic": {
+    "Kontakt": "Kontakt",
+    "Besuchen Sie uns auf Twitter": "Besuchen Sie uns auf Twitter",
+    "Registrieren": "Registrieren",
+    "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
+    "So funktioniert's": "So funktioniert's",
+    "Zufriedene Kunden": "Zufriedene Kunden",
     "navbar": {
       "Support": "Support",
       "Login": "Login"
     },
-    "powered by": "powered by",
-    "Benefits": "Benefits",
-    "So funktioniert's": "So funktioniert's",
-    "Preise": "Preise",
-    "Kontakt": "Kontakt",
     "Demozugang": "Demozugang",
-    "Registrieren": "Registrieren",
-    "Zufriedene Kunden": "Zufriedene Kunden",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
+    "powered by": "powered by",
     "Noch Fragen ?": "Noch Fragen ?",
-    "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
-    "Besuchen Sie uns auf Twitter": "Besuchen Sie uns auf Twitter",
+    "Preise": "Preise",
     "footer": {
       "Impressum": "Impressum",
       "Der": "Der",
       "wird unterstützt durch": "wird unterstützt durch"
-    }
+    },
+    "Benefits": "Benefits",
+    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:"
   }
 }
