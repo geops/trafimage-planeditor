@@ -275,8 +275,13 @@
   position: relative
   background: linear-gradient(90deg, $primary, $secondary)
   padding-bottom: 5rem
-  & h1, p
+  & h1
     color: $white
+  & p
+    color: $white
+    font-size: 1.5rem
+  & h2
+    font-size: 2.5rem
   & .container
     position: relative
     z-index: 10
@@ -323,11 +328,11 @@
       & hr
         width: 50%
         color: $greyLight
-      & .gratis
-        font-weight: bolder
-        color: $primary
-      & .oldPrice
-        margin-bottom: 2rem
+      & h2
+        margin-top: 2rem
+        margin-bottom: 0rem
+      & .no-subtext
+        margin-bottom: 2.5rem !important
       & .btn
         display: block
         width: calc(100% - 2rem)
@@ -415,6 +420,8 @@
 .is-cyan
   color: $cyanDark
 
+.is-blue
+  color: $primary
 
 .is-smaller
   font-size: .75rem

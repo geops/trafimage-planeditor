@@ -170,7 +170,6 @@ export const IndexPageTemplate = ({locale}) => {
             <section className="priceSection" id="price">
                 <div className="container">
                     <div className="rightColumn">
-                        <img className="discountBadge" src={discount_badge} alt="" />
                         <h1 className="is-bolder priceHeader"><FormattedMessage id="generic.Preise" /></h1>
                         <p><FormattedMessage id="content.price description" /></p>
                         <div className="priceCardArea row">
@@ -179,7 +178,7 @@ export const IndexPageTemplate = ({locale}) => {
                                 <div className="priceCard">
                                     <div className="priceCardHeader">
                                         <div className="padder">
-                                            <span className="brandName">Trafimage> </span>
+                                            <span className="brandName">Trafimage </span>
                                             <span className="is-bolder title">Mapset</span>
                                             <h2 className="is-bolder">FREE</h2>
                                         </div>
@@ -191,7 +190,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <span className="is-bolder">bis zu<br />10 Haltestellen *</span>
                                         </div>
                                         <hr />
-                                        <h1 className="gratis">gratis</h1>
+                                        <h2 className="is-blue is-bolder no-subtext">gratis</h2>
                                         <button className="btn blue-btn">Anmelden</button>
                                     </div>
                                 </div>
@@ -215,14 +214,10 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <div className="price">
-                                            <span className="is-smaller">Normalpreis</span>
-                                            <h4 className="is-bolder oldPrice">2'700.-</h4>
-                                            <span className="is-cyan">Mit 10%</span><br />
-                                            <span className="is-cyan">Einführungsrabatt</span>
-                                            <h2 className="is-bolder is-cyan">2'430.-</h2>
-                                            <span className="is-cyan">(CHF/Jahr)</span>
+                                            <h2 className="is-bolder">2'700.-</h2>
+                                            <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn">Anmelden</button>
+                                        <button className="btn blue-btn">Anmelden</button>
                                     </div>
                                 </div>
                             </div>
@@ -245,14 +240,10 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <div className="price">
-                                            <span className="is-smaller">Normalpreis</span>
-                                            <h4 className="is-bolder oldPrice">5'900.-</h4>
-                                            <span className="is-cyan">Mit 10%</span><br />
-                                            <span className="is-cyan">Einführungsrabatt</span>
-                                            <h2 className="is-bolder is-cyan">5'310.-</h2>
-                                            <span className="is-cyan">(CHF/Jahr)</span>
+                                            <h2 className="is-bolder ">5'900.-</h2>
+                                            <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn">Anmelden</button>
+                                        <button className="btn blue-btn">Anmelden</button>
                                     </div>
                                 </div>
                             </div>
@@ -275,14 +266,10 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <div className="price">
-                                            <span className="is-smaller">Normalpreis</span>
-                                            <h4 className="is-bolder oldPrice">8'400.-</h4>
-                                            <span className="is-cyan">Mit 10%</span><br />
-                                            <span className="is-cyan">Einführungsrabatt</span>
-                                            <h2 className="is-bolder is-cyan">7'560.-</h2>
-                                            <span className="is-cyan">(CHF/Jahr)</span>
+                                            <h2 className="is-bolder ">8'400.-</h2>
+                                            <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn">Anmelden</button>
+                                        <button className="btn blue-btn">Anmelden</button>
                                     </div>
                                 </div>
                             </div>
