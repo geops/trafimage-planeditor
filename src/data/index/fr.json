@@ -1,7 +1,6 @@
 {
   "templateKey": "index-page",
   "title": "Page d'index français",
-  "brand": "Trafimage",
   "content": {
     "page header": "Attraktive Situationspläne für den öffentlichen Verkehr",
     "page header description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -18,25 +17,25 @@
   },
   "generic": {
     "navbar": {
-      "Support": "Support",
+      "Support": "Soutien",
       "Login": "Login"
     },
-    "unterstützt durch": "supported by",
-    "Benefits": "Benefits",
-    "Spezifikationen": "Spezifikationen",
-    "Preise": "Preise",
-    "Kontakt": "Kontakt",
-    "Demozungang": "Demozungang",
-    "Preismodelle": "Preismodelle",
-    "Zufriedene Kunden": "Zufriedene Kunden",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
-    "Noch Fragen ?": "Noch Fragen ?",
-    "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
-    "Besuchen Sie uns auf Twitter": "Besuchen Sie uns auf Twitter",
+    "unterstützt durch": "soutenu par",
+    "Benefits": "Avantages",
+    "Spezifikationen": "Caractéristiques",
+    "Preise": "Prix",
+    "Kontakt": "Contact",
+    "Demozugang": "Accès démo",
+    "Preismodelle": "Modèles de tarification",
+    "Zufriedene Kunden": "Des clients satisfaits",
+    "Im Preis inbegriffen sind:": "Le prix comprend:",
+    "Noch Fragen ?": "Des questions?",
+    "Ihr persönlicher Kontakt": "Votre contact personnel",
+    "Besuchen Sie uns auf Twitter": "Nous rendre visite sur Twitter",
     "footer": {
-      "Impressum": "Impressum",
-      "Der": "Der",
-      "wird unterstützt durch": "wird unterstützt durch"
+      "Impressum": "empreinte",
+      "Der": "Le",
+      "wird unterstützt durch": "est soutenu par"
     }
   }
 }

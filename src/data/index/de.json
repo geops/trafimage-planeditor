@@ -1,7 +1,6 @@
 {
   "templateKey": "index-page",
   "title": "Deutsch Indexseite",
-  "brand": "Trafimage",
   "content": {
     "page header": "Attraktive Situationspläne für den öffentlichen Verkehr",
     "page header description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -26,7 +25,7 @@
     "Spezifikationen": "Spezifikationen",
     "Preise": "Preise",
     "Kontakt": "Kontakt",
-    "Demozungang": "Demozungang",
+    "Demozugang": "Demozugang",
     "Preismodelle": "Preismodelle",
     "Zufriedene Kunden": "Zufriedene Kunden",
     "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",

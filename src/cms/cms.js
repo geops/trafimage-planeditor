@@ -8,6 +8,6 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
+// CMS.registerPreviewTemplate('index', IndexPagePreview)
 
 // TODO register/style content and benefits previews

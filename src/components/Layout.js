@@ -8,13 +8,15 @@ import useSiteMetadata from './SiteMetadata'
 
 // Locale data
 import deData from 'react-intl/locale-data/de'
+import frData from 'react-intl/locale-data/fr'
 
 // Messages
 import de from '../data/index/de.json'
+import fr from '../data/index/fr.json'
 
-const languages = { de }
+const languages = { de, fr }
 
-addLocaleData([...deData])
+addLocaleData([...deData, ...frData])
 
 // TODO - if necessary - create dynamic language import.
 //  The below code did not work for that purpose

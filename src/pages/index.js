@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({locale}) => {
                                 <h1><FormattedMessage id="content.page header" /></h1>
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
-                                    <button className="btn"><FormattedMessage id="generic.Demozungang" /></button>
+                                    <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
                                     <button className="btn"><FormattedMessage id="generic.Preismodelle" /></button>
                                 </div>
                             </div>
@@ -175,8 +175,8 @@ export const IndexPageTemplate = ({locale}) => {
                                 <div className="priceCard">
                                     <div className="priceCardHeader">
                                         <div className="padder">
-                                            <span className="brandName"><FormattedMessage id="brand" /></span>
-                                            <span className="is-bolder title"><FormattedMessage id="title" /></span>
+                                            <span className="brandName">Trafimage> </span>
+                                            <span className="is-bolder title">PlanEditor</span>
                                             <h2 className="is-bolder">FREE</h2>
                                         </div>
                                         <img className="backgroundImage" src={layout_bg_2} alt="" />
