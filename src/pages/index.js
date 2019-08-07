@@ -7,7 +7,6 @@ import layout_bg_1 from "../img/layoutBG_1.svg";
 import layout_bg_2 from '../img/layoutBG_2.svg'
 import layout_bg_3 from '../img/layoutBG_3.svg'
 import mapset_banner from '../../static/img/Mapset_Logo_RGB_weiss.svg'
-import discount_badge from '../../static/img/discountBadge_1.svg'
 import twitter from '../img/social/Twitter_Logo_Blue.svg'
 import card_1 from "../img/cards/trackeramsterdam.png";
 import Scroller from "../components/Scroller";
@@ -19,7 +18,8 @@ import fr_features from '../data/features/de.json'
 import de_features from '../data/features/fr.json'
 
 const accordionHandler = function(id){
-    let item = document.getElementsByClassName('accordion-item')[id]
+    console.log(id)
+    let item = document.getElementsByName(id)[0]
     if(item.classList.contains('is-expanded')){
         document.getElementsByClassName('accordion-item')[id].classList.remove('is-expanded')
     } else {
@@ -112,7 +112,7 @@ export const IndexPageTemplate = ({locale}) => {
                     <div className="accordion rightColumn">
                         {benefits && benefits.map( (benefit, id) => (
                             // TODO style benefit list to match design
-                            <div className="accordion-item" key={"benefit_"+id}>
+                            <div className="accordion-item" key={"benefit_"+id} name={"benefit_"+id}>
                                 <button onClick={() => accordionHandler("benefit_"+id)}>
                                     <h5 className="item-head">
                                         <span dangerouslySetInnerHTML={{ __html: md.render(benefit.heading) }} />
@@ -140,10 +140,10 @@ export const IndexPageTemplate = ({locale}) => {
                     <div className="rightColumn">
                         <h1 className="is-bolder featuresHeader"><FormattedMessage id="generic.So funktioniert's" /></h1>
                         <p><FormattedMessage id="content.specification description" /></p>
-                        <div className="accordion rightColumn">
+                        <div className="accordion">
                             {features && features.map( (feature, id) => (
                                 // TODO style feature list to match design
-                                <div className="accordion-item" key={"feature_"+id}>
+                                <div className="accordion-item" key={"feature_"+id} name={"feature_"+id}>
                                     <button onClick={() => accordionHandler("feature_"+id)}>
                                         <h5 className="item-head">
                                             <span dangerouslySetInnerHTML={{ __html: md.render(feature.heading) }} />
@@ -275,21 +275,19 @@ export const IndexPageTemplate = ({locale}) => {
                             </div>
                         </div>
                         <div className="conditions is-smaller">
-                            <p><FormattedMessage
+                            <FormattedMessage
                                 id="content.conditions text"
                                 defaultMessage="* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br/>tatsächlich mit Mapset bearbeiteter Haltestellen"
-                            /></p>
+                            >{txt => <p>{txt}</p>}</FormattedMessage>
                             <span className="is-bolder"><FormattedMessage id="generic.Im Preis inbegriffen sind:" /></span>
-                            <ul>
-                                <FormattedMessage
-                                    id="content.included in price"
-                                    defaultMessage="<li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>
-                                <li>Wartung und Betrieb des Portals</li>
-                                <li>Automatische Übernahme von Weiterentwicklungen</li>
-                                <li>Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)</li>
-                                <li>Benutzerverwaltung</li>"
-                                />
-                            </ul>
+                            <FormattedMessage
+                                id="content.included in price"
+                                defaultMessage="<li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>
+                            <li>Wartung und Betrieb des Portals</li>
+                            <li>Automatische Übernahme von Weiterentwicklungen</li>
+                            <li>Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)</li>
+                            <li>Benutzerverwaltung</li>"
+                            />
                         </div>
                     </div>
                 </div>
