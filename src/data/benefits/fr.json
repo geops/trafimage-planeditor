@@ -3,13 +3,11 @@
   "benefits":
   [
     {
-      "heading": "French Benefit Erstellen",
-      "subheading": "von Situationsplänen",
+      "heading": "**Erstellen** von Situationsplänen",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "heading": "Indivuelle Definition",
-      "subheading": "von Ausschnitten und Auflösungen",
+      "heading": "**Exportfunktion**",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ]

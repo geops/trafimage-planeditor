@@ -1,14 +1,15 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables"
 
 // Colours
-$primary: #2982b8
-$secondary: #63a5ce
+$primary: #1789c9
+$secondary: #63b3f4
 $white: #fffefe
-$greyLight: #f9f7f6
+$greyLight: #f9f9f9
+$greyMid: #ededed
 $greyDark: #aaaca9
 $greyDarker: #595c5a
 $cyanDark: #28b2a2
-$red: #eb2c2c
+$red: #ff0000
 
 $transform3D: translateY(-50%) translateX(-30%) rotateX(50deg) rotateZ(-20deg) scale(.6, .6)
 
@@ -20,12 +21,22 @@ $bolder: 700
 // spacing
 $thinColumnWidth: 15rem
 
+// screen sizing
+$screen-extra-large: 1200px
+
 body
   min-width: 290px
   background: linear-gradient(90deg, $primary, $secondary)
+  color: $greyDarker
 
 html
   scroll-behavior: smooth
+
+h1
+  font-size: 4rem
+
+h2
+  font-size: 3rem
 
 // global styles
 .cardViewContainer

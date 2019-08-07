@@ -2,25 +2,25 @@ import React from 'react'
 import {FormattedMessage} from 'react-intl'
 
 const Scroller = class extends React.Component {
-  TOP_MARGIN = 50
+  TOP_MARGIN = 100
 
   handleScroll = () => {
-    if(window.scrollY < this.benefits){
+    if(document.getElementById('benefits').getBoundingClientRect().top - this.TOP_MARGIN > 0){
       this.benefitsScroller.classList.remove('active')
       this.specificationScroller.classList.remove('active')
       this.priceScroller.classList.remove('active')
       this.contactScroller.classList.remove('active')
-    } else if(window.scrollY < this.specification){
+    } else if(document.getElementById('specification').getBoundingClientRect().top - this.TOP_MARGIN > 0){
       this.benefitsScroller.classList.add('active')
       this.specificationScroller.classList.remove('active')
       this.priceScroller.classList.remove('active')
       this.contactScroller.classList.remove('active')
-    } else if(window.scrollY < this.price){
+    } else if(document.getElementById('price').getBoundingClientRect().top - this.TOP_MARGIN > 0){
       this.specificationScroller.classList.add('active')
       this.benefitsScroller.classList.remove('active')
       this.priceScroller.classList.remove('active')
       this.contactScroller.classList.remove('active')
-    } else if(window.scrollY < this.windowBottom){
+    } else if(document.getElementById('contact').getBoundingClientRect().bottom - window.innerHeight > 0){
       this.priceScroller.classList.add('active')
       this.benefitsScroller.classList.remove('active')
       this.specificationScroller.classList.remove('active')
@@ -31,26 +31,19 @@ const Scroller = class extends React.Component {
       this.specificationScroller.classList.remove('active')
       this.priceScroller.classList.remove('active')
     }
-    if(window.scrollY < this.benefits + this.TOP_MARGIN){
+    if(document.getElementById('benefits').getBoundingClientRect().top - this.TOP_MARGIN > 0){
       this.scroller.classList.remove('fixed')
-      this.scroller.style.marginLeft = 0
     } else {
-      this.scroller.style.marginLeft = document.getElementsByClassName('container')[0].getBoundingClientRect().x
       this.scroller.classList.add('fixed')
     }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    this.benefits = document.getElementById('benefits').getBoundingClientRect().top - this.TOP_MARGIN
-    this.specification = document.getElementById('specification').getBoundingClientRect().top - this.TOP_MARGIN
-    this.price = document.getElementById('price').getBoundingClientRect().top - this.TOP_MARGIN
-    this.contact = document.getElementById('contact').getBoundingClientRect().top - this.TOP_MARGIN
     this.benefitsScroller = document.getElementById('benefitsScroller')
     this.specificationScroller = document.getElementById('specificationScroller')
     this.priceScroller = document.getElementById('priceScroller')
     this.contactScroller = document.getElementById('contactScroller')
-    this.windowBottom = document.body.getBoundingClientRect().bottom - window.screen.height
     this.scroller = document.getElementById('scroller')
   }
 
@@ -74,7 +67,7 @@ const Scroller = class extends React.Component {
                 <path fill="none" d="M24 24H0V0h24v24z"/>
                 <circle fill="currentColor" cx="12" cy="12" r="8"/>
               </svg>
-              <span><FormattedMessage id="generic.Spezifikationen" /></span>
+              <span><FormattedMessage id="generic.So funktioniert's" /></span>
             </a>
             <a className="navbar-item" href="#price" id="priceScroller">
               <svg className="listNavImage" width="24" height="24" viewBox="0 0 24 24">

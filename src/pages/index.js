@@ -1,32 +1,52 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-
 import Layout from '../components/Layout'
+import { Remarkable } from 'remarkable';
 
+import layout_bg_1 from "../img/layoutBG_1.svg";
 import layout_bg_2 from '../img/layoutBG_2.svg'
 import layout_bg_3 from '../img/layoutBG_3.svg'
-import discount_badge from '../img/discountBadge_1.svg'
-import twitter from '../img/Twitter_Logo_Blue.svg'
+import mapset_banner from '../../static/img/Mapset_Logo_RGB_weiss.svg'
+import discount_badge from '../../static/img/discountBadge_1.svg'
+import twitter from '../img/social/Twitter_Logo_Blue.svg'
 import card_1 from "../img/cards/trackeramsterdam.png";
 import Scroller from "../components/Scroller";
-import layout_bg_1 from "../img/layoutBG_1.svg";
 
-// import benefits data, for the language needed
+// import benefits and features data, for the language needed
 import fr_benefits from '../data/benefits/de.json'
 import de_benefits from '../data/benefits/fr.json'
+import fr_features from '../data/features/de.json'
+import de_features from '../data/features/fr.json'
+
+const accordionHandler = function(id){
+    let item = document.getElementsByClassName('accordion-item')[id]
+    if(item.classList.contains('is-expanded')){
+        document.getElementsByClassName('accordion-item')[id].classList.remove('is-expanded')
+    } else {
+        document.getElementsByClassName('accordion-item')[id].classList.add('is-expanded')
+    }
+}
 
 export const IndexPageTemplate = ({locale}) => {
     let benefits
+    let features
     switch(locale) {
         case 'fr': {
             benefits = fr_benefits.benefits
+            features = fr_features.features
             break;
         }
         default: {
             benefits = de_benefits.benefits
+            features = de_features.features
             break;
         }
     }
+    let md = new Remarkable();
+    md.set({
+        html: true,
+        breaks: true
+    });
     return (
         <div style={{position:'relative'}}>
             <section className="topSection">
@@ -35,13 +55,12 @@ export const IndexPageTemplate = ({locale}) => {
                         <div className="col-12 col-lg-7">
                             <div className="row">
                                 <div className="headerBadge">
-                                    <span className="brandName">Trafimage</span>
-                                    <h1 className="is-bolder">PlanEditor</h1>
+                                    <img className="main-heading" src={mapset_banner} alt="" />
                                     <div className="subtext">
-                                        <span><FormattedMessage id="generic.unterstützt durch" /></span>
-                                        <span className="is-bold">evoq</span>
-                                        <span> | </span>
-                                        <span className="is-bold">geops</span>
+                                        <span><FormattedMessage id="generic.powered by" /> </span>
+                                        <span className="is-bolder">evoq</span>
+                                        <span className="is-bolder"> | </span>
+                                        <span className="is-bolder">geops</span>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +78,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <FormattedMessage id="generic.Benefits" />
                                 </a>
                                 <a className="navbar-item" href="#specification">
-                                    <FormattedMessage id="generic.Spezifikationen" />
+                                    <FormattedMessage id="generic.So funktioniert's" />
                                 </a>
                                 <a className="navbar-item" href="#price">
                                     <FormattedMessage id="generic.Preise" />
@@ -69,100 +88,85 @@ export const IndexPageTemplate = ({locale}) => {
                                 </a>
                             </div>
                             <div className="headerDescription">
-                                <h1><FormattedMessage id="content.page header" /></h1>
+                                <h2><FormattedMessage id="content.page header" /></h2>
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
                                     <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
-                                    <button className="btn"><FormattedMessage id="generic.Preismodelle" /></button>
+                                    <button className="btn"><FormattedMessage id="generic.Registrieren" /></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <img className="backgroundImage" src={layout_bg_1} alt=""/>
+            </section> {/* top section */}
             <section className="benefitsSection" id="benefits">
                 <Scroller/>
-                <img className="backgroundImage" src={layout_bg_1} alt=""/>
                 <div className="cardViewContainer">
                     <div className="cardViewer">
                         <img className="base" src={card_1} alt=""/>
                     </div>
                 </div>
                 <div className="container">
-                    {/* TODO implement logos */}
-                    <div className="logoWall">
-                        <span><FormattedMessage id="generic.Zufriedene Kunden" /></span>
-                        <span>LOGO</span>
-                        <span>LOGO</span>
-                        <span>LOGO</span>
-                    </div>
                     <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="generic.Benefits" /></h1>
                     <div className="accordion rightColumn">
                         {benefits && benefits.map( (benefit, id) => (
                             // TODO style benefit list to match design
-                            <div className="item" key={id}>
-                                <h5>
-                                    <span className="is-bolder">{benefit.heading}</span>
-                                    <span>{benefit.subheading}</span>
-                                </h5>
-                                <p>{benefit.text}</p>
+                            <div className="accordion-item" key={"benefit_"+id}>
+                                <button onClick={() => accordionHandler("benefit_"+id)}>
+                                    <h5 className="item-head">
+                                        <span dangerouslySetInnerHTML={{ __html: md.render(benefit.heading) }} />
+                                        <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor" />
+                                            <path d="M0 0h24v24H0z" fill="none"/>
+                                        </svg>
+                                        <svg className="accordionStateImage minus" width="24" height="24" viewBox="0 0 24 24">
+                                            <path d="M19 13H5v-2h14v2z" fill="currentColor" />
+                                            <path d="M0 0h24v24H0z" fill="none"/>
+                                        </svg>
+                                    </h5>
+                                </button>
+                                <div className="content">
+                                    <p>{benefit.text}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </section>
-            <section className="spezifikationSection" id="specification">
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
+            </section> {/* benefits section */}
+            <section className="spezifikationSection" id="specification">
                 <div className="container">
                     <div className="rightColumn">
-                        <h1 className="is-bolder speziHeader"><FormattedMessage id="generic.Spezifikationen" /></h1>
+                        <h1 className="is-bolder speziHeader"><FormattedMessage id="generic.So funktioniert's" /></h1>
                         <p><FormattedMessage id="content.specification description" /></p>
-                        <div className="row specRow">
-                            <div className="specCol first col-12 col-sm-4">
-                                <h5 className="is-bolder">
-                                    <FormattedMessage
-                                        id="content.specification col1 header"
-                                        defaultMessage="Vorgebene Elemente"
-                                    />
-                                </h5>
-                                {/* TODO create specification list widget for cms input */}
-                                <ul>
-                                    <FormattedMessage
-                                        id="content.specification col1 text"
-                                    />
-                                </ul>
-                            </div>
-                            <div className="specCol col-12 col-sm-4">
-                                <h5 className="is-bolder">
-                                    <FormattedMessage
-                                        id="content.specification col2 header"
-                                        defaultMessage="Frei verwendbare Elemente"
-                                    />
-                                </h5>
-                                <ul>
-                                    <FormattedMessage
-                                        id="content.specification col2 text"
-                                    />
-                                </ul>
-                            </div>
-                            <div className="specCol col-12 col-sm-4">
-                                <h5 className="is-bolder">
-                                    <FormattedMessage
-                                        id="content.specification col3 header"
-                                        defaultMessage="Technisches"
-                                    />
-                                </h5>
-                                <ul>
-                                    <FormattedMessage
-                                        id="content.specification col3 text"
-                                    />
-                                </ul>
-                            </div>
+                        <div className="accordion rightColumn">
+                            {features && features.map( (feature, id) => (
+                                // TODO style feature list to match design
+                                <div className="accordion-item" key={"feature_"+id}>
+                                    <button onClick={() => accordionHandler("feature_"+id)}>
+                                        <h5 className="item-head">
+                                            <span dangerouslySetInnerHTML={{ __html: md.render(feature.heading) }} />
+                                            <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                            <svg className="accordionStateImage minus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13H5v-2h14v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </h5>
+                                    </button>
+                                    <div className="content">
+                                        <p>{feature.text}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <img className="backgroundImage bottomImage" src={layout_bg_3} alt="" />
-            </section>
+            </section> {/* specification section */}
             <section className="priceSection" id="price">
                 <div className="container">
                     <div className="rightColumn">
@@ -176,7 +180,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <div className="priceCardHeader">
                                         <div className="padder">
                                             <span className="brandName">Trafimage> </span>
-                                            <span className="is-bolder title">PlanEditor</span>
+                                            <span className="is-bolder title">Mapset</span>
                                             <h2 className="is-bolder">FREE</h2>
                                         </div>
                                         <img className="backgroundImage" src={layout_bg_2} alt="" />
@@ -197,7 +201,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <div className="priceCardHeader">
                                         <div className="padder">
                                             <span className="brandName">Trafimage </span>
-                                            <span className="is-bolder title">PlanEditor</span>
+                                            <span className="is-bolder title">Mapset</span>
                                             <h2 className="is-bolder">MINI</h2>
                                         </div>
                                         <img className="backgroundImage" src={layout_bg_2} alt="" />
@@ -227,7 +231,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <div className="priceCardHeader">
                                         <div className="padder">
                                             <span className="brandName">Trafimage </span>
-                                            <span className="is-bolder title">PlanEditor</span>
+                                            <span className="is-bolder title">Mapset</span>
                                             <h2 className="is-bolder">MIDI</h2>
                                         </div>
                                         <img className="backgroundImage" src={layout_bg_2} alt="" />
@@ -257,7 +261,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <div className="priceCardHeader">
                                         <div className="padder">
                                             <span className="brandName">Trafimage </span>
-                                            <span className="is-bolder title">PlanEditor</span>
+                                            <span className="is-bolder title">Mapset</span>
                                             <h2 className="is-bolder">MAXI</h2>
                                         </div>
                                         <img className="backgroundImage" src={layout_bg_2} alt="" />
@@ -286,7 +290,7 @@ export const IndexPageTemplate = ({locale}) => {
                         <div className="conditions is-smaller">
                             <p><FormattedMessage
                                 id="content.conditions text"
-                                defaultMessage="* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br/>tatsächlich mit PlanEditor bearbeiteter Haltestellen"
+                                defaultMessage="* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br/>tatsächlich mit Mapset bearbeiteter Haltestellen"
                             /></p>
                             <span className="is-bolder"><FormattedMessage id="generic.Im Preis inbegriffen sind:" /></span>
                             <ul>
@@ -302,7 +306,7 @@ export const IndexPageTemplate = ({locale}) => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> {/* price section */}
             <section className="contactSection" id="contact">
                 <img className="backgroundImage" src={layout_bg_2} alt="" />
                 <div className="container">
@@ -328,7 +332,7 @@ export const IndexPageTemplate = ({locale}) => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> {/* contact section */}
             <div className="aboveFooter"></div>
         </div>
     )
