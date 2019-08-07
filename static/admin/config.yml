@@ -34,3 +34,44 @@ collections:
                 }
               ]
             }
+      - {
+        label: " Elements",
+        name: "common",
+        widget: "list",
+        fields:
+          [
+          {
+            label: "Heading", name: "heading", widget: "string"
+          },
+          {
+            label: "SubHeading", name: "subheading", widget: "string"
+          },
+          {
+            label: "Text", name: "text", widget: "text"
+          }
+          ]
+      }
+  - label: "Benefits"
+    name: "benefits"
+    folder: "src/data/benefits"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {
+        label: "Benefits",
+        name: "benefits",
+        widget: "list",
+        fields:
+          [
+          {
+            label: "Heading", name: "heading", widget: "string"
+          },
+          {
+            label: "SubHeading", name: "subheading", widget: "string"
+          },
+          {
+            label: "Text", name: "text", widget: "text"
+          }
+          ]
+      }

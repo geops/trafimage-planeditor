@@ -14,11 +14,18 @@ import deData from 'react-intl/locale-data/de'
 import en from '../data/index/en.json'
 import de from '../data/index/de.json'
 
-const messages = { en, de }
-
-console.log(messages)
+const languages = { en, de }
 
 addLocaleData([...enData, ...deData])
+
+// TODO - if necessary - create dynamic language import.
+//  The below code did not work for that purpose
+// const locales = require('../data/locales')
+// Object.keys(locales).forEach(key => {
+//   const possibleLocale = locales[key].locales || 'en'
+//   const reactData = 'react-intl/locale-data/'+possibleLocale
+//   addLocaleData(require(`${reactData}`))
+// })
 
 const Layout = ({ locale, children }) => {
   const { title, description } = useSiteMetadata()
@@ -59,7 +66,7 @@ const Layout = ({ locale, children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <IntlProvider locale={locale} messages={messages[locale]}>
+        <IntlProvider locale={locale} messages={languages[locale]}>
             {children}
         </IntlProvider>
         <Footer />

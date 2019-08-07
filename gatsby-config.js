@@ -1,5 +1,4 @@
 var proxy = require('http-proxy-middleware')
-const languages = require('./src/data/languages');
 
 module.exports = {
   siteMetadata: {
@@ -21,8 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data/index`,
-        name: 'index translations',
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
       },
     },
     {
