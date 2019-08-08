@@ -26,10 +26,10 @@ $thinColumnWidth: 15rem
 
 // screen sizing
 $screen-extra-large: 1200px
+$mobile_max_size: 768px
 
 body
   margin: auto
-  min-width: 290px
   max-width: 1440px
   color: $greyDarker
 
@@ -40,49 +40,4 @@ h1
   font-size: 4rem
 
 h2
-  font-size: 3rem
-
-// global styles
-.cardViewContainer
-  height: 100%
-  width: 100%
-.cardViewer
-  position: relative
-  perspective: 50rem
-  max-height: 635px
-  max-width: 635px
-  height: 50vw
-  width: 50vw
-  & img
-    position: absolute
-    top: 50%
-    opacity: .6
-    transform-style: preserve-3d
-    perspective-origin: center center
-    transform: $transform3D
-  & .l-1
-    transform: translateX(-5%) $transform3D
-    top: 60%
-    z-index: -1
-  & .l1
-    transform: translateX(5%) $transform3D
-    top: 40%
-    z-index: 1
-  & .base
-    opacity: 1
-    box-shadow: -2px 5px 5px 0px $greyDarker !important
-
-// media
-@media only screen and (max-width: 768px)
-  .scroller
-    display: none
-  .rightColumn
-    margin-left: 0 !important
-  .hide-on-mobile
-    display: none
-@media only screen and (max-width: 991px)
-  .scrollNav
-    margin-top: 10rem !important
-  .cardViewContainer
-    height: calc(80vw)
-    width: calc(80vw)
+  font-size: 2.5rem

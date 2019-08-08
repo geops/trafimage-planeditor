@@ -1,60 +1,116 @@
+.navbar
+  & .navbar-burger
+    cursor: pointer
+    display: block
+    height: 2rem
+    position: relative
+    width: 2rem
+    margin-left: auto
 
-.navbar-burger
-  cursor: pointer
-  display: block
-  height: 2rem
-  position: relative
-  width: 2rem
-  margin-left: auto
+  & .navbar-burger span
+    background-color: currentColor
+    display: block
+    height: 4px
+    left: calc(50% - 1rem)
+    position: absolute
+    -webkit-transform-origin: center
+      transform-origin: center
+    transition-duration: 86ms
+    transition-property: background-color, opacity, -webkit-transform
+    transition-property: background-color, opacity, transform
+    transition-property: background-color, opacity, transform, -webkit-transform
+    transition-timing-function: ease-out
+    width: 2rem
 
-.navbar-burger span
-  background-color: currentColor
-  display: block
-  height: 4px
-  left: calc(50% - 1rem)
-  position: absolute
-  -webkit-transform-origin: center
-    transform-origin: center
-  transition-duration: 86ms
-  transition-property: background-color, opacity, -webkit-transform
-  transition-property: background-color, opacity, transform
-  transition-property: background-color, opacity, transform, -webkit-transform
-  transition-timing-function: ease-out
-  width: 2rem
+  & .navbar-burger span:nth-child(1)
+    top: calc(50% - .65rem - 1px)
 
-.navbar-burger span:nth-child(1)
-  top: calc(50% - .75rem - 1px)
+  & .navbar-burger span:nth-child(2)
+    top: calc(50% - 1px)
 
-.navbar-burger span:nth-child(2)
-  top: calc(50% - 1px)
+  & .navbar-burger span:nth-child(3)
+    top: calc(50% + .65rem - 1px)
 
-.navbar-burger span:nth-child(3)
-  top: calc(50% + .75rem - 1px)
+  & .navbar-burger.is-active span:nth-child(1)
+    -webkit-transform: translateY(.65rem) rotate(45deg)
+      transform: translateY(.65rem) rotate(45deg)
 
-.navbar-burger.is-active span:nth-child(1)
-  -webkit-transform: translateY(.75rem) rotate(45deg)
-    transform: translateY(.75rem) rotate(45deg)
+  & .navbar-burger.is-active span:nth-child(2)
+    opacity: 0
 
-.navbar-burger.is-active span:nth-child(2)
-  opacity: 0
+  & .navbar-burger.is-active span:nth-child(3)
+    -webkit-transform: translateY(-.65rem) rotate(-45deg)
+      transform: translateY(-.65rem) rotate(-45deg)
 
-.navbar-burger.is-active span:nth-child(3)
-  -webkit-transform: translateY(-.75rem) rotate(-45deg)
-    transform: translateY(-.75rem) rotate(-45deg)
+  & .navbar-menu
+    display: none
 
-.navbar-menu
-  display: none
+  & .navbar-menu
+    padding: 0.5rem 0
 
-.navbar-menu
-  padding: 0.5rem 0
+  & .navbar-menu.is-active
+    display: block
 
-.navbar-menu.is-active
-  display: block
+  & .navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu
+    -webkit-overflow-scrolling: touch
+    max-height: calc(100vh - 3.25rem)
+    overflow: auto
 
-.navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu
-  -webkit-overflow-scrolling: touch
-  max-height: calc(100vh - 3.25rem)
-  overflow: auto
+  & .mobile-menu
+    z-index: -1
+    position: fixed
+    top: 100%
+    left: 0
+    width: 100vw
+    height: 100vh
+    transition: top 1.5s
+    & .mobile-menu-space
+      height: 6rem
+      pointer-events: none
+    & .mobile-menu-bottom-space
+      position: relative
+      margin-top: -10rem
+      z-index: -10
+      height: 100vh
+      background: $greyLight
+    & .mobileBackgroundImageTop
+      width: 100vw
+      margin-bottom: -1px
+      transform: scaleX(-1)
+    & .mobileBackgroundImageBottom
+      width: 100vw
+      margin-top: -1px
+      transform: rotateZ(180deg)
+    & .menu-list
+      position: relative
+      z-index: 1
+      width: 100vw
+      display: flex
+      flex-direction: column
+    & .icon
+      height: 1rem
+      width: 1rem
+    & .navbar-item
+      color: $primary
+      padding: 1rem
+    & .h-rule
+      margin: auto
+      width: calc(100vw - 2rem)
+      border-bottom: 2px solid $greyMid
+  & .mobile-menu.is-active
+    top: 0
+
+@media screen and (min-width: 768px)
+  .aboveBenefitsSection
+    margin-top: -10rem
+    position: relative
+    z-index: 10
+
+@media screen and (min-width: 992px)
+  .aboveBenefitsSection
+    margin-top: -15rem
+    position: relative
+    z-index: 10
 
 @media screen and (min-width: 1024px)
   .navbar,
@@ -72,14 +128,46 @@
   .container > .navbar .navbar-menu
     margin-right: -.75rem
 
-@media screen and (min-width: 1024px)
-  .navbar-burger
-    display: none
+@media screen and (min-width: 768px) and (max-width: 1119px)
+  .alignContainer
+    display: block
 
-@media screen and (max-width: 320px)
-  .topSection .headerBadge
+@media screen and (max-width: 767px)
+  p
+    font-size: 1.2rem
+    font-weight: $boldish
+  h1
+    font-size: 3rem
+  h2
+    font-size: 2.5rem
+  .backgroundImage
+    width: 100vw
+  .scroller
+    display: none
+  .rightColumn
+    margin-left: 0 !important
+  .topSection, .priceSection, .blueBack
+    background: linear-gradient(180deg, $primary, $secondary)
+  .footer
+    background: linear-gradient(1355deg, $primary, $secondary)
+  .navbar
+    padding: 1.5rem .5rem
+    background: transparent
+    margin-bottom: -1px
     position: absolute
-    margin-left: 1rem
-    width: 50%
-    & .main-heading
-      height: 3rem
+    width: 100%
+    -webkit-tap-highlight-color: unset
+  .topSection
+    & .headerBadge
+      position: absolute
+      margin-left: 1rem
+      width: 50%
+    & .cardViewContainer
+      padding-top: 2rem
+      padding-bottom: 0
+  .benefitSection
+    margin-top: 5rem
+
+@media screen and (max-width: 565px)
+  .topSection.main-heading
+    height: 3rem

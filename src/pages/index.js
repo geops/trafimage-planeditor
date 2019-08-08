@@ -2,14 +2,17 @@ import React from 'react'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
+import Scroller from "../components/Scroller";
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
 import layout_bg_3 from '../img/layoutBG_3.png'
+
 import mapset_banner from '../img/Mapset_Logo_RGB_weiss.svg'
 import twitter from '../img/social/Twitter_Logo_Blue.svg'
-import card_1 from "../../static/img/cards/trackeramsterdam.png";
-import Scroller from "../components/Scroller";
+
+import card_view_triple from '../../static/img/mapset_3d_card_view_triple.png'
+import card_view_single from '../../static/img/mapset_3d_card_view_single.png'
 
 // import benefits and features data, for the language needed
 import fr_benefits from '../data/benefits/de.json'
@@ -55,28 +58,8 @@ export const IndexPageTemplate = ({locale}) => {
             <section className="topSection">
                 <div className="container">
                     <div className="row is-white">
-                        <div className="col-12 col-lg-7">
-                            <div className="row">
-                                <div className="headerBadge">
-                                    <img className="main-heading" src={mapset_banner} alt="" />
-                                    <div className="subtext">
-                                        <span><FormattedMessage id="generic.powered by" /> </span>
-                                        <span className="is-bolder">evoq</span>
-                                        <span className="is-bolder"> | </span>
-                                        <span className="is-bolder">geops</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="cardViewContainer" >
-                                <div className="cardViewer" >
-                                    <img className="l1" src={card_1} alt="" />
-                                    <img className="" src={card_1} alt="" />
-                                    <img className="l-1 base" src={card_1} alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-12 col-lg-5">
-                            <div className="scrollNav row">
+                        <div className="col-12 col-md-5">
+                            <div className="scrollNav row d-none d-md-flex">
                                 <a className="navbar-item" href="#benefits">
                                     <FormattedMessage id="generic.Benefits" />
                                 </a>
@@ -90,7 +73,7 @@ export const IndexPageTemplate = ({locale}) => {
                                     <FormattedMessage id="generic.Kontakt" />
                                 </a>
                             </div>
-                            <div className="headerDescription">
+                            <div className="headerDescription pt-5 pt-md-0">
                                 <h2><FormattedMessage id="content.page header" /></h2>
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
@@ -99,19 +82,42 @@ export const IndexPageTemplate = ({locale}) => {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-12 col-md-7 order-md-first">
+                            <div className="row">
+                                <div className="headerBadge d-none d-md-block">
+                                    <img className="main-heading" src={mapset_banner} alt="" />
+                                    <div className="subtext">
+                                        <span><FormattedMessage id="generic.powered by" /> </span>
+                                        <span className="is-bolder">evoq</span>
+                                        <span className="is-bolder"> | </span>
+                                        <span className="is-bolder">geops</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="cardViewContainer" >
+                                <img className="cardViewTriple" src={card_view_triple} alt="" />
+                                {/*<div className="cardViewer" >*/}
+                                {/*<img className="l1" src={card_1} alt="" />*/}
+                                {/*<img className="" src={card_1} alt="" />*/}
+                                {/*<img className="l-1 base" src={card_1} alt="" />*/}
+                                {/*</div>*/}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section> {/* top section */}
-            <img className="backgroundImage blueBack" src={layout_bg_1} alt=""/>
+            <img className="backgroundImage aboveBenefitsSection" src={layout_bg_1} alt=""/>
             <section className="benefitsSection" id="benefits">
                 <Scroller/>
                 <div className="cardViewContainer">
-                    <div className="cardViewer">
-                        <img className="base" src={card_1} alt=""/>
-                    </div>
+                    <img className="cardViewSingle" src={card_view_single} alt="" />
+                    {/*<div className="cardViewer">*/}
+                    {/*    <img className="base" src={card_1} alt=""/>*/}
+                    {/*</div>*/}
                 </div>
                 <div className="container">
                     <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="generic.Benefits" /></h1>
+                    <div className="cardViewSapcer" />
                     <div className="accordion rightColumn">
                         {benefits && benefits.map( (benefit, id) => (
                             // TODO style benefit list to match design

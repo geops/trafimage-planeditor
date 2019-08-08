@@ -12,22 +12,22 @@
 .navbar, .topSection, .priceSection, .footer, .blueBack
   background: linear-gradient(90deg, $primary, $secondary)
 
-.greyBack
-  background-color: $greyLight
-
 //navbar
 .navbar
+  border: none
   display: flex
+  padding: 0
   min-height: 3.25rem
   position: relative
   z-index: 30
   color: $white
+  margin-bottom: -1px
   & .backgroundImage
     position: absolute
-    width: 70%
-    right: 0
+    width: 85%
+    max-width: 1000px
+    right: -3px
     top: 0
-
   & .navbar-item
     font-weight: $boldish
     color: $white
@@ -36,33 +36,24 @@
     padding: 0.5rem 0.75rem
     position: relative
     vertical-align: middle
-
-  & .icon
-    position: relative
-    align-items: center
-    display: inline-flex
-    justify-content: center
-    height: 1.5rem
-    width: 1.5rem
-    margin: 0 .5rem
-    vertical-align: middle
-    top: -1px
-
-  & .icon.is-small
-    height: 1rem
-    width: 1rem
-
-  & .icon.is-medium
-    height: 2rem
-    width: 2rem
-
-  & .icon.is-large
-    height: 3rem
-    width: 3rem
-
   & .navbar-end
     justify-content: flex-end
     margin-left: auto
+  & .headerBadge
+    & .brandName
+      font-variant: all-small-caps
+      position: relative
+      left: 2rem
+      bottom: -0.75rem
+    & .main-heading
+      height: 3.5rem
+    & .subtext
+      font-weight: $bold
+      position: absolute
+      left: 35%
+      top: 4.75rem
+      width: 100%
+      font-size: .75rem
 
 .topSection
   position: relative
@@ -92,7 +83,10 @@
       width: 100%
       font-size: .8rem
   & .cardViewContainer
-    z-index: -99
+    position: relative
+    z-index: 1
+    padding-top: 10rem
+    padding-bottom: 10rem
   & .cardViewer
     pointer-events: none
     & img
@@ -115,6 +109,7 @@
       display: flex
       justify-content: space-around
     & .btn
+      margin-bottom: 1rem
       padding: .5rem 2rem
       color: $white
       font-weight: bold
@@ -128,13 +123,26 @@
   position: relative
   background-color: $greyLight
   padding-bottom: calc(100vw * 22.7 / 241.5)
-  margin-top: -10rem
+  margin-top: -15rem
   padding-bottom: 10rem
   & h1
     color: $primary
   & .cardViewContainer
+    overflow: hidden
     position: absolute
-    height: 100vw
+    width: 100vw
+    height: calc(100vw * 772 / 1336)
+    max-width: 90rem
+    max-height: calc(90rem * 772 / 1336)
+    top: calc(10rem - 20vw)
+    padding-top: 0rem
+    padding-bottom: 0rem
+    & .cardViewSingle
+      position: absolute
+      z-index: 10
+      right: -35%
+  & .cardViewSapcer
+    height: calc(30vw - 10rem)
   & .cardViewer
     pointer-events: none
     position: absolute
@@ -402,7 +410,50 @@
   display: flex
   justify-content: space-around
 
+
+// global styles
+.cardViewContainer
+  height: 100%
+  width: 100%
+.cardViewTriple
+  height: 100%
+  width: 100%
+.cardViewSingle
+  height: 100%
+  width: 100%
+
+// original viewer styles for converting 2d image into 3d card -- not currently used
+.cardViewer
+  position: relative
+  perspective: 50rem
+  max-height: 635px
+  max-width: 635px
+  height: 50%
+  width: 50%
+  & img
+    position: absolute
+    top: 50%
+    opacity: .6
+    transform-style: preserve-3d
+    perspective-origin: center center
+    transform: $transform3D
+  & .l-1
+    transform: translateX(-5%) $transform3D
+    top: 60%
+    z-index: -1
+  & .l1
+    transform: translateX(5%) $transform3D
+    top: 40%
+    z-index: 1
+  & .base
+    opacity: 1
+    box-shadow: -2px 5px 5px 0px $greyDarker !important
+
 // global helpers
+.greyBack
+  background-color: $greyLight
+.whiteBack
+  background-color: $white
 .is-transparent
   background: transparent
 
@@ -421,6 +472,27 @@
 .is-blue
   color: $primary
 
+.icon
+  position: relative
+  align-items: center
+  display: inline-flex
+  justify-content: center
+  height: 1.5rem
+  width: 1.5rem
+  margin: 0 0 0 .5rem
+  vertical-align: middle
+  top: -1px
+
+.icon.is-small
+  height: 1rem
+  width: 1rem
+.icon.is-medium
+  height: 2rem
+  width: 2rem
+.icon.is-large
+  height: 3rem
+  width: 3rem
+
 .is-smaller, .is-smaller *
   font-size: .75rem !important
 
@@ -429,6 +501,11 @@
 
 .rightColumn
   margin-left: $thinColumnWidth
+
+.up-5
+  margin-top: -5rem
+  position: relative
+  z-index: 10
 
 
 @import "hamburger"
