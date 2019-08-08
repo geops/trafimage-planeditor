@@ -25,9 +25,10 @@ collections:
             {label: "page header", name: "page header", widget: "string"},
             {label: "page header description", name: "page header description", widget: "string"},
             {label: "specification description", name: "specification description", widget: "string"},
-            {label: "price descripgition", name: "price description", widget: "string"},
+            {label: "price description", name: "price description", widget: "string"},
             {label: "conditions text", name: "conditions text", widget: "markdown"},
             {label: "included in price", name: "included in price", widget: "markdown"},
+            {label: "contact description", name: "contact description", widget: "string"},
           ]
       }
       - {
@@ -113,3 +114,11 @@ collections:
           }
           ]
         }
+  - label: "Kontakt"
+      name: "contact"
+      files:
+        file: "src/data/contact.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}

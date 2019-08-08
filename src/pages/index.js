@@ -1,14 +1,14 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 
-import layout_bg_1 from "../img/layoutBG_1.svg";
-import layout_bg_2 from '../img/layoutBG_2.svg'
-import layout_bg_3 from '../img/layoutBG_3.svg'
-import mapset_banner from '../../static/img/Mapset_Logo_RGB_weiss.svg'
+import layout_bg_1 from "../img/layoutBG_1.png";
+import layout_bg_2 from '../img/layoutBG_2.png'
+import layout_bg_3 from '../img/layoutBG_3.png'
+import mapset_banner from '../img/Mapset_Logo_RGB_weiss.svg'
 import twitter from '../img/social/Twitter_Logo_Blue.svg'
-import card_1 from "../img/cards/trackeramsterdam.png";
+import card_1 from "../../static/img/cards/trackeramsterdam.png";
 import Scroller from "../components/Scroller";
 
 // import benefits and features data, for the language needed
@@ -16,6 +16,9 @@ import fr_benefits from '../data/benefits/de.json'
 import de_benefits from '../data/benefits/fr.json'
 import fr_features from '../data/features/de.json'
 import de_features from '../data/features/fr.json'
+
+// import contact information
+import contact from '../data/contact.json'
 
 const accordionHandler = function(id){
     console.log(id)
@@ -98,8 +101,8 @@ export const IndexPageTemplate = ({locale}) => {
                         </div>
                     </div>
                 </div>
-                <img className="backgroundImage" src={layout_bg_1} alt=""/>
             </section> {/* top section */}
+            <img className="backgroundImage blueBack" src={layout_bg_1} alt=""/>
             <section className="benefitsSection" id="benefits">
                 <Scroller/>
                 <div className="cardViewContainer">
@@ -113,7 +116,7 @@ export const IndexPageTemplate = ({locale}) => {
                         {benefits && benefits.map( (benefit, id) => (
                             // TODO style benefit list to match design
                             <div className="accordion-item" key={"benefit_"+id} name={"benefit_"+id}>
-                                <button onClick={() => accordionHandler("benefit_"+id)}>
+                                <a onClick={() => accordionHandler("benefit_"+id)}>
                                     <h5 className="item-head">
                                         <span dangerouslySetInnerHTML={{ __html: md.render(benefit.heading) }} />
                                         <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
@@ -125,7 +128,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <path d="M0 0h24v24H0z" fill="none"/>
                                         </svg>
                                     </h5>
-                                </button>
+                                </a>
                                 <div className="content">
                                     <p>{benefit.text}</p>
                                 </div>
@@ -133,8 +136,8 @@ export const IndexPageTemplate = ({locale}) => {
                         ))}
                     </div>
                 </div>
-                <img className="backgroundImage" src={layout_bg_2} alt="" />
             </section> {/* benefits section */}
+            <img className="backgroundImage greyBack" src={layout_bg_2} alt="" />
             <section className="featureSection" id="features">
                 <div className="container">
                     <div className="rightColumn">
@@ -144,7 +147,7 @@ export const IndexPageTemplate = ({locale}) => {
                             {features && features.map( (feature, id) => (
                                 // TODO style feature list to match design
                                 <div className="accordion-item" key={"feature_"+id} name={"feature_"+id}>
-                                    <button onClick={() => accordionHandler("feature_"+id)}>
+                                    <a onClick={() => accordionHandler("feature_"+id)}>
                                         <h5 className="item-head">
                                             <span dangerouslySetInnerHTML={{ __html: md.render(feature.heading) }} />
                                             <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
@@ -156,7 +159,7 @@ export const IndexPageTemplate = ({locale}) => {
                                                 <path d="M0 0h24v24H0z" fill="none"/>
                                             </svg>
                                         </h5>
-                                    </button>
+                                    </a>
                                     <div className="content">
                                         <p>{feature.text}</p>
                                     </div>
@@ -165,8 +168,8 @@ export const IndexPageTemplate = ({locale}) => {
                         </div>
                     </div>
                 </div>
-                <img className="backgroundImage bottomImage" src={layout_bg_3} alt="" />
             </section> {/* specification section */}
+            <img className="backgroundImage blueBack" src={layout_bg_3} alt="" />
             <section className="priceSection" id="price">
                 <div className="container">
                     <div className="rightColumn">
@@ -275,41 +278,34 @@ export const IndexPageTemplate = ({locale}) => {
                             </div>
                         </div>
                         <div className="conditions is-smaller">
-                            <FormattedMessage
-                                id="content.conditions text"
-                                defaultMessage="* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl<br/>tatsächlich mit Mapset bearbeiteter Haltestellen"
-                            >{txt => <p>{txt}</p>}</FormattedMessage>
-                            <span className="is-bolder"><FormattedMessage id="generic.Im Preis inbegriffen sind:" /></span>
-                            <FormattedMessage
-                                id="content.included in price"
-                                defaultMessage="<li>Freie Verwendung ger generierten Pläne (Einhaltung Copyright)</li>
-                            <li>Wartung und Betrieb des Portals</li>
-                            <li>Automatische Übernahme von Weiterentwicklungen</li>
-                            <li>Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)</li>
-                            <li>Benutzerverwaltung</li>"
-                            />
+                            <p>
+                                <FormattedHTMLMessage
+                                    id="content.conditions text"
+                                    values={{ br: <br />  }}
+                                />
+                            </p>
+                            <p className="is-bolder"><FormattedMessage id="generic.Im Preis inbegriffen sind:" /></p>
+                            <p>
+                                <FormattedHTMLMessage
+                                    id="content.included in price"
+                                    values={{ br: <br />  }}
+                                />
+                            </p>
                         </div>
                     </div>
                 </div>
             </section> {/* price section */}
+            <img className="backgroundImage blueBack" src={layout_bg_2} alt="" />
             <section className="contactSection" id="contact">
-                <img className="backgroundImage" src={layout_bg_2} alt="" />
                 <div className="container">
                     <div className="rightColumn">
                         <h1 className="is-bolder contactHeader"><FormattedMessage id="generic.Noch Fragen ?" /></h1>
-                        <h5>Wir freuen uns über Ihre Kontaktaufnahme und helfen bei<br />Fragen gerne weiter.</h5>
+                        <h5></h5>
                         <p>
                             <span className="is-bolder"><FormattedMessage id="generic.Ihr persönlicher Kontakt" /></span><br />
-                            <span className="">Mario Härtwig</span><br />
-                            <span className="">T 00 000 00 00</span><br />
-                            <span className="">E mario.haertwig@geops.de</span>
-                        </p>
-                        <p>
-                            <span className="is-bolder"><FormattedMessage id="generic.Kontakt" /></span><br />
-                            <span className="">geOps AG</span><br />
-                            <span className="">Eggstr. 42</span><br />
-                            <span className="">4402 Frankendorf</span><br />
-                            <span className="">info@geops.ch</span>
+                            <span className="">{contact.name}</span><br />
+                            <span><a href={"mailto:"+contact.email}>{contact.email}</a></span><br />
+                            {(contact.phone)?<span><a href={"tel:"+contact.phone}>{contact.phone}</a></span>:''}
                         </p>
                         <p>
                             <span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />

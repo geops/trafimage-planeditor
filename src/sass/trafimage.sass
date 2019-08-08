@@ -11,6 +11,9 @@ $greyDarker: #595c5a
 $cyanDark: #28b2a2
 $red: #ff0000
 
+$background: $primary
+$link: $primary
+$border: 0
 $transform3D: translateY(-50%) translateX(-30%) rotateX(50deg) rotateZ(-20deg) scale(.6, .6)
 
 // Text & Font
@@ -25,8 +28,9 @@ $thinColumnWidth: 15rem
 $screen-extra-large: 1200px
 
 body
+  margin: auto
   min-width: 290px
-  background: linear-gradient(90deg, $primary, $secondary)
+  max-width: 1440px
   color: $greyDarker
 
 html
@@ -74,6 +78,8 @@ h2
     display: none
   .rightColumn
     margin-left: 0 !important
+  .hide-on-mobile
+    display: none
 @media only screen and (max-width: 991px)
   .scrollNav
     margin-top: 10rem !important

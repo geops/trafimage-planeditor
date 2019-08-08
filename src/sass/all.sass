@@ -3,8 +3,17 @@
 
 @import "trafimage"
 
-.navbar .navbar-menu
+.navbar.navbar-menu
   box-shadow: none !important
+
+.backgroundImage
+  width: 100%
+
+.navbar, .topSection, .priceSection, .footer, .blueBack
+  background: linear-gradient(90deg, $primary, $secondary)
+
+.greyBack
+  background-color: $greyLight
 
 //navbar
 .navbar
@@ -13,50 +22,60 @@
   position: relative
   z-index: 30
   color: $white
+  & .backgroundImage
+    position: absolute
+    width: 70%
+    right: 0
+    top: 0
 
-.navbar-item
-  font-weight: $boldish
-  color: $white
-  display: inline
-  line-height: 1.5
-  padding: 0.5rem 0.75rem
-  position: relative
-  vertical-align: middle
+  & .navbar-item
+    font-weight: $boldish
+    color: $white
+    display: inline
+    line-height: 1.5
+    padding: 0.5rem 0.75rem
+    position: relative
+    vertical-align: middle
 
-.icon
-  position: relative
-  align-items: center
-  display: inline-flex
-  justify-content: center
-  height: 1.5rem
-  width: 1.5rem
-  margin: 0 .5rem
-  vertical-align: middle
-  top: -1px
+  & .icon
+    position: relative
+    align-items: center
+    display: inline-flex
+    justify-content: center
+    height: 1.5rem
+    width: 1.5rem
+    margin: 0 .5rem
+    vertical-align: middle
+    top: -1px
 
-.icon.is-small
-  height: 1rem
-  width: 1rem
+  & .icon.is-small
+    height: 1rem
+    width: 1rem
 
-.icon.is-medium
-  height: 2rem
-  width: 2rem
+  & .icon.is-medium
+    height: 2rem
+    width: 2rem
 
-.icon.is-large
-  height: 3rem
-  width: 3rem
+  & .icon.is-large
+    height: 3rem
+    width: 3rem
 
-.navbar-end
-  justify-content: flex-end
-  margin-left: auto
+  & .navbar-end
+    justify-content: flex-end
+    margin-left: auto
 
-// header section
 .topSection
   position: relative
-  margin-bottom: -10rem
+  & .navbar-item
+    font-weight: $boldish
+    color: $white
+    display: inline
+    line-height: 1.5
+    padding: 0.5rem 0.75rem
+    position: relative
+    vertical-align: middle
   & .headerBadge
     position: relative
-    top: -.75rem
     margin-left: 5rem
     & .brandName
       font-variant: all-small-caps
@@ -75,22 +94,19 @@
   & .cardViewContainer
     z-index: -99
   & .cardViewer
+    pointer-events: none
     & img
       left: 25%
       height: 100%
       width: 100%
       box-shadow: -4.5rem 6.5rem 30px -3rem $greyDarker
-
-  // top right column
   & .scrollNav
     display: flex
     margin-top: 1rem
     justify-content: space-between
     & a
       font-weight: bold
-
   & .headerDescription
-    margin-bottom: 15rem
     & h2
       margin-top: 6rem
     & p
@@ -108,41 +124,11 @@
         background-color: $white
         color: $secondary
 
-  & .backgroundImage
-    bottom: -10rem
-    position: absolute
-    z-index: 10
-    width: 100%
-    height: calc(100vw * 60.5 / 241.5)
-
-  //scroller
-.scroller
-  position: relative
-  & .thinColumnScroller
-    z-index: 100 !important
-    position: absolute
-    width: $thinColumnWidth
-    top: 30rem
-    left: 5rem
-    & .navbar-item
-      display: flex
-    & a
-      color: $greyDark
-    & .active
-      color: $red !important
-    & span
-      display: block
-    & .listNavImage
-      margin-right: 1rem
-  & .fixed
-    position: fixed
-    top: calc(30rem + 100)
-
-// benefitsCollection
 .benefitsSection
-  top: calc(100vw * 22.7 / 241.5)
   position: relative
   background-color: $greyLight
+  padding-bottom: calc(100vw * 22.7 / 241.5)
+  margin-top: -10rem
   padding-bottom: 10rem
   & h1
     color: $primary
@@ -150,6 +136,7 @@
     position: absolute
     height: 100vw
   & .cardViewer
+    pointer-events: none
     position: absolute
     z-index: 100
     top: -5rem
@@ -167,11 +154,12 @@
     margin-top: 10rem
     margin-bottom: 25rem
   & .accordion
-    margin-bottom: 5rem
     & .accordion-item
       position: relative
       border-bottom: 2px solid $greyMid
-      & button
+      & a
+        -webkit-appearance: none
+        border: none
         width : 100%
         text-align: left
         padding: 0
@@ -199,29 +187,38 @@
         max-height: 300px
       & .plus
         display: none
-  & .backgroundImage
-    position: absolute
-    width: 100%
-
+  //scroller
+  & .scroller
+    position: relative
+    & .thinColumnScroller
+      z-index: 100 !important
+      position: absolute
+      width: $thinColumnWidth
+      left: 5rem
+      & .navbar-item
+        display: flex
+        margin: 2rem 0
+      & a
+        color: $greyDark
+        transition: color .5s
+      & .active
+        color: $red !important
+      & span
+        display: block
+      & .listNavImage
+        margin-right: 1rem
+    & .fixed
+      position: fixed
+      bottom: 500px
 
 .featureSection
-  top: calc(100vw * 22.7 / 241.5)
   position: relative
   background-color: $white
-  padding-bottom: 5rem
-  margin-bottom: 15rem
-  z-index: 1
   & .backgroundImage
-    top: calc(-100vw * 22.7 / 241.5)
+    top: 100%
     position: absolute
     z-index: 10
-    width: 100vw
-  & .bottomImage
-    top: unset
-    bottom: calc(-100vw * 27.5 / 241.5)
-    position: absolute
-    z-index: 10
-    width: 100vw
+    width: 100%
   & h1
     color: $primary
   & p
@@ -239,7 +236,9 @@
     & .accordion-item
       position: relative
       border-bottom: 2px solid $greyMid
-      & button
+      & a
+        -webkit-appearance: none
+        border: none
         width : 100%
         text-align: left
         padding: 0
@@ -267,13 +266,9 @@
         max-height: 300px
       & .plus
         display: none
-  & .backgroundImage
-    position: absolute
-    width: 100%
 
 .priceSection
   position: relative
-  background: linear-gradient(90deg, $primary, $secondary)
   padding-bottom: 5rem
   & h1
     color: $white
@@ -289,8 +284,8 @@
     position: absolute
     right: 10rem
     top: -2rem
-    width: calc(100vw * 40 / 241.5)
-    height: calc(100vw * 40 / 241.5)
+    width: calc(100% * 40 / 241.5)
+    height: calc(100% * 40 / 241.5)
     max-height: 200px
     max-width: 200px
   & .priceHeader
@@ -305,10 +300,11 @@
     color: $greyDarker
     margin-bottom: 2rem
     & .priceCardHeader
+      position: relative
       background: linear-gradient(90deg, $primary, $secondary)
       color: $white
       & .padder
-        padding: .5rem 1rem 0 1rem
+        padding: .5rem 1rem 1rem 1rem
         margin-bottom: -.5rem
         & .brandName
           font-variant: all-small-caps
@@ -318,7 +314,8 @@
         & h2
           margin-top: -.5rem
       & .backgroundImage
-        margin: 0 -.25rem -.5rem -.25rem
+        position: absolute
+        bottom: -1px
         margin-top: 1px
     & .priceCardBody
       text-align: center
@@ -349,17 +346,10 @@
     color: $white
 
 .contactSection
-  top: calc(100vw * 22.7 / 241.5)
   position: relative
   background-color: $white
   padding-bottom: 2rem
-  margin-bottom: 5rem
   color: $greyDarker
-  & .backgroundImage
-    top: calc(-100vw * 22.7 / 241.5)
-    position: absolute
-    z-index: 10
-    width: 100vw
   & .contactHeader
     padding-top: 5rem
     font-weight: $bolder
@@ -371,9 +361,10 @@
     height: 2rem
     margin-top: 1rem
 
+
 // for creating a predictable spacing above the footer after all the relative elements
 .aboveFooter
-  width: 100vw
+  width: 100%
   background-color: $white
   height: 3rem
 
@@ -385,13 +376,20 @@
   color: $white
   display: flex
   justify-content: space-between
-  background: linear-gradient(90deg, $primary, $secondary)
   & .menu
     & .menu-list
       display: flex
       margin: 0
       list-style: none
       flex-direction: row
+      & .navbar-item
+        font-weight: $boldish
+        color: $white
+        display: inline
+        line-height: 1.5
+        padding: 0.5rem 0.75rem
+        position: relative
+        vertical-align: middle
   & .brandName
     font-variant: all-small-caps
   & .logo
@@ -423,11 +421,14 @@
 .is-blue
   color: $primary
 
-.is-smaller
-  font-size: .75rem
+.is-smaller, .is-smaller *
+  font-size: .75rem !important
 
 .has-text-centered
   text-align: center !important
 
 .rightColumn
   margin-left: $thinColumnWidth
+
+
+@import "hamburger"

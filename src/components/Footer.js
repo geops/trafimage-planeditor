@@ -29,7 +29,7 @@ const Footer = class extends React.Component {
             <div>
               <span className="is-smaller"><FormattedMessage id="generic.footer.Der" /> </span>
               <span className="brandName">Trafimage </span>
-              <span className="is-bolder title">PlanEditor </span>
+              <span className="is-bolder title">Mapset </span>
               <span className="is-smaller"><FormattedMessage id="generic.footer.wird unterstützt durch" /> </span>
               <span className="logo">EVOQ</span>
               <span> | </span>

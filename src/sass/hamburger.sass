@@ -1,0 +1,85 @@
+
+.navbar-burger
+  cursor: pointer
+  display: block
+  height: 2rem
+  position: relative
+  width: 2rem
+  margin-left: auto
+
+.navbar-burger span
+  background-color: currentColor
+  display: block
+  height: 4px
+  left: calc(50% - 1rem)
+  position: absolute
+  -webkit-transform-origin: center
+    transform-origin: center
+  transition-duration: 86ms
+  transition-property: background-color, opacity, -webkit-transform
+  transition-property: background-color, opacity, transform
+  transition-property: background-color, opacity, transform, -webkit-transform
+  transition-timing-function: ease-out
+  width: 2rem
+
+.navbar-burger span:nth-child(1)
+  top: calc(50% - .75rem - 1px)
+
+.navbar-burger span:nth-child(2)
+  top: calc(50% - 1px)
+
+.navbar-burger span:nth-child(3)
+  top: calc(50% + .75rem - 1px)
+
+.navbar-burger.is-active span:nth-child(1)
+  -webkit-transform: translateY(.75rem) rotate(45deg)
+    transform: translateY(.75rem) rotate(45deg)
+
+.navbar-burger.is-active span:nth-child(2)
+  opacity: 0
+
+.navbar-burger.is-active span:nth-child(3)
+  -webkit-transform: translateY(-.75rem) rotate(-45deg)
+    transform: translateY(-.75rem) rotate(-45deg)
+
+.navbar-menu
+  display: none
+
+.navbar-menu
+  padding: 0.5rem 0
+
+.navbar-menu.is-active
+  display: block
+
+.navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu
+  -webkit-overflow-scrolling: touch
+  max-height: calc(100vh - 3.25rem)
+  overflow: auto
+
+@media screen and (min-width: 1024px)
+  .navbar,
+  .navbar-menu,
+  .navbar-start,
+  .navbar-end
+    align-items: stretch
+    display: flex
+
+  .navbar-menu
+    flex-grow: 1
+    flex-shrink: 0
+
+  .navbar > .container .navbar-menu,
+  .container > .navbar .navbar-menu
+    margin-right: -.75rem
+
+@media screen and (min-width: 1024px)
+  .navbar-burger
+    display: none
+
+@media screen and (max-width: 320px)
+  .topSection .headerBadge
+    position: absolute
+    margin-left: 1rem
+    width: 50%
+    & .main-heading
+      height: 3rem
