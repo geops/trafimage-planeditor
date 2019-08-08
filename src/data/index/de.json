@@ -11,6 +11,12 @@
     "contact description": "Wir freuen uns über Ihre Kontaktaufnahme und helfen bei Fragen gerne weiter."
   },
   "generic": {
+    "Kontakt": "Kontakt",
+    "Besuchen Sie uns auf Twitter": "Besuchen Sie uns auf Twitter",
+    "Registrieren": "Registrieren",
+    "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
+    "So funktioniert's": "So funktioniert's",
+    "Zufriedene Kunden": "Zufriedene Kunden",
     "navbar": {
       "Support": "Support",
       "Login": "Login"
