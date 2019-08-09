@@ -177,7 +177,7 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* specification section */}
-            <img className="backgroundImage" src={layout_bg_3} alt="" />
+            <img className="backgroundImage abovePriceSection" src={layout_bg_3} alt="" />
             <section className="priceSection" id="price">
                 <div className="container">
                     <div className="rightColumn">

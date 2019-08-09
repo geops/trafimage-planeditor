@@ -34,11 +34,15 @@ const Scroller = class extends React.Component {
     }
     if(!this.scroller.classList.contains('fixed')){
       if((this.scroller.getBoundingClientRect().bottom + this.SCROLLER_POSITION < window.innerHeight)){
+        let leftMargin = document.getElementById('scroller').getBoundingClientRect().left
+        console.log('left: '+leftMargin)
         this.scroller.classList.add('fixed')
+        this.scroller.style.left = leftMargin +'px'
       }
     } else {
       if(this.scrollerContainer.getBoundingClientRect().top + this.scroller.offsetHeight + this.SCROLLER_POSITION > window.innerHeight){
         this.scroller.classList.remove('fixed')
+        this.scroller.style.left = '5rem'
       }
     }
   }
