@@ -106,9 +106,9 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* top section */}
+            <Scroller/>
             <section className="benefitsSection" id="benefits">
                 <img className="backgroundImage aboveBenefitsSection" src={layout_bg_1} alt=""/>
-                <Scroller/>
                 <div className="benefitsSectionContent">
                     <div className="cardViewContainer">
                         <img className="cardViewSingle" src={card_view_single} alt="" />

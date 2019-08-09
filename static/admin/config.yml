@@ -8,7 +8,7 @@ public_folder: /img
 publish_mode: editorial_workflow
 
 collections:
-  - label: "Inhalt Locale"
+  - label: "Inhalt Locales"
     name: "inhalt"
     folder: "src/data/index"
     extension: "json"
@@ -116,8 +116,10 @@ collections:
   - label: "Kontakt"
     name: "contact"
     files:
-      file: "src/data/contact.json"
-      fields:
-        - {label: "Name", name: "name", widget: "string"}
-        - {label: "Email", name: "email", widget: "string"}
-        - {label: "Phone", name: "phone", widget: "string"}
+      - file: "src/data/contact.json"
+        label: "Kontakt"
+        name: "contact"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}

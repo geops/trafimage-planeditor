@@ -203,30 +203,6 @@
           max-height: 300px
         & .plus
           display: none
-  //scroller
-  & .scroller
-    position: relative
-    & .thinColumnScroller
-      z-index: 100 !important
-      position: absolute
-      width: $thinColumnWidth
-      left: 5rem
-      & .navbar-item
-        display: flex
-        margin: 2rem 0
-      & a
-        color: $greyDark
-        transition: color .5s
-      & .active
-        color: $red !important
-      & span
-        display: block
-      & .listNavImage
-        margin-right: 1rem
-    & .fixed
-      position: fixed
-      bottom: 500px
-
 .featureSection
   position: relative
   z-index: 2
@@ -391,6 +367,31 @@
     height: 2rem
     margin-top: 1rem
 
+
+//scroller
+.scroller
+  position: relative
+  z-index: 100
+  & .thinColumnScroller
+    z-index: 100 !important
+    position: absolute
+    width: $thinColumnWidth
+    left: 5rem
+    & .navbar-item
+      display: flex
+      margin: 2rem 0
+    & a
+      color: $greyDark
+      transition: color .5s
+    & .active
+      color: $red !important
+    & span
+      display: block
+    & .listNavImage
+      margin-right: 1rem
+  & .fixed
+    position: fixed
+    bottom: 500px
 
 // for creating a predictable spacing above the footer after all the relative elements
 .aboveFooter
