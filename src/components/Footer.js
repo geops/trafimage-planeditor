@@ -1,7 +1,6 @@
 import React from 'react'
 import {FormattedMessage, IntlProvider} from 'react-intl'
 import { Link } from 'gatsby'
-import twitter from "../img/social/Twitter_Logo_Blue.svg";
 import evoq from '../img/evoq_logo_weiss_RGB.png'
 import geOps from '../img/geops_neg-01.png'
 

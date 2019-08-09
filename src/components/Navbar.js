@@ -85,19 +85,19 @@ const Navbar = class extends React.Component {
                             <div className="mobile-menu-space" />
                             <img className="mobileBackgroundImageTop" src={layout_bg_2} alt="" />
                             <div className="whiteBack menu-list">
-                                <a className="navbar-item is-bolder"
+                                <a className="navbar-item is-bolder" href="#benefits"
                                    onClick={() => this.mobileMenuLinkClick("benefits")}>
                                     <FormattedMessage id="generic.Benefits" />
                                 </a>
-                                <a className="navbar-item is-bolder"
+                                <a className="navbar-item is-bolder" href="#features"
                                    onClick={() => this.mobileMenuLinkClick("features")}>
                                     <FormattedMessage id="generic.So funktioniert's" />
                                 </a>
-                                <a className="navbar-item is-bolder"
+                                <a className="navbar-item is-bolder" href="#price"
                                    onClick={() => this.mobileMenuLinkClick("price")}>
                                     <FormattedMessage id="generic.Preise" />
                                 </a>
-                                <a className="navbar-item is-bolder"
+                                <a className="navbar-item is-bolder" href="#contact"
                                    onClick={() => this.mobileMenuLinkClick("contact")}>
                                     <FormattedMessage id="generic.Kontakt" />
                                 </a>

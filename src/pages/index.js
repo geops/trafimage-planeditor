@@ -15,10 +15,10 @@ import card_view_triple from '../../static/img/mapset_3d_card_view_triple.png'
 import card_view_single from '../../static/img/mapset_3d_card_view_single.png'
 
 // import benefits and features data, for the language needed
-import fr_benefits from '../data/benefits/de.json'
-import de_benefits from '../data/benefits/fr.json'
-import fr_features from '../data/features/de.json'
-import de_features from '../data/features/fr.json'
+import fr_benefits from '../data/benefits/fr.json'
+import de_benefits from '../data/benefits/de.json'
+import fr_features from '../data/features/fr.json'
+import de_features from '../data/features/de.json'
 
 // import contact information
 import contact from '../data/contact.json'
@@ -36,6 +36,7 @@ const accordionHandler = function(id){
 export const IndexPageTemplate = ({locale}) => {
     let benefits
     let features
+    console.log(locale)
     switch(locale) {
         case 'fr': {
             benefits = fr_benefits.benefits
@@ -49,6 +50,8 @@ export const IndexPageTemplate = ({locale}) => {
         }
     }
     let md = new Remarkable();
+    console.log(benefits)
+    console.log(features)
     md.set({
         html: true,
         breaks: true
@@ -63,7 +66,7 @@ export const IndexPageTemplate = ({locale}) => {
                                 <a className="navbar-item" href="#benefits">
                                     <FormattedMessage id="generic.Benefits" />
                                 </a>
-                                <a className="navbar-item" href="#specification">
+                                <a className="navbar-item" href="#features">
                                     <FormattedMessage id="generic.So funktioniert's" />
                                 </a>
                                 <a className="navbar-item" href="#price">
@@ -123,7 +126,7 @@ export const IndexPageTemplate = ({locale}) => {
                             {benefits && benefits.map( (benefit, id) => (
                                 // TODO style benefit list to match design
                                 <div className="accordion-item" key={"benefit_"+id} name={"benefit_"+id}>
-                                    <a onClick={() => accordionHandler("benefit_"+id)}>
+                                    <button onClick={() => accordionHandler("benefit_"+id)}>
                                         <h5 className="item-head">
                                             <span dangerouslySetInnerHTML={{ __html: md.render(benefit.heading) }} />
                                             <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
@@ -135,7 +138,7 @@ export const IndexPageTemplate = ({locale}) => {
                                                 <path d="M0 0h24v24H0z" fill="none"/>
                                             </svg>
                                         </h5>
-                                    </a>
+                                    </button>
                                     <div className="content">
                                         <p>{benefit.text}</p>
                                     </div>
@@ -155,7 +158,7 @@ export const IndexPageTemplate = ({locale}) => {
                             {features && features.map( (feature, id) => (
                                 // TODO style feature list to match design
                                 <div className="accordion-item" key={"feature_"+id} name={"feature_"+id}>
-                                    <a onClick={() => accordionHandler("feature_"+id)}>
+                                    <button onClick={() => accordionHandler("feature_"+id)}>
                                         <h5 className="item-head">
                                             <span dangerouslySetInnerHTML={{ __html: md.render(feature.heading) }} />
                                             <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
@@ -167,7 +170,7 @@ export const IndexPageTemplate = ({locale}) => {
                                                 <path d="M0 0h24v24H0z" fill="none"/>
                                             </svg>
                                         </h5>
-                                    </a>
+                                    </button>
                                     <div className="content">
                                         <p>{feature.text}</p>
                                     </div>
