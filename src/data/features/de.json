@@ -1,10 +1,9 @@
 {
   "title": "Deutsch",
-  "features":
-  [
+  "features": [
     {
-      "heading": "Account beantragen und anmelden",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "heading": "Dynamische Einbindung in Online-Medien",
+      "text": "Ihre Pläne lassen sich nicht nur als statische Bilder exportieren, sondern können auch dynamisch in Webseiten eingebunden oder verlinkt werden. Profitieren Sie mit der dynamischen Einbindung von frei navigierbaren Karten, auf denen die Nutzer selbst Ausschnitt und Massstab bestimmen können. Versenden sie Links zu ihren individuellen Plänen einfach per Mail oder teilen sie diese über ihre Social Media-Kanäle."
     },
     {
       "heading": "Element zeichnen",
