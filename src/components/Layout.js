@@ -6,6 +6,8 @@ import Navbar from '../components/Navbar'
 import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
 
+import favicon from '../img/Mapset_Element.ico';
+
 // Locale data
 import deData from 'react-intl/locale-data/de'
 import frData from 'react-intl/locale-data/fr'
@@ -67,14 +69,9 @@ const Layout = ({ locale, children }) => {
         <link
           rel="icon"
           type="image/png"
-          href="../img/Mapset_Element.png"
+          href={favicon}
+          sizes="16x16"
         />
-        
-        <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <Navbar locale={locale} messages={localeMessages} />
       <IntlProvider locale={locale} messages={localeMessages}>
