@@ -3,7 +3,7 @@
   "title": "Page d'index français",
   "content": {
     "page header": "Attraktive Situationspläne für den öffentlichen Verkehr",
-    "page header description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "page header description": "francais: Sie möchten Ihren Kunden aktuelle und attraktive Informationen zum öffentlichen Verkehr zugänglich machen? – Trafimage Mapset erlaubt die einfache Erstellung von übersichtlichen und optisch ansprechenden Plangrafiken für den öffentlichen Verkehr. Mit wenigen Klicks visualisieren Sie Pläne für geänderte Haltestellen, kommunizieren die Situation bei Bauprojekten, gewährleisten die Kundenführung bei Events oder informieren über betriebliche Sonderfälle vor Ort. All dies auf Basis der bekannten, offiziellen Trafimage-Karten, welche von der SBB entwickelt wurden und laufend aktualisiert werden.",
     "specification description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "price description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "conditions text": "* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl :P\\n\\ntatsächlich mit PlanEditor bearbeiteter Haltestellen",
@@ -11,25 +11,25 @@
     "contact description": "Wir freuen uns über Ihre Kontaktaufnahme und helfen bei Fragen gerne weiter."
   },
   "generic": {
+    "Kontakt": "Contact",
+    "Besuchen Sie uns auf Twitter": "Nous rendre visite sur Twitter",
+    "Registrieren": "Enregistrer",
+    "Ihr persönlicher Kontakt": "Votre contact personnel",
+    "So funktioniert's": "So funktioniert's",
+    "Zufriedene Kunden": "Des clients satisfaits",
     "navbar": {
       "Support": "Soutien",
       "Login": "Login"
     },
-    "powered by": "powered by",
-    "Benefits": "Avantages",
-    "So funktioniert's": "So funktioniert's",
-    "Preise": "Prix",
-    "Kontakt": "Contact",
     "Demozugang": "Accès démo",
-    "Registrieren": "Enregistrer",
-    "Zufriedene Kunden": "Des clients satisfaits",
-    "Im Preis inbegriffen sind:": "Le prix comprend:",
+    "powered by": "powered by",
     "Noch Fragen ?": "Des questions?",
-    "Ihr persönlicher Kontakt": "Votre contact personnel",
-    "Besuchen Sie uns auf Twitter": "Nous rendre visite sur Twitter",
+    "Preise": "Prix",
     "footer": {
       "Impressum": "empreinte",
       "Disclaimer": "Disclaimer"
-    }
+    },
+    "Benefits": "Avantages",
+    "Im Preis inbegriffen sind:": "Le prix comprend:"
   }
 }
