@@ -8,6 +8,8 @@
 
 .backgroundImage
   width: 100%
+  position: relative
+  z-index: 2
 
 .navbar, .topSection, .priceSection, .footer, .blueBack
   background: linear-gradient(90deg, $primary, $secondary)
@@ -28,6 +30,7 @@
     max-width: 1000px
     right: -3px
     top: 0
+    z-index: -1
   & .navbar-item
     font-weight: $boldish
     color: $white
@@ -57,6 +60,7 @@
 
 .topSection
   position: relative
+  z-index: 1
   & .navbar-item
     font-weight: $boldish
     color: $white
@@ -110,7 +114,7 @@
       justify-content: space-around
     & .btn
       margin-bottom: 1rem
-      padding: .5rem 2rem
+      padding: .5rem 1rem
       color: $white
       font-weight: bold
       border: 2px solid white
@@ -119,82 +123,86 @@
         background-color: $white
         color: $secondary
 
-.benefitsSection
+.benefitsSection 
   position: relative
+  z-index: 1
   background-color: $greyLight
   padding-bottom: calc(100vw * 22.7 / 241.5)
-  margin-top: -15rem
   padding-bottom: 10rem
-  & h1
-    color: $primary
-  & .cardViewContainer
-    overflow: hidden
-    position: absolute
-    width: 100vw
-    height: calc(100vw * 772 / 1336)
-    max-width: 90rem
-    max-height: calc(90rem * 772 / 1336)
-    top: calc(10rem - 20vw)
-    padding-top: 0rem
-    padding-bottom: 0rem
-    & .cardViewSingle
-      position: absolute
-      z-index: 10
-      right: -35%
-  & .cardViewSapcer
-    height: calc(30vw - 10rem)
-  & .cardViewer
-    pointer-events: none
-    position: absolute
-    z-index: 100
-    top: -5rem
-    right: 0
-    width: 100%
-    height: 100%
-    & img
-      box-shadow: 0 0 5rem $primary
-      transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
-  & .container
+  & .benefitsSectionContent
+    margin-top: -15rem
     position: relative
-    z-index: 10
-  & .benefitsHeader
-    font-size: 4rem
-    margin-top: 10rem
-    margin-bottom: 25rem
-  & .accordion
-    & .accordion-item
+    z-index: 20
+    & h1
+      color: $primary
+    & .cardViewContainer
+      overflow: hidden
+      position: absolute
+      width: 100vw
+      height: calc(100vw * 772 / 1336)
+      max-width: 90rem
+      max-height: calc(90rem * 772 / 1336)
+      top: calc(10rem - 20vw)
+      padding-top: 0rem
+      padding-bottom: 0rem
+      & .cardViewSingle
+        position: absolute
+        z-index: 20
+        right: -35%
+    & .cardViewSapcer
+      height: calc(30vw - 10rem)
+    & .cardViewer
+      pointer-events: none
+      position: absolute
+      z-index: 100
+      top: -5rem
+      right: 0
+      width: 100%
+      height: 100%
+      & img
+        box-shadow: 0 0 5rem $primary
+        transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
+    & .container
       position: relative
-      border-bottom: 2px solid $greyMid
-      & a
-        -webkit-appearance: none
-        border: none
-        width : 100%
-        text-align: left
-        padding: 0
-      & .item-head
-        font-weight: normal
-        margin: 1rem 0
-        & p
-          display: inline
-        & .accordionStateImage
-          color: $primary
-          right: 0
-          position: absolute
-      & .content
-        overflow: hidden
-        max-height: 0
-        transition: max-height 1s
-        margin: 0
-        & p
-          font-size: 1rem
-          width: 85%
-          margin: 1rem 0 2rem 0
-    & .accordion-item.is-expanded
-      & .content
-        display: block
-        max-height: 300px
-      & .plus
-        display: none
+      z-index: 10
+    & .benefitsHeader
+      font-size: 4rem
+      margin-top: 10rem
+      margin-bottom: 25rem
+    & .accordion
+      & .accordion-item
+        position: relative
+        border-bottom: 2px solid $greyMid
+        & a
+          -webkit-appearance: none
+          border: none
+          width : 100%
+          text-align: left
+          padding: 0
+        & .item-head
+          font-weight: normal
+          margin: 1rem 0
+          & p
+            display: inline
+          & .accordionStateImage
+            color: $primary
+            right: 0
+            position: absolute
+        & .content
+          overflow: hidden
+          max-height: 0
+          transition: max-height 1s
+          margin: 0
+          & p
+            font-size: 1rem
+            width: 85%
+            margin: 1rem 0 2rem 0
+      & .accordion-item.is-expanded
+        & .content
+          display: block
+          max-height: 300px
+        & .plus
+          display: none
   //scroller
   & .scroller
     position: relative
@@ -221,7 +229,9 @@
 
 .featureSection
   position: relative
+  z-index: 2
   background-color: $white
+  padding-bottom: 1rem
   & .backgroundImage
     top: 100%
     position: absolute
@@ -277,6 +287,9 @@
 
 .priceSection
   position: relative
+  margin-top: -10rem
+  padding-top: 10rem
+  z-index: 1
   padding-bottom: 5rem
   & h1
     color: $white
@@ -322,6 +335,7 @@
         & h2
           margin-top: -.5rem
       & .backgroundImage
+        width: 100%
         position: absolute
         bottom: -1px
         margin-top: 1px
@@ -351,10 +365,15 @@
 
   & .conditions
     margin-top: 5rem
+    margin-bottom: 5rem
     color: $white
+    & *
+      font-size: .75rem
 
 .contactSection
+  margin-top: 0
   position: relative
+  z-index: 0
   background-color: $white
   padding-bottom: 2rem
   color: $greyDarker
@@ -362,7 +381,10 @@
     padding-top: 5rem
     font-weight: $bolder
     color: $primary
-  & h5, p
+  & h5
+    margin: 2rem 0
+    max-width: 35rem
+  & p
     margin: 2rem 0
   & .twitter
     width: 2rem
@@ -383,23 +405,29 @@
   padding: 2rem
   color: $white
   display: flex
-  justify-content: space-between
+  flex-direction: row
   & .menu
     & .menu-list
       display: flex
       margin: 0
       list-style: none
       flex-direction: row
+      margin-block-start: 0
+      padding-inline-start: 0
       & .navbar-item
         font-weight: $boldish
         color: $white
         display: inline
         line-height: 1.5
-        padding: 0.5rem 0.75rem
+        padding: .5rem 1.5rem .5rem 0
         position: relative
         vertical-align: middle
+  & .expander
+    flex-grow: 1
   & .brandName
     font-variant: all-small-caps
+  & .title
+    font-size: .75rem
   & .logo
     margin: 0 1rem
 
@@ -502,10 +530,12 @@
 .rightColumn
   margin-left: $thinColumnWidth
 
-.up-5
+.aboveBenefitsSection
   margin-top: -5rem
   position: relative
   z-index: 10
 
+.belowPriceSection
+  margin-top: calc(-2rem - 10%)
 
 @import "hamburger"

@@ -1,6 +1,9 @@
 import React from 'react'
 import {FormattedMessage, IntlProvider} from 'react-intl'
 import { Link } from 'gatsby'
+import twitter from "../img/social/Twitter_Logo_Blue.svg";
+import evoq from '../img/evoq_logo_weiss_RGB.png'
+import geOps from '../img/geops_neg-01.png'
 
 const Footer = class extends React.Component {
   state = {
@@ -26,14 +29,17 @@ const Footer = class extends React.Component {
                 </li>
               </ul>
             </div>
+            <div className="expander" />
             <div>
-              <span className="is-smaller"><FormattedMessage id="generic.footer.Der" /> </span>
               <span className="brandName">Trafimage </span>
               <span className="is-bolder title">Mapset </span>
-              <span className="is-smaller"><FormattedMessage id="generic.footer.wird unterstützt durch" /> </span>
-              <span className="logo">EVOQ</span>
+              <span className="d-inline d-md-none"><br /></span>
+              <span className="is-smaller"><FormattedMessage id="generic.powered by" /> </span>
+            </div>
+            <div>
+              <img className="logo first" src={evoq} alt="" />
               <span> | </span>
-              <span className="logo">geOps</span>
+              <img className="logo" src={geOps} alt="" />
             </div>
           </footer>
         </IntlProvider>

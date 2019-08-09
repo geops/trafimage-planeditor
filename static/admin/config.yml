@@ -66,8 +66,7 @@ collections:
               fields:
                 [
                   {label: "Impressum", name: "Impressum", widget: "string"},
-                  {label: "Der", name: "Der", widget: "string"},
-                  {label: "wird unterstützt durch", name: "wird unterstützt durch", widget: "string"}
+                  {label: "Disclaimer", name: "Disclaimer", widget: "string"},
                 ]
             }
           ]
@@ -115,10 +114,10 @@ collections:
           ]
         }
   - label: "Kontakt"
-      name: "contact"
-      files:
-        file: "src/data/contact.json"
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Phone", name: "phone", widget: "string"}
+    name: "contact"
+    files:
+      file: "src/data/contact.json"
+      fields:
+        - {label: "Name", name: "name", widget: "string"}
+        - {label: "Email", name: "email", widget: "string"}
+        - {label: "Phone", name: "phone", widget: "string"}

@@ -128,14 +128,24 @@
   .container > .navbar .navbar-menu
     margin-right: -.75rem
 
-@media screen and (min-width: 768px) and (max-width: 1119px)
-  .alignContainer
-    display: block
+@media screen and (min-width: 768px) and (max-width: 991px)
+  .topSection
+    padding-bottom: 5rem
+    & .headerDescription h2
+      margin-top: 0
+    & .headerBadge
+      position: absolute
+      margin-left: 1rem
+      width: 50%
+    & .cardViewContainer
+      padding-bottom: 0
+      padding-top: 22rem
+  .benefitsSection
+    padding-bottom: 5rem
 
 @media screen and (max-width: 767px)
   p
     font-size: 1.2rem
-    font-weight: $boldish
   h1
     font-size: 3rem
   h2
@@ -149,7 +159,7 @@
   .topSection, .priceSection, .blueBack
     background: linear-gradient(180deg, $primary, $secondary)
   .footer
-    background: linear-gradient(1355deg, $primary, $secondary)
+    background: linear-gradient(135deg, $primary, $secondary)
   .navbar
     padding: 1.5rem .5rem
     background: transparent
@@ -165,8 +175,39 @@
     & .cardViewContainer
       padding-top: 2rem
       padding-bottom: 0
-  .benefitSection
-    margin-top: 5rem
+  .benefitsSection
+    padding-bottom: 5rem
+    & .benefitsSectionContent
+      margin-top: 0rem
+      & .benefitsHeader
+        font-size: 2.5rem
+        margin-top: 0rem
+        margin-bottom: 20rem
+  .featureSection
+    & h1
+      font-size: 2.5rem
+  .priceSection
+    padding-top: calc(20vw - 5rem)
+    margin-bottom: 3rem
+    & .priceCard .priceCardHeader
+      padding-bottom: 7vw
+    & .conditions
+      margin-top: 0
+      & *
+        font-size: 1rem
+  .belowPriceSection
+    margin-top: calc(-8rem - 10vw)
+  .contactSection
+    padding-bottom: 0
+  .footer
+    flex-direction: column
+    & div
+      margin-bottom: 1rem
+    .logo.first
+      margin-left: 0
+
+
+
 
 @media screen and (max-width: 565px)
   .topSection.main-heading
