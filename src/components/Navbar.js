@@ -26,13 +26,11 @@ const Navbar = class extends React.Component {
                     this.setState({
                         navBarActiveClass: 'is-active',
                     })
-                    document.body.style.overflow="hidden"
                     document.body.style.position="fixed"
                 } else {
                     this.setState({
                         navBarActiveClass: '',
                     })
-                    document.body.style.overflow="scroll"
                     document.body.style.position="static"
                 }
                 if (callback) callback()

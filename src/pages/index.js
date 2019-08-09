@@ -123,7 +123,7 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                     <div className="container">
                         <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="generic.Benefits" /></h1>
-                        <div className="cardViewSapcer" />
+                        <div className="cardViewSpacer" />
                         <div className="accordion rightColumn">
                             {benefits && benefits.map( (benefit, id) => (
                                 // TODO style benefit list to match design
