@@ -32,15 +32,16 @@ const Scroller = class extends React.Component {
       this.featureScroller.classList.remove('active')
       this.priceScroller.classList.remove('active')
     }
+    console.log('scroller position: '+ this.scroller.getBoundingClientRect().top )
+    console.log(window.innerHeight)
     if(!this.scroller.classList.contains('fixed')){
-      if((this.scroller.getBoundingClientRect().bottom + this.SCROLLER_POSITION < window.innerHeight)){
+      if((this.scroller.getBoundingClientRect().top < 0)){
         let leftMargin = document.getElementById('scroller').getBoundingClientRect().left
-        console.log('left: '+leftMargin)
         this.scroller.classList.add('fixed')
         this.scroller.style.left = leftMargin +'px'
       }
     } else {
-      if(this.scrollerContainer.getBoundingClientRect().top + this.scroller.offsetHeight + this.SCROLLER_POSITION > window.innerHeight){
+      if(this.scrollerContainer.getBoundingClientRect().top > 0){
         this.scroller.classList.remove('fixed')
         this.scroller.style.left = '5rem'
       }
