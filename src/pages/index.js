@@ -11,8 +11,9 @@ import layout_bg_3 from '../img/layoutBG_3.png'
 import mapset_banner from '../img/Mapset_Logo_RGB_weiss.svg'
 import twitter from '../img/social/Twitter_Logo_Blue.svg'
 
-import card_view_triple from '../../static/img/mapset_3d_card_view_triple.png'
-import card_view_single from '../../static/img/mapset_3d_card_view_single.png'
+import mapset_element from '../img/Mapset_Element.svg'
+import card_view_triple from '../../static/img/20180809_Web Screens Perspective PSD Mockup_bearbeitet.png'
+import card_view_single from '../../static/img/20180809_techandall_website_showcase_mockup.png'
 
 // import benefits and features data, for the language needed
 import fr_benefits from '../data/benefits/fr.json'
@@ -78,6 +79,7 @@ export const IndexPageTemplate = ({locale}) => {
                             </div>
                             <div className="headerDescription pt-5 pt-md-0">
                                 <h2><FormattedMessage id="content.page header" /></h2>
+                                <img className="mapsetElementSmall" src={mapset_element} alt="" />
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
                                     <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
@@ -99,6 +101,7 @@ export const IndexPageTemplate = ({locale}) => {
                             </div>
                             <div className="cardViewContainer" >
                                 <img className="cardViewTriple" src={card_view_triple} alt="" />
+                                <img className="mapsetElementLarge d-none d-md-inline" src={mapset_element} alt="" />
                                 {/*<div className="cardViewer" >*/}
                                 {/*<img className="l1" src={card_1} alt="" />*/}
                                 {/*<img className="" src={card_1} alt="" />*/}

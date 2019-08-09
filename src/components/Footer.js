@@ -1,8 +1,8 @@
 import React from 'react'
 import {FormattedMessage, IntlProvider} from 'react-intl'
 import { Link } from 'gatsby'
-import evoq from '../img/evoq_logo_weiss_RGB.png'
-import geOps from '../img/geops_neg-01.png'
+import evoq from '../../static/img/evoq_logo_weiss_RGB.png'
+import geOps from '../../static/img/geOps_logo_white.png'
 
 const Footer = class extends React.Component {
   state = {

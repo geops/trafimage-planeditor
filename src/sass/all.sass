@@ -91,6 +91,11 @@
     z-index: 1
     padding-top: 10rem
     padding-bottom: 10rem
+    & .mapsetElementLarge
+      position: absolute
+      opacity: .25
+      left: 0
+      height: 40%
   & .cardViewer
     pointer-events: none
     & img
@@ -122,6 +127,12 @@
     & .btn:hover
         background-color: $white
         color: $secondary
+    & .mapsetElementSmall
+      position: absolute
+      opacity: .25
+      left: -15%
+      top: 7%
+      height: 25%
 
 .benefitsSection 
   position: relative
@@ -435,6 +446,7 @@
   & .title
     font-size: .75rem
   & .logo
+    height: 1.5rem
     margin: 0 1rem
 
 // logo wall

@@ -65,26 +65,9 @@ const Layout = ({ locale, children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         
         <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/img/baseline-place-24px.svg"
-        />
-        <link
           rel="icon"
-          type="image/svg"
-          href="/img/baseline-place-24px.svg"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/svg"
-          href="/img/baseline-place-24px.svg"
-          sizes="16x16"
-        />
-        <link
-          rel="mask-icon"
-          href="/img/baseline-place-24px.svg"
-          color="#ff4400"
+          type="image/png"
+          href="../img/Mapset_Element.png"
         />
         
         <meta name="theme-color" content="#fff" />
