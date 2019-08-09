@@ -113,11 +113,13 @@ export const IndexPageTemplate = ({locale}) => {
             <section className="benefitsSection" id="benefits">
                 <img className="backgroundImage aboveBenefitsSection" src={layout_bg_1} alt=""/>
                 <div className="benefitsSectionContent">
-                    <div className="cardViewContainer">
-                        <img className="cardViewSingle" src={card_view_single} alt="" />
-                        {/*<div className="cardViewer">*/}
-                        {/*    <img className="base" src={card_1} alt=""/>*/}
-                        {/*</div>*/}
+                    <div className="cardViewSection">
+                        <div className="cardViewContainer">
+                            <img className="cardViewSingle" src={card_view_single} alt="" />
+                            {/*<div className="cardViewer">*/}
+                            {/*    <img className="base" src={card_1} alt=""/>*/}
+                            {/*</div>*/}
+                        </div>
                     </div>
                     <div className="container">
                         <h1 className="is-bolder benefitsHeader rightColumn"><FormattedMessage id="generic.Benefits" /></h1>
