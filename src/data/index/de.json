@@ -2,8 +2,8 @@
   "templateKey": "index-page",
   "title": "Deutsch Indexseite",
   "content": {
-    "page header": "Attraktive Situationspläne für den öffentlichen Verkehr",
-    "page header description": "Sie möchten Ihren Kunden aktuelle und attraktive Informationen zum öffentlichen Verkehr zugänglich machen? – Trafimage Mapset erlaubt die einfache Erstellung von übersichtlichen und optisch ansprechenden Plangrafiken für den öffentlichen Verkehr. Mit wenigen Klicks visualisieren Sie Pläne für geänderte Haltestellen, kommunizieren die Situation bei Bauprojekten, gewährleisten die Kundenführung bei Events oder informieren über betriebliche Sonderfälle vor Ort. All dies auf Basis der bekannten, offiziellen Trafimage-Karten, welche von der SBB entwickelt wurden und laufend aktualisiert werden.",
+    "page header": "Situationspläne für den öffentlichen Verkehr",
+    "page header description": "Sie möchten Ihren Kunden aktuelle und attraktiveInformationen zum öffentlichen Verkehr zugänglich machen? – Trafimage Mapset erlaubt die einfache Erstellung von übersichtlichen und optisch ansprechenden Plangrafiken für den öffentlichen Verkehr. Mit wenigen Klicks visualisieren Sie Pläne für geänderte Haltestellen, kommunizieren die Situation bei Bauprojekten, gewährleisten die Kundenführung bei Events oder informieren über betriebliche Sonderfälle vor Ort. All dies auf Basis der bekannten, offiziellen Trafimage-Karten, welche von der SBB entwickelt wurden und laufend aktualisiert werden.",
     "specification description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "price description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "conditions text": "* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl <br> tatsächlich mit PlanEditor bearbeiteter Haltestellen",
