@@ -81,10 +81,6 @@ export const IndexPageTemplate = ({locale}) => {
                                 <h2><FormattedMessage id="content.page header" /></h2>
                                 <img className="mapsetElementSmall" src={mapset_element} alt="" />
                                 <p><FormattedMessage id="content.page header description" /></p>
-                                <div className="alignContainer row">
-                                    <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
-                                    <button className="btn"><FormattedMessage id="generic.Registrieren" /></button>
-                                </div>
                             </div>
                         </div>
                         <div className="col-12 col-md-7 order-md-first">
@@ -93,9 +89,9 @@ export const IndexPageTemplate = ({locale}) => {
                                     <img className="main-heading" src={mapset_banner} alt="" />
                                     <div className="subtext">
                                         <span><FormattedMessage id="generic.powered by" /> </span>
-                                        <span className="is-bolder">evoq</span>
-                                        <span className="is-bolder"> | </span>
                                         <span className="is-bolder">geops</span>
+                                        <span className="is-bolder"> | </span>
+                                        <span className="is-bolder">evoq</span>
                                     </div>
                                 </div>
                             </div>
