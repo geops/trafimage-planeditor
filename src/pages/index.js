@@ -320,8 +320,8 @@ export const IndexPageTemplate = ({locale}) => {
                             {(contact.phone)?<span><a href={"tel:"+contact.phone}>{contact.phone}</a></span>:''}
                         </p>
                         <p>
-                            <span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
-                            <img className="twitter" src={twitter} alt="" />
+                            <a href="https://twitter.com/mapsetch"><span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
+                            <img className="twitter" src={twitter} alt="" /></a>
                         </p>
                     </div>
                 </div>
