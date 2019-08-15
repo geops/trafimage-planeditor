@@ -21,11 +21,6 @@ const Footer = class extends React.Component {
                     Impressum
                   </Link>
                 </li>
-                <li>
-                  <Link className="navbar-item" to="/">
-                    Disclaimer
-                  </Link>
-                </li>
               </ul>
             </div>
             <div className="expander" />
@@ -36,9 +31,9 @@ const Footer = class extends React.Component {
               <span className="is-smaller"><FormattedMessage id="generic.powered by" /> </span>
             </div>
             <div>
-              <img className="logo first" src={evoq} alt="" />
+              <img className="logo first" src={geOps} alt="" />
               <span> | </span>
-              <img className="logo" src={geOps} alt="" />
+              <img className="logo" src={evoq} alt="" />
             </div>
           </footer>
         </IntlProvider>
