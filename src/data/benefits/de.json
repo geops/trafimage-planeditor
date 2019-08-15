@@ -3,15 +3,15 @@
   "benefits": [
     {
       "heading": "**Erstellen** von Situationsplänen",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "text": "Entwerfen Sie einfach und schnell aussagekräftige Pläne von Haltestellen. Bahnersatzverkehr oder Baustellen lassen sich ebenso abbilden wie die Situation bei Grossanlässen, die die Lenkung der Reisenden erforderlich machen. In wenigen Minuten lässt sich ein Plan erstellen, der zielgerichtet informiert und eine hohe grafische Qualität aufweist."
     },
     {
-      "heading": "**Exportfunktion**",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "heading": "Einfaches **Einzeichnen** von lokalen Informationen",
+      "text": "Ergänzen sie lokale Informationen auf der Basis bestehender detaillierter Karten. Sie können Wegrouten darstellen, Haltestellen und Haltekanten mit Piktogrammen versehen oder Points of Interests hervorheben. Dabei können Sie auf bewährte grafische Trafimage-Elemente der SBB zurückgreifen (Piktogrammen, Linienstilen, Farben, etc.)."
     },
     {
-      "heading": "new **benefit**",
-      "text": "lorem benefit.....kej lsdjl-"
+      "heading": "**Exportfunktionen**",
+      "text": "Laden Sie ihre selbst erstellten Pläne als Bilddatei herunter, und binden Sie diese in Ihre individuellen Vorlagen ein. Für die Optimierung des Exports können Sie den Ausschnitt und die Auflösung für den Druck festlegen."
     }
   ]
 }
