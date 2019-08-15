@@ -321,7 +321,7 @@ export const IndexPageTemplate = ({locale}) => {
                         </p>
                         <p>
                             <a href="https://twitter.com/mapsetch"><span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
-                            <img className="twitter" src={twitter} alt="" /></a>
+                            <img className="twitter" src={twitter} alt="twitter" /></a>
                         </p>
                     </div>
                 </div>
