@@ -25,19 +25,17 @@ import de_features from '../data/features/de.json'
 import contact from '../data/contact.json'
 
 const accordionHandler = function(id){
-    console.log(id)
     let item = document.getElementsByName(id)[0]
     if(item.classList.contains('is-expanded')){
-        document.getElementsByClassName('accordion-item')[id].classList.remove('is-expanded')
+        item.classList.remove('is-expanded')
     } else {
-        document.getElementsByClassName('accordion-item')[id].classList.add('is-expanded')
+        item.classList.add('is-expanded')
     }
 }
 
 export const IndexPageTemplate = ({locale}) => {
     let benefits
     let features
-    console.log(locale)
     switch(locale) {
         case 'fr': {
             benefits = fr_benefits.benefits
@@ -51,8 +49,6 @@ export const IndexPageTemplate = ({locale}) => {
         }
     }
     let md = new Remarkable();
-    console.log(benefits)
-    console.log(features)
     md.set({
         html: true,
         breaks: true

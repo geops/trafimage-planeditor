@@ -2,7 +2,7 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'TrafimagePlanEditor',
+    title: 'Trafimage MapSet',
     description:
       'CMS onePager for GeOps',
   },
