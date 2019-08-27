@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
 import EmailButton from "../components/EmailButton";
+import Imprint from '../components/Imprint';
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -330,7 +331,7 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* contact section */}
-
+           
             <section className="licenseSection" id="license">
                 <div className="container">
                     <div className="rightColumn">
@@ -340,6 +341,15 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* license section */}
+
+            <section className="impressumSection" id="impressum">
+                <div className="container">
+                    <div className="rightColumn">
+                        <h1 className="is-bolder impressumHeader"><FormattedMessage id="generic.Imprint" /></h1>
+                        <Imprint />
+                    </div>
+                </div>
+            </section> {/* impressum section */}
             <div className="aboveFooter"></div>
         </div>
     )
