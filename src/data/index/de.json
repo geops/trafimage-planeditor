@@ -8,7 +8,8 @@
     "price description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "conditions text": "* Gemeint ist der Gesamtumfang an Haltestellen, unabhängig von der Anzahl <br> tatsächlich mit PlanEditor bearbeiteter Haltestellen",
     "included in price": "- Freie Verwendung ger generierten Pläne (Einhaltung Copyright)<br>- Wartung und Betrieb des Portals <br>- Automatische Übernahme von Weiterentwicklungen <br>- Wöchentliche Aktualisierung des Kartenbildes (OpenStreetMap)<br>- Benutzerverwaltung",
-    "contact description": "Wir freuen uns über Ihre Kontaktaufnahme und helfen bei Fragen gerne weiter."
+    "contact description": "Wir freuen uns über Ihre Kontaktaufnahme und helfen bei Fragen gerne weiter.",
+    "license description": "Bei jeder Verwendung von Plänen aus mapset muss die Copyright-Angabe im Plan beibehalten werden. Die aktuelle Copyright-Angabe kann am unteren Rand der Pläne im Editor abgelesen werden. Mit Stand Juli 2019 lautet die Angabe z.B. © OpenStreetMap, imagico, SBB/CFF/FFS, mapset.ch.  Bei der unveränderten Nutzung von Plänen aus mapset wird die jeweils aktuelle Copyright-Angabe automatisch in die Pläne eingeblendet. Bei allfälligen Nachbearbeitungen der Pläne durch den Lizenznehmer muss die Darstellung des Copyrights stets gewährleistet werden."
   },
   "generic": {
     "Kontakt": "Kontakt",
@@ -30,6 +31,7 @@
       "Disclaimer": "Disclaimer"
     },
     "Benefits": "Benefits",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:"
+    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
+    "License": "License"
   }
 }

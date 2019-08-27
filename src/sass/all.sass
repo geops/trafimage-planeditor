@@ -133,6 +133,7 @@
       left: -15%
       top: 7%
       height: 25%
+      z-index: -1!important
 
 .benefitsSection 
   position: relative
@@ -381,7 +382,28 @@
     width: 2rem
     height: 2rem
     margin-top: 1rem
+    margin-bottom: 8rem
 
+.licenseSection
+  margin-top: 0
+  position: relative
+  z-index: 0
+  background-color: $white
+  padding-bottom: 2rem
+  color: $greyDarker
+  & .licenseHeader
+    padding-top: 3rem
+    font-weight: $bolder
+    color: $primary
+  & h5
+    margin: 2rem 0
+    max-width: 35rem
+  & p
+    margin: 2rem 0
+  & .twitter
+    width: 2rem
+    height: 2rem
+    margin-top: 1rem
 
 //scroller
 .scroller

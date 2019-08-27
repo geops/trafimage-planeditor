@@ -72,6 +72,9 @@ export const IndexPageTemplate = ({locale}) => {
                                 <a className="navbar-item" href="#contact">
                                     <FormattedMessage id="generic.Kontakt" />
                                 </a>
+                                <a className="navbar-item" href="#license">
+                                    <FormattedMessage id="generic.License" />
+                                </a>
                             </div>
                             <div className="headerDescription pt-5 pt-md-0">
                                 <h2><FormattedMessage id="content.page header" /></h2>
@@ -326,6 +329,16 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* contact section */}
+
+            <section className="licenseSection" id="license">
+                <div className="container">
+                    <div className="rightColumn">
+                        <h1 className="is-bolder licenseHeader"><FormattedMessage id="generic.License" /></h1>
+                        <h5><FormattedMessage id="content.license description" /></h5>
+                       
+                    </div>
+                </div>
+            </section> {/* license section */}
             <div className="aboveFooter"></div>
         </div>
     )

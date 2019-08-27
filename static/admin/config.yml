@@ -55,6 +55,7 @@ collections:
             {label: "Zufriedene Kunden", name: "Zufriedene Kunden", widget: "string"},
             {label: "Im Preis inbegriffen sind:", name: "Im Preis inbegriffen sind:", widget: "string"},
             {label: "Noch Fragen ?", name: "Noch Fragen ?", widget: "string"},
+            {label: "License", name: "License", widget: "string"},
             {label: "Ihr persönlicher Kontakt", name: "Ihr persönlicher Kontakt", widget: "string"},
             {label: "Besuchen Sie uns auf Twitter", name: "Besuchen Sie uns auf Twitter", widget: "string"},
             {
