@@ -3,6 +3,7 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
+import EmailButton from "../components/EmailButton";
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -209,7 +210,7 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <h2 className="is-blue is-bolder no-subtext">gratis</h2>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton />
                                     </div>
                                 </div>
                             </div>
@@ -235,7 +236,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder">2'700.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton />
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +262,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">5'900.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton />
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +288,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">8'400.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton />
                                     </div>
                                 </div>
                             </div>
