@@ -211,7 +211,7 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <h2 className="is-blue is-bolder no-subtext">gratis</h2>
-                                        <EmailButton />
+                                        <EmailButton mode="FREE"/>
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +237,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder">2'700.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <EmailButton />
+                                        <EmailButton mode="MINI"/>
                                     </div>
                                 </div>
                             </div>
@@ -263,7 +263,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">5'900.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <EmailButton />
+                                        <EmailButton mode="MIDI"/>
                                     </div>
                                 </div>
                             </div>
@@ -289,7 +289,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">8'400.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <EmailButton />
+                                        <EmailButton mode="MAXI"/>
                                     </div>
                                 </div>
                             </div>
@@ -336,7 +336,7 @@ export const IndexPageTemplate = ({locale}) => {
                 <div className="container">
                     <div className="rightColumn">
                         <h1 className="is-bolder licenseHeader"><FormattedMessage id="generic.License" /></h1>
-                        <h5><FormattedMessage id="content.license description" /></h5>
+                        <span className="licenseMessage"><FormattedMessage id="content.license description" /></span>
                        
                     </div>
                 </div>

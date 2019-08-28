@@ -14,20 +14,6 @@ const Footer = class extends React.Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <footer className="footer">
-          <div className="menu">
-            <ul className="menu-list">
-              <li>
-                <Link className="navbar-item" to="/">
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link className="navbar-item" to="/">
-                  Disclaimer
-                </Link>
-              </li>
-            </ul>
-          </div>
           <div className="expander" />
           <div>
             <span className="brandName">Trafimage </span>
@@ -40,9 +26,9 @@ const Footer = class extends React.Component {
             </span>
           </div>
           <div>
-            <img className="logo first" src={evoq} alt="" />
-            <span> | </span>
             <img className="logo" src={geOps} alt="" />
+            <span> | </span>
+            <img className="logo first" src={evoq} alt="" />
           </div>
         </footer>
       </IntlProvider>
