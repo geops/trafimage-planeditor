@@ -384,31 +384,89 @@
     margin-top: 1rem
     margin-bottom: 1rem
 
-.licenseSection
-  margin-bottom: 7rem
+.licenseSection 
   position: relative
-  background-color: $white
-  padding-bottom: 2rem
-  color: $greyDarker
-  & .licenseHeader
-    padding-top: 3rem
-    font-weight: $bolder
-    color: $primary
-    padding-bottom: 1.5rem
-  & .licenseMessage 
-    max-width: 35rem
-    font-size: .75rem
-    font-weight: 400
-    text-align: left
+  & .licenseSectionContent
+    margin-top: -15rem
+    position: relative
+    z-index: 20
+    & h1
+      color: $primary
+    & .cardViewSection
+      position: relative
+    & .cardViewContainer
+      overflow: hidden
+      position: absolute
+      width: 100vw
+      height: calc(100vw * 772 / 1336)
+      max-width: 90rem
+      max-height: calc(90rem * 772 / 1336)
+      top: calc(17rem - 30vw)
+      padding-top: 0rem
+      padding-bottom: 0rem
+      & .cardViewSingle
+        position: absolute
+        z-index: 20
+        right: -35%
+    & .cardViewSpacer
+      height: calc(25vw - 90rem)
+    & .cardViewer
+      pointer-events: none
+      position: absolute
+      z-index: 100
+      top: -5rem
+      right: 0
+      width: 100%
+      height: 100%
+      & img
+        box-shadow: 0 0 5rem $primary
+        transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
+    & .container
+      position: relative
+      z-index: 10
+    & .licenseHeader
+      font-size: 4rem
+      margin-top: 1rem
+    & .accordion
+      & .accordion-item
+        position: relative
+        border-bottom: 2px solid $greyMid
+        & button
+          -webkit-appearance: none
+          border: none
+          width : 100%
+          text-align: left
+          padding: 0
+        & .item-head
+          font-weight: normal
+          margin: 1rem 0
+          & p
+            display: inline
+            color: #595c5a
+          & .accordionStateImage
+            color: $primary
+            right: 0
+            position: absolute
+        & .content
+          overflow: hidden
+          max-height: 0
+          transition: max-height 1s
+          margin: 0
+          & p
+            font-size: 0.85rem
+            width: 85%
+            margin: 1rem 0 2rem 0
+            color: #595c5a
+      & .accordion-item.is-expanded
+        & .content
+          display: block
+          max-height: 300px
+        & .plus
+          display: none
     
 
-
 .impressumSection
-  margin-top: 0
-  position: relative
-  z-index: 0
-  background-color: $white
-  padding-bottom: 2rem
+  padding-top: 3rem
   color: $greyDarker
   & .impressumHeader
     font-weight: $bolder

@@ -23,6 +23,9 @@ import de_benefits from '../data/benefits/de.json'
 import fr_features from '../data/features/fr.json'
 import de_features from '../data/features/de.json'
 
+// import license information
+import license from '../data/license/de.json'
+
 // import contact information
 import contact from '../data/contact.json'
 
@@ -50,6 +53,7 @@ export const IndexPageTemplate = ({locale}) => {
             break;
         }
     }
+    let licenseInformation = license.license;
     let md = new Remarkable();
     md.set({
         html: true,
@@ -332,15 +336,38 @@ export const IndexPageTemplate = ({locale}) => {
                 </div>
             </section> {/* contact section */}
            
+
             <section className="licenseSection" id="license">
-                <div className="container">
-                    <div className="rightColumn"> 
-                        <h1 className="is-bolder licenseHeader"><FormattedMessage id="generic.License" /></h1>
-                        <p className="licenseMessage"><span></span><FormattedHTMLMessage id="content.license description.Vertragsgegenstand" values={{br: <br />}}/></p>
-                       
+                <div className="licenseSectionContent">
+                    <div className="container">
+                        <h1 className="is-bolder licenseHeader rightColumn"><FormattedMessage id="generic.License" /></h1>
+                        <div className="cardViewSpacer" />
+                        <div className="accordion rightColumn">
+                            {licenseInformation && licenseInformation.map( (license, id) => (
+                                // TODO style benefit list to match design
+                                <div className="accordion-item" key={"license_"+id} name={"license_"+id}>
+                                    <button onClick={() => accordionHandler("license_"+id)}>
+                                        <h5 className="item-head">
+                                            <span dangerouslySetInnerHTML={{ __html: md.render(license.heading) }} />
+                                            <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                            <svg className="accordionStateImage minus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13H5v-2h14v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </h5>
+                                    </button>
+                                    <div className="content">
+                                        <p>{license.text}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </section> {/* license section */}
+            </section> {/* license section */}                     
 
             <section className="impressumSection" id="impressum">
                 <div className="container">
