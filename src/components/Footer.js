@@ -27,7 +27,7 @@ const Footer = class extends React.Component {
           </div>
           <div>
             <img className="logo" src={geOps} alt="" />
-            <span> | </span>
+            <span>|</span>
             <img className="logo first" src={evoq} alt="" />
           </div>
         </footer>

@@ -94,9 +94,9 @@ export const IndexPageTemplate = ({locale}) => {
                                     <img className="main-heading" src={mapset_banner} alt="" />
                                     <div className="subtext">
                                         <span><FormattedMessage id="generic.powered by" /> </span>
-                                        <span className="is-bolder">evoq</span>
-                                        <span className="is-bolder"> | </span>
                                         <span className="is-bolder">geops</span>
+                                        <span className="is-bolder"> | </span>
+                                        <span className="is-bolder">evoq</span>
                                     </div>
                                 </div>
                             </div>

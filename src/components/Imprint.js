@@ -28,7 +28,7 @@ function Imprint() {
         <span>Handelsregister Nr. CHE-455.829.547 Basel-Landschaft</span>
         <span>UID: CHE-455.829.547 MWST</span>
       </p>
-
+      <br />
       <p>
         <span>
           Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen
