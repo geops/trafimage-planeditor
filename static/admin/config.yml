@@ -122,3 +122,25 @@ collections:
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
+  - label: "License"
+    name: "license"
+    folder: "src/data/license"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Sprache", name: "title", widget: "string"}
+      - {
+        label: "License",
+        name: "license",
+        widget: "list",
+        fields:
+          [
+          {
+            label: "Überschrift", name: "heading", widget: "markdown"
+          },
+          {
+            label: "Text", name: "text", widget: "text"
+          }
+          ]
+      }
+          

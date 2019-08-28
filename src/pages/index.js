@@ -334,18 +334,9 @@ export const IndexPageTemplate = ({locale}) => {
            
             <section className="licenseSection" id="license">
                 <div className="container">
-                    <div className="rightColumn">
+                    <div className="rightColumn"> 
                         <h1 className="is-bolder licenseHeader"><FormattedMessage id="generic.License" /></h1>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Vertragsgegenstand" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Rechteinhaberschaft" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Lizenzdauer" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Kosten" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Copyright" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Kündigung" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Haftung" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Laufende Entwicklung des Vertragsgegenstandes" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Schlussbestimmungen" values={{br: <br />}}/></span>
-                        <span className="licenseMessage"><FormattedHTMLMessage id="content.license description.Anwendbares Recht und Gerichtsstand" values={{br: <br />}}/></span>
+                        <p className="licenseMessage"><span></span><FormattedHTMLMessage id="content.license description.Vertragsgegenstand" values={{br: <br />}}/></p>
                        
                     </div>
                 </div>
