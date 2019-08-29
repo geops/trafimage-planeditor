@@ -13,7 +13,7 @@
   "generic": {
     "Kontakt": "Contact",
     "Besuchen Sie uns auf Twitter": "Nous rendre visite sur Twitter",
-    "Registrieren": "Enregistrer",
+    "Anmelden": "Anmelden",
     "Ihr persönlicher Kontakt": "Votre contact personnel",
     "So funktioniert's": "So funktioniert's",
     "Zufriedene Kunden": "Des clients satisfaits",
@@ -21,7 +21,7 @@
       "Support": "Soutien",
       "Login": "Login"
     },
-    "Demozugang": "Accès démo",
+    "Demo": "Demo",
     "powered by": "powered by",
     "Noch Fragen ?": "Des questions?",
     "Preise": "Prix",

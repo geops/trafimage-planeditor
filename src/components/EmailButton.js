@@ -4,16 +4,9 @@ import contact from "../data/contact.json";
 
 function EmailButton({ mode }) {
   return (
-    <button className="btn blue-btn">
-      <a
-        style={{ color: "white" }}
-        rel="noopener noreferrer"
-        target="_blank"
-        href={`mailto:${contact.email}?subject=${contact.emailSubject} ${mode}`}
-      >
-        Anmelden
-      </a>
-    </button>
+    <a href={`mailto:${contact.email}?subject=${contact.emailSubject} ${mode}`}>
+      <button className="btn blue-btn">Anmelden</button>
+    </a>
   );
 }
 

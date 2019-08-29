@@ -87,8 +87,8 @@ export const IndexPageTemplate = ({locale}) => {
                                 <img className="mapsetElementSmall" src={mapset_element} alt="" />
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
-                                    <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
-                                    <button className="btn"><FormattedMessage id="generic.Registrieren" /></button>
+                                <a href="https://editor.mapset.ch" target="_blank" rel="noopener noreferrer"><button className="btn"><FormattedMessage id="generic.Demo" /></button></a>
+                                <a href={`mailto:${contact.email}?subject=${contact.emailSubject}`}><button className="btn"><FormattedMessage id="generic.Anmelden" /></button></a>
                                 </div>
                             </div>
                         </div>
