@@ -7,15 +7,15 @@
     },
     {
       "heading": "§2 Rechteinhaberschaft",
-      "text": "Software samt Quellcode gehört GeOps. Genutzte Kartenbasis und das Copyright am Kartenbild gehören der SBB."
+      "text": "Software samt Quellcode gehören geOps. \nDie genutzte Kartenbasis und das Copyright am Kartenbild gehören der SBB."
     },
     {
       "heading": "§3 Lizenzdauer",
-      "text": "Der Vertrag beginnt mit der auf die Vertragsunterzeichnung folgende Aktivierung der Zugänge und läuft ab diesem Zeitpunkt für 12 Monate."
+      "text": "Der Vertrag beginnt mit der auf die Vertragsunterzeichnung folgenden Aktivierung der Zugänge und läuft ab diesem Zeitpunkt für 12 Monate."
     },
     {
       "heading": "§4 Kosten",
-      "text": "Die jährlichen Kosten für die Nutzung des Editors sind nach der Anzahl der Haltestellen gestaffelt, die der Lizenznehmer bedient. Eine aktuelle Übersicht der Preise findet sich auf mapset.ch. Für Verkehrsverbunde und Vertriebsgesellschaften (z.B.  Moonliner), die mehrere Transportunternehmen umfassen, können auf Anfrage spezielle Lizenzbestimmungen vereinbart werden."
+      "text": "Die jährlichen Kosten für die Nutzung des Editors sind nach der Anzahl der Haltestellen gestaffelt, die der Lizenznehmer bedient. Eine aktuelle Übersicht der Preise findet sich auf trafimage.mapset.ch. Für Verkehrsverbunde und Vertriebsgesellschaften (z.B.  Moonliner), die mehrere Transportunternehmen umfassen, können auf Anfrage spezielle Lizenzbestimmungen vereinbart werden."
     },
     {
       "heading": "§5 Copyright",
@@ -23,19 +23,19 @@
     },
     {
       "heading": "§6 Kündigung",
-      "text": "Der Lizenzvertrag kann mit einer Kündigungsfrist von 3 Monaten auf Ende einer Vertragsperiode gekündigt werden. Ohne Kündigung verlängert sich der Vertrag stillschweigend um ein weiteres Jahr. Der Lizenzgeber hat ein einseitiges fristloses Sonderkündigungsrecht, wenn der Lizenznehmer seinen Verpflichtungen nicht nachkommt. Dies ist insbesondere dann der Fall: Eine wesentliche Änderung der Inhaber- oder Geschäftsleitungsverhältnisse Eintritt einer wesentlichen Verschlechterung in den Vermögensverhältnissen des Lizenznehmers Eine Schuld der Nichterfüllung oder Verletzungen der wesentlichen Verpflichtungen aus dem Vertrag.     Im Falle einer signifikanten Verschlechterung des Angebots steht dem Lizenznehmer ein a.o. Kündigungsrecht zu. Der Nachweis der Verschlechterung muss vom Lizenznehmer erbracht werden. Darüberhinausgehende Ansprüche, insb. Schadenersatzansprüche, sind ausgeschlossen."
+      "text": "Der Lizenzvertrag kann mit einer Kündigungsfrist von 3 Monaten auf Ende einer Vertragsperiode gekündigt werden. Ohne Kündigung verlängert sich der Vertrag stillschweigend um ein weiteres Jahr. \nDer Lizenzgeber hat ein einseitiges fristloses Sonderkündigungsrecht, wenn der Lizenznehmer seinen Verpflichtungen nicht nachkommt. Dies ist insbesondere dann der Fall: \n- Eine wesentliche Änderung der Inhaber- oder Geschäftsleitungsverhältnisse \n- Eintritt einer wesentlichen Verschlechterung in den Vermögensverhältnissen des Lizenznehmers \n- Eine Schuld der Nichterfüllung oder Verletzungen der wesentlichen Verpflichtungen aus dem Vertrag\nIm Falle einer signifikanten Verschlechterung des Angebots steht dem Lizenznehmer ein a.o. Kündigungsrecht zu. Der Nachweis der Verschlechterung muss vom Lizenznehmer erbracht werden. Darüberhinausgehende Ansprüche, insb. Schadenersatzansprüche, sind ausgeschlossen."
     },
     {
       "heading": "§7 Haftung",
-      "text": "Der Lizenzgeber haftet nicht für Verluste oder Schäden aller Art, welche im Zusammenhang mit dem Zugriff oder der Benützung von mapset oder Teilen davon oder aus Links zu Websites Dritter entstehen könnten. Ebenfalls haftet der Lizenzgeber nicht für entgangenen Gewinn, für Fehlleistungen des Internets aller Art (z.B. Betriebsunterbrechung, Funktionsstörungen, Viren, schädliche Komponenten, terroristische Handlungen...etc), Missbrauch durch Dritte (Einsehen von Daten, Kopien usw.) sowie Verlust von Programmen oder sonstigen Daten in den Informationssystemen des Lizenznehmers. Manche Links auf mapset führen zu Websites Dritter. Diese stehen nicht mehr unter dem Einflussbereich des Lizenzgebers. Für die Richtigkeit, Vollständigkeit und Rechtmässigkeit der dort enthaltenen Inhalte und Verlinkung mit weiteren Websites sowie für allfällige dort enthaltene Angebote, Produkte und (Dienst-)Leistungen übernimmt der Lizenzgeber ebenfalls keinerlei Verantwortung. Die Benutzung verlinkter Websites erfolgt in eigener Verantwortung des Lizenznehmers.  "
+      "text": "Der Lizenzgeber haftet nicht für Verluste oder Schäden aller Art, welche im Zusammenhang mit dem Zugriff oder der Benützung von mapset oder Teilen davon oder aus Links zu Websites Dritter entstehen könnten. Ebenfalls haftet der Lizenzgeber nicht für entgangenen Gewinn, für Fehlleistungen des Internets aller Art (z.B. Betriebsunterbrechung, Funktionsstörungen, Viren, schädliche Komponenten, terroristische Handlungen...etc), Missbrauch durch Dritte (Einsehen von Daten, Kopien usw.) sowie Verlust von Programmen oder sonstigen Daten in den Informationssystemen des Lizenznehmers. \nManche Links auf mapset führen zu Websites Dritter. Diese stehen nicht mehr unter dem Einflussbereich des Lizenzgebers. Für die Richtigkeit, Vollständigkeit und Rechtmässigkeit der dort enthaltenen Inhalte und Verlinkung mit weiteren Websites sowie für allfällige dort enthaltene Angebote, Produkte und (Dienst-)Leistungen übernimmt der Lizenzgeber ebenfalls keinerlei Verantwortung. Die Benutzung verlinkter Websites erfolgt in eigener Verantwortung des Lizenznehmers.  "
     },
     {
       "heading": "§8 Laufende Entwicklung des Vertragsgegenstandes",
-      "text": "Die Kartengrundlage kann jederzeit angepasst werden. Aktualisierungen der Karte, insbesondere die Darstellung von Veränderungen in der Landschaft oder der Infrastruktur werden in der Regel innerhalb kurzer Zeit in den Grundlagenkarten angezeigt. Eine Verpflichtung zur Aktualisierung der Kartengrundlagen durch den Lizenzgeber besteht nicht. Das Aussehen dynamisch eingebundener Karten ('Styling') kann sich jederzeit in geringem Umfang ändern."
+      "text": "Die Kartengrundlage kann jederzeit angepasst werden. Aktualisierungen der Karte, insbesondere die Darstellung von Veränderungen in der Landschaft oder der Infrastruktur werden in der Regel innerhalb kurzer Zeit in den Grundlagenkarten angezeigt. Eine Verpflichtung zur Aktualisierung der Kartengrundlagen durch den Lizenzgeber besteht nicht. \nDas Aussehen dynamisch eingebundener Karten ('Styling') kann sich jederzeit in geringem Umfang ändern."
     },
     {
       "heading": "§9 Schlussbestimmungen",
-      "text": "Sollte eine der Bestimmungen dieses Vertrages unwirksam sein oder werden, so hat das auf die Wirksamkeit der übrigen Bestimmungen keinen Einfluss. Die Vertragspartner verpflichten sich, eine Regelung herbeizuführen, die der unwirksamen Bestimmungen in ihrem rechtlichen und wirtschaftlichen Inhalt am nächsten kommt. Alle Vereinbarungen, Einzelgenehmigungen und Sonderregelungen bedürfen der Schriftform. Mündliche Nebenabsprachen begründen keine Rechtswirksamkeit.  "
+      "text": "Sollte eine der Bestimmungen dieses Vertrages unwirksam sein oder werden, so hat das auf die Wirksamkeit der übrigen Bestimmungen keinen Einfluss. Die Vertragspartner verpflichten sich, eine Regelung herbeizuführen, die der unwirksamen Bestimmungen in ihrem rechtlichen und wirtschaftlichen Inhalt am nächsten kommt. \nAlle Vereinbarungen, Einzelgenehmigungen und Sonderregelungen bedürfen der Schriftform. Mündliche Nebenabsprachen begründen keine Rechtswirksamkeit.  "
     },
     {
       "heading": "§10 Anwendbares Recht und Gerichtsstand",
