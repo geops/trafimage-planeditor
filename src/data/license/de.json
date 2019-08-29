@@ -1,0 +1,45 @@
+{
+  "title": "Deutsch",
+  "license": [
+    {
+      "heading": "§1 Vertragsgegenstand",
+      "text": "Gegenstand dieses Vertrages ist die Lizenzierung für die Nutzung des Online-Editors «mapset» unter editor.mapset.ch. Sie berechtigt zur Erstellung einer unbegrenzten Anzahl von Plänen für die Haltestellen des Lizenznehmers und zur freien Verwendung der mit dem Editor erstellten Pläne, vorbehältlich der Einhaltung der in §5 genannten Copyright-Bestimmungen.  Die Lizenz ist auf die Haltestellen des Lizenznehmers beschränkt. Der Lizenznehmer ist nicht berechtigt, Unterlizenzen zu gewähren, mit der Ausnahme, dass ein direkter Bezug zur Darstellung der Umsteigebeziehung zwischen einer Haltestelle des Lizenznehmers und der Haltestelle eines Dritten oder die Haltestelle des Dritten räumlich bedingt im gleichen Planausschnitt wie die Haltestelle des Lizenznehmers liegt.  Die mit der Lizenz erzeugten Pläne dürfen unter Berücksichtigung der Copyright-Angaben (§5) in jedwelchen Medien, insbesondere auch im digitalen Umfeld genutzt werden. Die Nutzung der Pläne ist auf den Lizenznehmer beschränkt. Dritte dürfen die fertigen Pläne als Print-Produkt nutzen oder als statischen oder dynamischen Plan auf ihren Online-Medien verwenden, insofern darauf -wie oben beschrieben - Haltestellen des Lizenznehmers abgebildet sind.  Der Lizenzgeber behält sich das Recht vor, jederzeit nach eigenem Ermessen den Inhalt von mapset und die vorliegenden Bestimmungen jederzeit ganz oder teilweise zu ändern, zu ergänzen oder zu löschen. Das gilt auch für Verbesserungen / Änderungen an den beschriebenen Informationen bzw. Produkten und Dienstleistungen. Der Lizenznehmer ist gehalten, die Bestimmungen in regelmässigen Abständen auf eventuelle Änderungen zu überprüfen. Wenn der Lizenznehmer das mapset nach der Veröffentlichung von Änderungen der vorliegenden Bestimmungen weiterhin verwendet, gilt dies als stillschweigende Genehmigung der Änderung."
+    },
+    {
+      "heading": "§2 Rechteinhaberschaft",
+      "text": "Software samt Quellcode gehört GeOps. Genutzte Kartenbasis und das Copyright am Kartenbild gehören der SBB."
+    },
+    {
+      "heading": "§3 Lizenzdauer",
+      "text": "Der Vertrag beginnt mit der auf die Vertragsunterzeichnung folgende Aktivierung der Zugänge und läuft ab diesem Zeitpunkt für 12 Monate."
+    },
+    {
+      "heading": "§4 Kosten",
+      "text": "Die jährlichen Kosten für die Nutzung des Editors sind nach der Anzahl der Haltestellen gestaffelt, die der Lizenznehmer bedient. Eine aktuelle Übersicht der Preise findet sich auf mapset.ch. Für Verkehrsverbunde und Vertriebsgesellschaften (z.B.  Moonliner), die mehrere Transportunternehmen umfassen, können auf Anfrage spezielle Lizenzbestimmungen vereinbart werden."
+    },
+    {
+      "heading": "§5 Copyright",
+      "text": "Bei jeder Verwendung von Plänen aus mapset muss die Copyright-Angabe im Plan beibehalten werden. Die aktuelle Copyright-Angabe kann am unteren Rand der Pläne im Editor abgelesen werden. Mit Stand Juli 2019 lautet die Angabe z.B. '© OpenStreetMap, imagico, SBB/CFF/FFS, mapset.ch'.  Bei der unveränderten Nutzung von Plänen aus mapset wird die jeweils aktuelle Copyright-Angabe automatisch in die Pläne eingeblendet. Bei allfälligen Nachbearbeitungen der Pläne durch den Lizenznehmer muss die Darstellung des Copyrights stets gewährleistet werden."
+    },
+    {
+      "heading": "§6 Kündigung",
+      "text": "Der Lizenzvertrag kann mit einer Kündigungsfrist von 3 Monaten auf Ende einer Vertragsperiode gekündigt werden. Ohne Kündigung verlängert sich der Vertrag stillschweigend um ein weiteres Jahr. Der Lizenzgeber hat ein einseitiges fristloses Sonderkündigungsrecht, wenn der Lizenznehmer seinen Verpflichtungen nicht nachkommt. Dies ist insbesondere dann der Fall: Eine wesentliche Änderung der Inhaber- oder Geschäftsleitungsverhältnisse Eintritt einer wesentlichen Verschlechterung in den Vermögensverhältnissen des Lizenznehmers Eine Schuld der Nichterfüllung oder Verletzungen der wesentlichen Verpflichtungen aus dem Vertrag.     Im Falle einer signifikanten Verschlechterung des Angebots steht dem Lizenznehmer ein a.o. Kündigungsrecht zu. Der Nachweis der Verschlechterung muss vom Lizenznehmer erbracht werden. Darüberhinausgehende Ansprüche, insb. Schadenersatzansprüche, sind ausgeschlossen."
+    },
+    {
+      "heading": "§7 Haftung",
+      "text": "Der Lizenzgeber haftet nicht für Verluste oder Schäden aller Art, welche im Zusammenhang mit dem Zugriff oder der Benützung von mapset oder Teilen davon oder aus Links zu Websites Dritter entstehen könnten. Ebenfalls haftet der Lizenzgeber nicht für entgangenen Gewinn, für Fehlleistungen des Internets aller Art (z.B. Betriebsunterbrechung, Funktionsstörungen, Viren, schädliche Komponenten, terroristische Handlungen...etc), Missbrauch durch Dritte (Einsehen von Daten, Kopien usw.) sowie Verlust von Programmen oder sonstigen Daten in den Informationssystemen des Lizenznehmers. Manche Links auf mapset führen zu Websites Dritter. Diese stehen nicht mehr unter dem Einflussbereich des Lizenzgebers. Für die Richtigkeit, Vollständigkeit und Rechtmässigkeit der dort enthaltenen Inhalte und Verlinkung mit weiteren Websites sowie für allfällige dort enthaltene Angebote, Produkte und (Dienst-)Leistungen übernimmt der Lizenzgeber ebenfalls keinerlei Verantwortung. Die Benutzung verlinkter Websites erfolgt in eigener Verantwortung des Lizenznehmers.  "
+    },
+    {
+      "heading": "§8 Laufende Entwicklung des Vertragsgegenstandes",
+      "text": "Die Kartengrundlage kann jederzeit angepasst werden. Aktualisierungen der Karte, insbesondere die Darstellung von Veränderungen in der Landschaft oder der Infrastruktur werden in der Regel innerhalb kurzer Zeit in den Grundlagenkarten angezeigt. Eine Verpflichtung zur Aktualisierung der Kartengrundlagen durch den Lizenzgeber besteht nicht. Das Aussehen dynamisch eingebundener Karten ('Styling') kann sich jederzeit in geringem Umfang ändern."
+    },
+    {
+      "heading": "§9 Schlussbestimmungen",
+      "text": "Sollte eine der Bestimmungen dieses Vertrages unwirksam sein oder werden, so hat das auf die Wirksamkeit der übrigen Bestimmungen keinen Einfluss. Die Vertragspartner verpflichten sich, eine Regelung herbeizuführen, die der unwirksamen Bestimmungen in ihrem rechtlichen und wirtschaftlichen Inhalt am nächsten kommt. Alle Vereinbarungen, Einzelgenehmigungen und Sonderregelungen bedürfen der Schriftform. Mündliche Nebenabsprachen begründen keine Rechtswirksamkeit.  "
+    },
+    {
+      "heading": "§10 Anwendbares Recht und Gerichtsstand",
+      "text": "Für sämtliche allfällige Streitigkeiten zwischen dem Lizenzgeber und dem Lizenznehmer sind die Gerichte am Sitz des Lizenzgebers zuständig. Anwendbar ist ausschliesslich Schweizer Recht."
+    }
+  ]
+}

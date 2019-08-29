@@ -113,6 +113,8 @@
     z-index: 10
   .topSection .headerDescription
     padding-bottom: 15rem
+  .licenseSection
+    padding-top: 15rem
 
 @media screen and (min-width: 1024px)
   .navbar,
@@ -133,6 +135,7 @@
   .benefitsSection
     padding-top: 5rem
     margin-top: -5rem
+ 
 
 @media screen and (min-width: 1440px)
   .benefitsSection
@@ -158,6 +161,8 @@
       padding-top: 22rem
   .benefitsSection
     padding-bottom: 5rem
+  .licenseSection
+    padding-top: 15rem
 
 @media screen and (max-width: 767px)
   p
@@ -198,6 +203,7 @@
       right: -5%
       top: 15%
       height: 25%
+      z-index: -1
   .benefitsSection
     padding-bottom: 5rem
     & .benefitsSectionContent
@@ -226,8 +232,20 @@
     margin-top: calc(-8rem - 10vw)
   .contactSection
     padding-bottom: 0
+  .licenseSection
+    padding-bottom: 5rem
+    & .licenseSectionContent
+      margin-top: 0rem
+      & .licenseHeader
+        font-size: 2.5rem
+        margin-top: 0rem
+      & .cardViewContainer
+        top: calc(7rem - 25vw)
+      & .cardViewSpacer
+        height: calc(20vw - 5rem)
   .footer
     flex-direction: column
+  .footer span
     & div
       margin-bottom: 1rem
     .logo.first

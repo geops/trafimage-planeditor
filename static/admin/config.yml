@@ -50,8 +50,8 @@ collections:
             {label: "So funktioniert's", name: "So funktioniert's", widget: "string"},
             {label: "Preise", name: "Preise", widget: "string"},
             {label: "Kontakt", name: "Kontakt", widget: "string"},
-            {label: "Demozugang", name: "Demozugang", widget: "string"},
-            {label: "Registrieren", name: "Registrieren", widget: "string"},
+            {label: "Demo", name: "Demo", widget: "string"},
+            {label: "Anmelden", name: "Anmelden", widget: "string"},
             {label: "Zufriedene Kunden", name: "Zufriedene Kunden", widget: "string"},
             {label: "Im Preis inbegriffen sind:", name: "Im Preis inbegriffen sind:", widget: "string"},
             {label: "Noch Fragen ?", name: "Noch Fragen ?", widget: "string"},
@@ -121,3 +121,25 @@ collections:
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
+  - label: "License"
+    name: "license"
+    folder: "src/data/license"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Sprache", name: "title", widget: "string"}
+      - {
+        label: "License",
+        name: "license",
+        widget: "list",
+        fields:
+          [
+          {
+            label: "Überschrift", name: "heading", widget: "markdown"
+          },
+          {
+            label: "Text", name: "text", widget: "text"
+          }
+          ]
+      }
+          

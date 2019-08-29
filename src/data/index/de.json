@@ -13,7 +13,7 @@
   "generic": {
     "Kontakt": "Kontakt",
     "Besuchen Sie uns auf Twitter": "Besuchen Sie uns auf Twitter",
-    "Registrieren": "Registrieren",
+    "Anmelden": "Anmelden",
     "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
     "So funktioniert's": "So funktioniert's",
     "Zufriedene Kunden": "Zufriedene Kunden",
@@ -21,7 +21,7 @@
       "Support": "Support",
       "Login": "Login"
     },
-    "Demozugang": "Demozugang",
+    "Demo": "Demo",
     "powered by": "powered by",
     "Noch Fragen ?": "Noch Fragen ?",
     "Preise": "Preise",
@@ -30,6 +30,8 @@
       "Disclaimer": "Disclaimer"
     },
     "Benefits": "Benefits",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:"
+    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
+    "License": "License",
+    "Imprint": "Impressum"
   }
 }

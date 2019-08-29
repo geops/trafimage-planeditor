@@ -3,6 +3,8 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
+import EmailButton from "../components/EmailButton";
+import Imprint from '../components/Imprint';
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -20,6 +22,9 @@ import fr_benefits from '../data/benefits/fr.json'
 import de_benefits from '../data/benefits/de.json'
 import fr_features from '../data/features/fr.json'
 import de_features from '../data/features/de.json'
+
+// import license information
+import license from '../data/license/de.json'
 
 // import contact information
 import contact from '../data/contact.json'
@@ -48,6 +53,7 @@ export const IndexPageTemplate = ({locale}) => {
             break;
         }
     }
+    let licenseInformation = license.license;
     let md = new Remarkable();
     md.set({
         html: true,
@@ -72,14 +78,17 @@ export const IndexPageTemplate = ({locale}) => {
                                 <a className="navbar-item" href="#contact">
                                     <FormattedMessage id="generic.Kontakt" />
                                 </a>
+                                <a className="navbar-item" href="#license">
+                                    <FormattedMessage id="generic.License" />
+                                </a>
                             </div>
                             <div className="headerDescription pt-5 pt-md-0">
                                 <h2><FormattedMessage id="content.page header" /></h2>
                                 <img className="mapsetElementSmall" src={mapset_element} alt="" />
                                 <p><FormattedMessage id="content.page header description" /></p>
                                 <div className="alignContainer row">
-                                    <button className="btn"><FormattedMessage id="generic.Demozugang" /></button>
-                                    <button className="btn"><FormattedMessage id="generic.Registrieren" /></button>
+                                <a href="https://editor.mapset.ch" target="_blank" rel="noopener noreferrer"><button className="btn"><FormattedMessage id="generic.Demo" /></button></a>
+                                <a href={`mailto:${contact.email}?subject=${contact.emailSubject}`}><button className="btn"><FormattedMessage id="generic.Anmelden" /></button></a>
                                 </div>
                             </div>
                         </div>
@@ -89,9 +98,9 @@ export const IndexPageTemplate = ({locale}) => {
                                     <img className="main-heading" src={mapset_banner} alt="" />
                                     <div className="subtext">
                                         <span><FormattedMessage id="generic.powered by" /> </span>
-                                        <span className="is-bolder">evoq</span>
-                                        <span className="is-bolder"> | </span>
                                         <span className="is-bolder">geops</span>
+                                        <span className="is-bolder"> | </span>
+                                        <span className="is-bolder">evoq</span>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +215,7 @@ export const IndexPageTemplate = ({locale}) => {
                                         </div>
                                         <hr />
                                         <h2 className="is-blue is-bolder no-subtext">gratis</h2>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton mode="FREE"/>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +241,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder">2'700.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton mode="MINI"/>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +267,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">5'900.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton mode="MIDI"/>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +293,7 @@ export const IndexPageTemplate = ({locale}) => {
                                             <h2 className="is-bolder ">8'400.-</h2>
                                             <span className="subtext">(CHF/Jahr)</span>
                                         </div>
-                                        <button className="btn blue-btn">Anmelden</button>
+                                        <EmailButton mode="MAXI"/>
                                     </div>
                                 </div>
                             </div>
@@ -326,6 +335,48 @@ export const IndexPageTemplate = ({locale}) => {
                     </div>
                 </div>
             </section> {/* contact section */}
+           
+
+            <section className="licenseSection" id="license">
+                <div className="licenseSectionContent">
+                    <div className="container">
+                        <h1 className="is-bolder licenseHeader rightColumn"><FormattedMessage id="generic.License" /></h1>
+                        <div className="cardViewSpacer" />
+                        <div className="accordion rightColumn">
+                            {licenseInformation && licenseInformation.map( (license, id) => (
+                                // TODO style benefit list to match design
+                                <div className="accordion-item" key={"license_"+id} name={"license_"+id}>
+                                    <button onClick={() => accordionHandler("license_"+id)}>
+                                        <h5 className="item-head">
+                                            <span dangerouslySetInnerHTML={{ __html: md.render(license.heading) }} />
+                                            <svg className="accordionStateImage plus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                            <svg className="accordionStateImage minus" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M19 13H5v-2h14v2z" fill="currentColor" />
+                                                <path d="M0 0h24v24H0z" fill="none"/>
+                                            </svg>
+                                        </h5>
+                                    </button>
+                                    <div className="content">
+                                        <p>{license.text}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section> {/* license section */}                     
+
+            <section className="impressumSection" id="impressum">
+                <div className="container">
+                    <div className="rightColumn">
+                        <h1 className="is-bolder impressumHeader"><FormattedMessage id="generic.Imprint" /></h1>
+                        <Imprint />
+                    </div>
+                </div>
+            </section> {/* impressum section */}
             <div className="aboveFooter"></div>
         </div>
     )
