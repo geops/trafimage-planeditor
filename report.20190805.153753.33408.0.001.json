@@ -1,4 +1,3 @@
-
 {
   "header": {
     "reportVersion": 1,
@@ -9,11 +8,7 @@
     "dumpEventTimeStamp": "1565012273524",
     "processId": 33408,
     "cwd": "/Users/thomashulley/Development/GeOPS/trialTask/trafimage-planeditor",
-    "commandLine": [
-      "node",
-      "/usr/local/bin/gatsby",
-      "develop"
-    ],
+    "commandLine": ["node", "/usr/local/bin/gatsby", "develop"],
     "nodejsVersion": "v12.6.0",
     "wordSize": 64,
     "arch": "x64",
@@ -123,9 +118,7 @@
   },
   "javascriptStack": {
     "message": "No stack.",
-    "stack": [
-      "Unavailable."
-    ]
+    "stack": ["Unavailable."]
   },
   "nativeStack": [
     {
@@ -260,8 +253,7 @@
       "writes": 0
     }
   },
-  "libuv": [
-  ],
+  "libuv": [],
   "environmentVariables": {
     "TERM": "xterm-256color",
     "SHELL": "/bin/bash",

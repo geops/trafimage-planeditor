@@ -35,16 +35,6 @@ collections:
         widget: "object",
         fields:
           [
-            {
-              label: "Navbar",
-              name: "navbar",
-              widget: "object",
-              fields:
-                [
-                  {label: "Support", name: "Support", widget: "string"},
-                  {label: "Login", name: "Login", widget: "string"},
-                ]
-            },
             {label: "powered by", name: "powered by", widget: "string"},
             {label: "Benefits", name: "Benefits", widget: "string"},
             {label: "So funktioniert's", name: "So funktioniert's", widget: "string"},
