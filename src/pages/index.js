@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
 import EmailButton from "../components/EmailButton";
 import Imprint from '../components/Imprint';
+import Authenticate from 'react-openidconnect';
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -29,6 +30,9 @@ import license from '../data/license/de.json'
 // import contact information
 import contact from '../data/contact.json'
 
+// import OidcSettings 
+import OidcSettings from './oidcsettings';
+console.log('oidc ',OidcSettings)
 const accordionHandler = function(id){
     let item = document.getElementsByName(id)[0]
     if(item.classList.contains('is-expanded')){
@@ -59,6 +63,13 @@ export const IndexPageTemplate = ({locale}) => {
         html: true,
         breaks: true
     });
+
+    
+
+function NotAuthenticated() {
+    return <div>You are not authenticated, please click here to authenticate.</div>;
+}
+    
     return (
         <div style={{position:'relative'}}>
             <section className="topSection">
@@ -385,10 +396,28 @@ export const IndexPageTemplate = ({locale}) => {
 }
 
 const Index = ({ pageContext: { locale } }) => {
+
+    const [user,setUser] = useState()
+    const userLoaded = (user) =>  {
+        if (user) {
+            setUser(user)
+    }
+}
+
+function userUnLoaded (user) {
+    if (user) {
+        setUser(user)
+}
+}
+
+function NotAuthenticated() {
+    return <div>You are not authenticated, please click here to authenticate.</div>;
+}
     return (
-        <Layout locale={locale}>
-            <IndexPageTemplate locale={locale} />
-        </Layout>
+        <Authenticate OidcSettings={OidcSettings} userLoaded={userLoaded} userunLoaded={userUnLoaded} renderNotAuthenticated={NotAuthenticated}>
+        <div>If you see this you are authenticated.</div>
+        {console.log('users is ',user)}
+        </Authenticate>
     )
 }
 
