@@ -47,8 +47,8 @@ const Scroller = class extends React.Component {
       this.contactScroller.classList.remove("active");
       this.licenseScroller.classList.remove("active");
     } else if (
-      document.getElementById("license").getBoundingClientRect().bottom -
-        window.innerHeight >
+      document.getElementById("license").getBoundingClientRect().top -
+        this.TOP_MARGIN >
       0
     ) {
       this.contactScroller.classList.add("active");
@@ -56,6 +56,16 @@ const Scroller = class extends React.Component {
       this.featureScroller.classList.remove("active");
       this.priceScroller.classList.remove("active");
       this.licenseScroller.classList.remove("active");
+    } else if (
+      document.getElementById("impressum").getBoundingClientRect().bottom -
+        window.innerHeight >
+      0
+    ) {
+      this.contactScroller.classList.remove("active");
+      this.benefitsScroller.classList.remove("active");
+      this.featureScroller.classList.remove("active");
+      this.priceScroller.classList.remove("active");
+      this.licenseScroller.classList.add("active");
     } else {
       this.licenseScroller.classList.add("active");
       this.benefitsScroller.classList.remove("active");

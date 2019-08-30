@@ -329,8 +329,8 @@ export const IndexPageTemplate = ({locale}) => {
                             {(contact.phone)?<span><a href={"tel:"+contact.phone}>{contact.phone}</a></span>:''}
                         </p>
                         <p>
-                            <span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
-                            <img className="twitter" src={twitter} alt="" />
+                        <span className="is-bolder"><FormattedMessage id="generic.Besuchen Sie uns auf Twitter" /></span><br />
+                        <a href="https://twitter.com/mapsetch"><img className="twitter" src={twitter} alt="" /></a>
                         </p>
                     </div>
                 </div>
@@ -344,7 +344,6 @@ export const IndexPageTemplate = ({locale}) => {
                         <div className="cardViewSpacer" />
                         <div className="accordion rightColumn">
                             {licenseInformation && licenseInformation.map( (license, id) => (
-                                // TODO style benefit list to match design
                                 <div className="accordion-item" key={"license_"+id} name={"license_"+id}>
                                     <button onClick={() => accordionHandler("license_"+id)}>
                                         <h5 className="item-head">
@@ -360,7 +359,10 @@ export const IndexPageTemplate = ({locale}) => {
                                         </h5>
                                     </button>
                                     <div className="content">
-                                        <p>{license.text}</p>
+                                        <p><FormattedHTMLMessage
+                                    id={license.text}
+                                   values={{br:<br/>}}
+                                /></p>
                                     </div>
                                 </div>
                             ))}

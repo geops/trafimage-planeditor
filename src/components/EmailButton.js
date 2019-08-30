@@ -10,12 +10,12 @@ function EmailButton({ mode }) {
   );
 }
 
-EmailButton.propTypes = {
-  mode: PropTypes.string
-};
-
 EmailButton.defaultProps = {
   mode: ""
+};
+
+EmailButton.propTypes = {
+  mode: PropTypes.string
 };
 
 export default EmailButton;

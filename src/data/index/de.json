@@ -18,10 +18,7 @@
     "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
     "So funktioniert's": "So funktioniert's",
     "Zufriedene Kunden": "Zufriedene Kunden",
-    "navbar": {
-      "Support": "Support",
-      "Login": "Login"
-    },
+    "Demo": "Demo",
     "powered by": "powered by",
     "Noch Fragen ?": "Noch Fragen ?",
     "Preise": "Preise",
@@ -30,6 +27,8 @@
       "Disclaimer": "Disclaimer"
     },
     "Benefits": "Benefits",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:"
+    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
+    "License": "License",
+    "Imprint": "Impressum"
   }
 }
