@@ -10363,10 +10363,10 @@ obuf@^1.0.0, obuf@^1.1.2:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
-oidc-client@^1.4.1:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/oidc-client/-/oidc-client-1.9.0.tgz#c331f30c0f4b42f39889a3cb0b036c8d7ddedb63"
-  integrity sha512-fJradf/BsRYh96YzWPlm38DRQJRg1wm1nZU21OX8P9NBNxBXRems9BmvOIoh8sO8Y7gmMemESOn4A2TgId+36g==
+oidc-client@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/oidc-client/-/oidc-client-1.9.1.tgz#c12c2a63adad7a6780b7cb3c2b9e97c903c1aaad"
+  integrity sha512-AP1BwqASKIYrCBMu9dmNy3OTbhfaiBpy+5hZRbG1dmE2HqpQCp2JiJUNnNGTh2P+cnfVOrC79CGIluD1VMgMzQ==
   dependencies:
     base64-js "^1.3.0"
     core-js "^2.6.4"
@@ -12040,7 +12040,7 @@ react-dnd@^7.3.2:
     invariant "^2.1.0"
     shallowequal "^1.1.0"
 
-react-dom@^16.0.0, react-dom@^16.8.4:
+react-dom@^16.8.4:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
   integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
@@ -12141,15 +12141,6 @@ react-onclickoutside@^6.5.0:
   version "6.9.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.9.0.tgz#a54bc317ae8cf6131a5d78acea55a11067f37a1f"
   integrity sha512-8ltIY3bC7oGhj2nPAvWOGi+xGFybPNhJM0V1H8hY/whNcXgmDeaeoCMPPd8VatrpTsUWjb/vGzrmu6SrXVty3A==
-
-react-openidconnect@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-openidconnect/-/react-openidconnect-1.1.0.tgz#c7f2cff07226fc365d083822009f9cbe7f2f8fa4"
-  integrity sha512-MBwUReefz6+e/RObot6/vu33kJrwGg4HsduMa99QgakEFgtO2HZR63KJSZPSBBomRPJDwJIt4dTQG7GJ0hG8aw==
-  dependencies:
-    oidc-client "^1.4.1"
-    react "^16.0.0"
-    react-dom "^16.0.0"
 
 react-overlays@^1.2.0:
   version "1.2.0"
@@ -12372,7 +12363,7 @@ react-waypoint@^8.1.0:
     prop-types "^15.0.0"
     react-is "^16.6.3"
 
-react@^16.0.0, react@^16.8.4, react@^16.9.0:
+react@^16.8.4, react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
   integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==

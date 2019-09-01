@@ -5,6 +5,13 @@ import layout_bg_4 from "../img/layoutBG_4.svg";
 import layout_bg_2 from "../img/layoutBG_2.png";
 import mapset_banner from "../img/Mapset_Logo_RGB_weiss.svg";
 
+// OidcSettings 
+import { UserManager, OidcClient,WebStorageStateStore, Log } from "oidc-client";
+import OidcSettings from './oidcsettings';
+console.log('oidc ',OidcSettings)
+var manager = new OidcClient(OidcSettings);
+
+
 const Navbar = class extends React.Component {
   state = {
     locale: this.props.locale,
@@ -12,6 +19,10 @@ const Navbar = class extends React.Component {
     active: false,
     navBarActiveClass: ""
   };
+
+  hi= (ho) => {
+    console.log('manager ',ho)
+  }
 
   toggleHamburger = (callback = null) => {
     // toggle the active boolean in the state
@@ -127,6 +138,15 @@ const Navbar = class extends React.Component {
                   <FormattedMessage id="generic.License" />
                 </a>
                 <span className="h-rule" />
+                <Link className="navbar-item" to="/">
+                  <span onClick={()=>this.hi('gola ho ')}><FormattedMessage id="generic.navbar.Support" /></span>
+                </Link>
+                <Link className="navbar-item" to="/">
+                  <FormattedMessage id="generic.navbar.Login" />
+                  <svg className="icon is-small is-blue" width="24" height="24" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"></path>
+                  </svg>
+                </Link>
               </div>
               <img
                 className="mobileBackgroundImageBottom"
@@ -136,7 +156,17 @@ const Navbar = class extends React.Component {
               <div className="mobile-menu-bottom-space" />
             </div>
             <div id="navMenu" className="navbar-menu d-none d-md-block">
-              <div className="navbar-end has-text-centered"></div>
+              <div className="navbar-end has-text-centered">
+                <Link className="navbar-item" to="/">
+                <span onClick={()=>this.hi('gola ho ')}><FormattedMessage id="generic.navbar.Support" /></span>
+                </Link>
+                <Link className="navbar-item" to="/">
+                  <FormattedMessage id="generic.navbar.Login" />
+                  <svg className="icon is-small is-white" width="24" height="24" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"></path>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </nav>
