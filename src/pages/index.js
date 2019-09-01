@@ -5,7 +5,6 @@ import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
 import EmailButton from "../components/EmailButton";
 import Imprint from '../components/Imprint';
-import Authenticate from 'react-openidconnect';
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -30,9 +29,6 @@ import license from '../data/license/de.json'
 // import contact information
 import contact from '../data/contact.json'
 
-// import OidcSettings 
-import OidcSettings from './oidcsettings';
-console.log('oidc ',OidcSettings)
 const accordionHandler = function(id){
     let item = document.getElementsByName(id)[0]
     if(item.classList.contains('is-expanded')){
@@ -41,6 +37,7 @@ const accordionHandler = function(id){
         item.classList.add('is-expanded')
     }
 }
+
 
 export const IndexPageTemplate = ({locale}) => {
     let benefits
@@ -64,11 +61,6 @@ export const IndexPageTemplate = ({locale}) => {
         breaks: true
     });
 
-    
-
-function NotAuthenticated() {
-    return <div>You are not authenticated, please click here to authenticate.</div>;
-}
     
     return (
         <div style={{position:'relative'}}>
@@ -397,27 +389,10 @@ function NotAuthenticated() {
 
 const Index = ({ pageContext: { locale } }) => {
 
-    const [user,setUser] = useState()
-    const userLoaded = (user) =>  {
-        if (user) {
-            setUser(user)
-    }
-}
-
-function userUnLoaded (user) {
-    if (user) {
-        setUser(user)
-}
-}
-
-function NotAuthenticated() {
-    return <div>You are not authenticated, please click here to authenticate.</div>;
-}
     return (
-        <Authenticate OidcSettings={OidcSettings} userLoaded={userLoaded} userunLoaded={userUnLoaded} renderNotAuthenticated={NotAuthenticated}>
-        <div>If you see this you are authenticated.</div>
-        {console.log('users is ',user)}
-        </Authenticate>
+        <Layout locale={locale}>
+            <IndexPageTemplate locale={locale} />
+        </Layout>
     )
 }
 
