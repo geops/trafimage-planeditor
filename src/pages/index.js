@@ -5,6 +5,7 @@ import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
 import EmailButton from "../components/EmailButton";
 import Imprint from '../components/Imprint';
+import userManager from "../utils/userManager";
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -37,6 +38,43 @@ const accordionHandler = function(id){
         item.classList.add('is-expanded')
     }
 }
+
+const onSuccess = user => {
+    const params = (user && user.state && user.state.urlParams) || "";
+    const pathName = (user && user.state && user.state.urlPathname) || "/";
+    window.location.href = `${pathName}${params}`;
+  };
+  
+  const onError = error => {
+    console.error(error);
+    window.location.href = "/";
+  };
+  
+  if (localStorage.getItem("loginProzessOnGoing")) {
+    userManager
+      .signinRedirectCallback()
+      .then(user => {
+        localStorage.removeItem("loginProzessOnGoing");
+        localStorage.setItem("userNickname", user.profile.nickname);
+        onSuccess(user);
+      })
+      .catch(error => {
+        onError(error);
+      });
+  } else if (localStorage.getItem("logoutProzessOnGoing")) {
+    localStorage.removeItem("logoutProzessOnGoing");
+    userManager
+      .signoutRedirectCallback()
+      .then(user => {
+        localStorage.removeItem("logoutProzessOnGoing");
+        localStorage.removeItem("userNickname");
+        onSuccess(user);
+      })
+      .catch(error => {
+        onError(error);
+      });
+  }
+  
 
 
 export const IndexPageTemplate = ({locale}) => {
@@ -388,6 +426,10 @@ export const IndexPageTemplate = ({locale}) => {
 }
 
 const Index = ({ pageContext: { locale } }) => {
+    if (localStorage.getItem("loginProzessOnGoing")) {
+        localStorage.removeItem("loginProzessOnGoing");
+        return 'Redirecting ...';
+    }
     return (
         <Layout locale={locale}>
             <IndexPageTemplate locale={locale} />
