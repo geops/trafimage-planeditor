@@ -7,7 +7,7 @@ const Oidcsettings = {
   response_type: "id_token token",
   scope: "openid profile email roles",
   filterProtocolClaims: true,
-  automaticSilentRenew: true,
+  automaticSilentRenew: false,
   loadUserInfo: true
 };
 

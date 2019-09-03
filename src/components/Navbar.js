@@ -7,8 +7,7 @@ import layout_bg_2 from "../img/layoutBG_2.png";
 import mapset_banner from "../img/Mapset_Logo_RGB_weiss.svg";
 import login from "../img/login.svg";
 import logout from "../img/logout.svg";
-import userManager, { onSuccess, onError } from "../utils/userManager";
-import { CallbackSignout } from "../utils/userManager";
+import userManager from "../utils/userManager";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -20,45 +19,19 @@ class Navbar extends React.Component {
       navBarActiveClass: "",
       user: ""
     };
-    this.getNickName = this.getNickName.bind(this);
   }
 
   login = event => {
+    console.log("here login");
     event.preventDefault();
+    localStorage.setItem("loginProzessOnGoing", true);
     userManager.signinRedirect();
   };
 
   logout = event => {
     console.log("logged out");
-    userManager.signoutRedirectCallback().then(user => {
-      console.log("logged out ", user);
-      onSuccess(user);
-      localStorage.removeItem("userNickname");
-      userManager.stopSilentRenew();
-      userManager.removeUser();
-    });
-    return <div>Redirecting ...</div>;
-  };
-
-  getNickName = () => {
-    let nickname;
-    userManager.getUser().then(user => {
-      //   localStorage.setItem("pe.signin", true);
-      if (user) {
-        console.log("user nickname is ", user.profile.nickname);
-        nickname = user.profile.nickname;
-        localStorage.setItem("userNickname", user.profile.nickname);
-        console.log("fg", this);
-        this.setState({ user: nickname });
-
-        // this.setState({ user: nickname });
-      } else {
-        nickname = "";
-        console.log("User not logged in");
-      }
-    });
-    console.log("nickname ", nickname);
-    return nickname;
+    localStorage.setItem("logoutProzessOnGoing", true);
+    userManager.signoutRedirect();
   };
 
   toggleHamburger = (callback = null) => {
@@ -92,11 +65,6 @@ class Navbar extends React.Component {
       window.scrollTo(0, document.getElementById(target).offsetTop);
     });
   };
-
-  componentDidMount() {
-    console.log("mounted");
-    this.getNickName();
-  }
 
   render() {
     return (
@@ -227,7 +195,7 @@ class Navbar extends React.Component {
                     </svg>
                     <FormattedMessage id={`generic.navbar.Logout`} />
                     {"\u00A0"}
-                    {this.state.user}
+                    {localStorage.getItem("userNickname")}
                   </Link>
                 ) : (
                   <Link
