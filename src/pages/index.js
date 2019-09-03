@@ -388,7 +388,6 @@ export const IndexPageTemplate = ({locale}) => {
 }
 
 const Index = ({ pageContext: { locale } }) => {
-
     return (
         <Layout locale={locale}>
             <IndexPageTemplate locale={locale} />
