@@ -5,8 +5,6 @@ import { Link } from "gatsby";
 import layout_bg_4 from "../img/layoutBG_4.svg";
 import layout_bg_2 from "../img/layoutBG_2.png";
 import mapset_banner from "../img/Mapset_Logo_RGB_weiss.svg";
-import login from "../img/login.svg";
-import logout from "../img/logout.svg";
 import userManager from "../utils/userManager";
 
 class Navbar extends React.Component {
