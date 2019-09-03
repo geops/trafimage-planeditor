@@ -146,21 +146,53 @@ class Navbar extends React.Component {
                   <FormattedMessage id="generic.License" />
                 </a>
                 <span className="h-rule" />
-                <Link className="navbar-item" to="/">
-                  <FormattedMessage id="generic.navbar.Login" />{" "}
-                  {this.state.user}
-                  <svg
-                    className="icon is-blue"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 42.26 59.55"
+                {localStorage["userNickname"] ? (
+                  <Link
+                    className="navbar-item"
+                    onClick={event => {
+                      this.logout(event);
+                    }}
+                    to="/"
                   >
-                    <g data-name="Ebene 2">
-                      <path d="M40.76 29.14H37V15.69a15.69 15.69 0 0 0-31.38 0v13.45H1.5a1.5 1.5 0 0 0-1.5 1.5v21.84a7.08 7.08 0 0 0 7.08 7.07h28.1a7.08 7.08 0 0 0 7.08-7.07V30.64a1.5 1.5 0 0 0-1.5-1.5zM8.58 15.69a12.69 12.69 0 0 1 25.38 0v13.45H8.58zm30.68 36.79a4 4 0 0 1-4.08 4.07H7.08A4 4 0 0 1 3 52.48V32.14h36.26z" />
-                      <path d="M24.58 40.56a3.31 3.31 0 1 0-6.62 0 3.24 3.24 0 0 0 1.79 3L18 49.79h6.62l-1.79-6.34a3.21 3.21 0 0 0 1.75-2.89z" />
-                    </g>
-                  </svg>
-                </Link>
+                    <svg
+                      className="icon is-blue"
+                      viewBox="0 0 42.26 59.55"
+                      width="24"
+                      height="24"
+                      fill="blue"
+                    >
+                      <g data-name="Ebene 2">
+                        <path d="M40.76,29.13H8.58V15.69a12.69,12.69,0,0,1,25.38,0v4.16h3V15.69a15.69,15.69,0,0,0-31.38,0V29.13H1.5A1.5,1.5,0,0,0,0,30.63V52.47a7.09,7.09,0,0,0,7.08,7.08h28.1a7.09,7.09,0,0,0,7.08-7.08V30.63A1.5,1.5,0,0,0,40.76,29.13Zm-1.5,23.34a4,4,0,0,1-4.08,4.08H7.08A4,4,0,0,1,3,52.47V32.13H39.26Z" />
+                        <path d="M24.57,40.55a3.31,3.31,0,1,0-4.82,3L18,49.78h6.61l-1.79-6.33A3.22,3.22,0,0,0,24.57,40.55Z" />
+                      </g>
+                    </svg>
+                    <FormattedMessage id={`generic.navbar.Logout`} />
+                    {"\u00A0"}
+                    {localStorage.getItem("userNickname")}
+                  </Link>
+                ) : (
+                  <Link
+                    className="navbar-item"
+                    onClick={event => {
+                      this.login(event);
+                    }}
+                    to="/"
+                  >
+                    <svg
+                      className="icon is-blue"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 42.26 59.55"
+                      fill="blue"
+                    >
+                      <g data-name="Ebene 2">
+                        <path d="M40.76 29.14H37V15.69a15.69 15.69 0 0 0-31.38 0v13.45H1.5a1.5 1.5 0 0 0-1.5 1.5v21.84a7.08 7.08 0 0 0 7.08 7.07h28.1a7.08 7.08 0 0 0 7.08-7.07V30.64a1.5 1.5 0 0 0-1.5-1.5zM8.58 15.69a12.69 12.69 0 0 1 25.38 0v13.45H8.58zm30.68 36.79a4 4 0 0 1-4.08 4.07H7.08A4 4 0 0 1 3 52.48V32.14h36.26z" />
+                        <path d="M24.58 40.56a3.31 3.31 0 1 0-6.62 0 3.24 3.24 0 0 0 1.79 3L18 49.79h6.62l-1.79-6.34a3.21 3.21 0 0 0 1.75-2.89z" />
+                      </g>
+                    </svg>
+                    <FormattedMessage id="generic.navbar.Login" />
+                  </Link>
+                )}
               </div>
               <img
                 className="mobileBackgroundImageBottom"
