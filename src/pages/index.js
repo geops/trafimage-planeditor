@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
@@ -39,44 +39,14 @@ const accordionHandler = function(id){
     }
 }
 
-const onSuccess = user => {
-    const params = (user && user.state && user.state.urlParams) || "";
-    const pathName = (user && user.state && user.state.urlPathname) || "/";
-    window.location.href = `${pathName}${params}`;
-  };
-  
-  const onError = error => {
-    console.error(error);
-    window.location.href = "/";
-  };
-  
-  if (localStorage.getItem("loginProzessOnGoing")) {
-    userManager
-      .signinRedirectCallback()
-      .then(user => {
-        localStorage.removeItem("loginProzessOnGoing");
-        localStorage.setItem("userNickname", user.profile.nickname);
-        onSuccess(user);
-      })
-      .catch(error => {
-        onError(error);
-      });
-  } else if (localStorage.getItem("logoutProzessOnGoing")) {
-    localStorage.removeItem("logoutProzessOnGoing");
-    userManager
-      .signoutRedirectCallback()
-      .then(user => {
-        localStorage.removeItem("logoutProzessOnGoing");
-        localStorage.removeItem("userNickname");
-        onSuccess(user);
-      })
-      .catch(error => {
-        onError(error);
-      });
-  }
-  
-
-
+if (typeof window !== `undefined` && !/(admin|signin|signout|silent)/.test(window.location.pathname)) {
+    userManager.signinSilent().then(user => {
+      window.localStorage.setItem('userNickname', user.profile.nickname)
+    })
+    .catch(error => {
+      console.log(error)
+    }); 
+}
 export const IndexPageTemplate = ({locale}) => {
     let benefits
     let features
@@ -97,9 +67,7 @@ export const IndexPageTemplate = ({locale}) => {
     md.set({
         html: true,
         breaks: true
-    });
-
-    
+    });    
     return (
         <div style={{position:'relative'}}>
             <section className="topSection">
@@ -426,12 +394,16 @@ export const IndexPageTemplate = ({locale}) => {
 }
 
 const Index = ({ pageContext: { locale } }) => {
-    if (localStorage.getItem("loginProzessOnGoing")) {
-        localStorage.removeItem("loginProzessOnGoing");
-        return 'Redirecting ...';
+    const [user, setUser] = useState(null);
+
+    if (typeof window !== 'undefined' && !window.localStorage.getItem('userNickname')) {
+        userManager.events.addUserLoaded((userr) => {
+            setUser(userr);
+        });
     }
+
     return (
-        <Layout locale={locale}>
+        <Layout locale={locale} user={user}>
             <IndexPageTemplate locale={locale} />
         </Layout>
     )

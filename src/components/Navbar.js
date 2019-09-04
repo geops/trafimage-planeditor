@@ -14,21 +14,19 @@ class Navbar extends React.Component {
       locale: this.props.locale,
       messages: this.props.messages,
       active: false,
-      navBarActiveClass: "",
-      user: ""
+      navBarActiveClass: ""
     };
   }
 
   login = event => {
     console.log("here login");
     event.preventDefault();
-    localStorage.setItem("loginProzessOnGoing", true);
     userManager.signinRedirect();
   };
 
   logout = event => {
     console.log("logged out");
-    localStorage.setItem("logoutProzessOnGoing", true);
+    localStorage.removeItem("userNickname");
     userManager.signoutRedirect();
   };
 
@@ -65,6 +63,7 @@ class Navbar extends React.Component {
   };
 
   render() {
+    const { user } = this.props;
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <nav className="navbar" role="navigation" aria-label="main-navigation">
@@ -146,7 +145,7 @@ class Navbar extends React.Component {
                   <FormattedMessage id="generic.License" />
                 </a>
                 <span className="h-rule" />
-                {localStorage["userNickname"] ? (
+                {user ? (
                   <Link
                     className="navbar-item"
                     onClick={event => {
@@ -168,7 +167,7 @@ class Navbar extends React.Component {
                     </svg>
                     <FormattedMessage id={`generic.navbar.Logout`} />
                     {"\u00A0"}
-                    {localStorage.getItem("userNickname")}
+                    {user.profile.nickname}
                   </Link>
                 ) : (
                   <Link
@@ -203,7 +202,7 @@ class Navbar extends React.Component {
             </div>
             <div id="navMenu" className="navbar-menu d-none d-md-block">
               <div className="navbar-end has-text-centered">
-                {localStorage["userNickname"] ? (
+                {user ? (
                   <Link
                     className="navbar-item"
                     onClick={event => {
@@ -225,7 +224,7 @@ class Navbar extends React.Component {
                     </svg>
                     <FormattedMessage id={`generic.navbar.Logout`} />
                     {"\u00A0"}
-                    {localStorage.getItem("userNickname")}
+                    {user.profile.nickname}
                   </Link>
                 ) : (
                   <Link

@@ -39,6 +39,7 @@
     "react-helmet": "^5.2.0",
     "react-intl": "^2.9.0",
     "remarkable": "^2.0.0",
+    "use-force-update": "^1.0.7",
     "uuid": "^3.2.1"
   },
   "keywords": [
