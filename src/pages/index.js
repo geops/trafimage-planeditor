@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from '../components/Layout'
 import { Remarkable } from 'remarkable';
 import Scroller from "../components/Scroller";
 import EmailButton from "../components/EmailButton";
 import Imprint from '../components/Imprint';
+import userManager from "../utils/userManager";
 
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from '../img/layoutBG_2.png'
@@ -38,6 +39,14 @@ const accordionHandler = function(id){
     }
 }
 
+if (typeof window !== `undefined` && !/(admin|signin|signout|silent)/.test(window.location.pathname)) {
+    userManager.signinSilent().then(user => {
+      window.localStorage.setItem('userNickname', user.profile.nickname)
+    })
+    .catch(error => {
+      console.log(error)
+    }); 
+}
 export const IndexPageTemplate = ({locale}) => {
     let benefits
     let features
@@ -58,7 +67,7 @@ export const IndexPageTemplate = ({locale}) => {
     md.set({
         html: true,
         breaks: true
-    });
+    });    
     return (
         <div style={{position:'relative'}}>
             <section className="topSection">
@@ -385,8 +394,16 @@ export const IndexPageTemplate = ({locale}) => {
 }
 
 const Index = ({ pageContext: { locale } }) => {
+    const [user, setUser] = useState(null);
+
+    if (typeof window !== 'undefined' && !window.localStorage.getItem('userNickname')) {
+        userManager.events.addUserLoaded((userr) => {
+            setUser(userr);
+        });
+    }
+
     return (
-        <Layout locale={locale}>
+        <Layout locale={locale} user={user}>
             <IndexPageTemplate locale={locale} />
         </Layout>
     )

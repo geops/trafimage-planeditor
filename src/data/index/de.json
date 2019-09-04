@@ -18,7 +18,6 @@
     "Ihr persönlicher Kontakt": "Ihr persönlicher Kontakt",
     "So funktioniert's": "So funktioniert's",
     "Zufriedene Kunden": "Zufriedene Kunden",
-    "Demo": "Demo",
     "powered by": "powered by",
     "Noch Fragen ?": "Noch Fragen ?",
     "Preise": "Preise",
@@ -29,6 +28,10 @@
     "Benefits": "Benefits",
     "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
     "License": "License",
-    "Imprint": "Impressum"
+    "Imprint": "Impressum",
+    "navbar": {
+      "Login": "Einloggen",
+      "Logout": "Logged in as"
+    }
   }
 }
