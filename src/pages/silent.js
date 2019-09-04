@@ -1,10 +1,14 @@
 import userManager from "../utils/userManager";
 
-const Silent = ({ pageContext: { locale } }) => {
-  if (!userManager) {
-    return null;
-  }
+if (
+  userManager &&
+  typeof window !== `undefined` &&
+  /silent/.test(window.location.pathname)
+) {
   userManager.signinSilentCallback();
+}
+
+const Silent = ({ pageContext: { locale } }) => {
   return null;
 };
 

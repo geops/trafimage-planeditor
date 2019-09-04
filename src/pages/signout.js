@@ -1,6 +1,6 @@
 import userManager from "../utils/userManager";
 
-const onSuccess = () => {
+const onSuccess = user => {
   const params = (user && user.state && user.state.urlParams) || "";
   const pathName = (user && user.state && user.state.urlPathname) || "/";
   if (window) window.location.href = `${pathName}${params}`;
@@ -11,10 +11,11 @@ const onError = error => {
   if (window) window.location.href = "/";
 };
 
-const Signout = ({ pageContext: { locale } }) => {
-  if (!userManager) {
-    return null;
-  }
+if (
+  userManager &&
+  typeof window !== `undefined` &&
+  /signout/.test(window.location.pathname)
+) {
   userManager
     .signoutRedirectCallback()
     .then(() => {
@@ -23,6 +24,9 @@ const Signout = ({ pageContext: { locale } }) => {
     .catch(error => {
       onError(error);
     });
+}
+
+const Signout = ({ pageContext: { locale } }) => {
   return null;
 };
 

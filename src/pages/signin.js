@@ -11,10 +11,11 @@ const onError = error => {
   if (window) window.location.href = "/";
 };
 
-const Signin = ({ pageContext: { locale } }) => {
-  if (!userManager) {
-    return null;
-  }
+if (
+  userManager &&
+  typeof window !== `undefined` &&
+  /signin/.test(window.location.pathname)
+) {
   userManager
     .signinRedirectCallback()
     .then(user => {
@@ -23,6 +24,9 @@ const Signin = ({ pageContext: { locale } }) => {
     .catch(error => {
       onError(error);
     });
+}
+
+const Signin = ({ pageContext: { locale } }) => {
   return "Redirecting ...";
 };
 
