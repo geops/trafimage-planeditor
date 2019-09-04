@@ -8,7 +8,7 @@ const getUrl = path => {
 };
 
 const Oidcsettings = {
-  authority: "https://sso.geops.io/openid",
+  authority: "https://sso.mapset.ch/openid",
   client_id: "023137",
   redirect_uri: getUrl("/signin"),
   post_logout_redirect_uri: getUrl("/signout"),
