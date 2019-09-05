@@ -30,7 +30,7 @@
     "License": "License",
     "Imprint": "Impressum",
     "navbar": {
-      "Login": "Einloggen",
+      "Login": "Login",
       "Logout": "Logged in as"
     }
   }
