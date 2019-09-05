@@ -19,13 +19,11 @@ class Navbar extends React.Component {
   }
 
   login = event => {
-    console.log("here login");
     event.preventDefault();
     userManager.signinRedirect();
   };
 
   logout = event => {
-    console.log("logged out");
     localStorage.removeItem("userNickname");
     userManager.signoutRedirect();
   };
