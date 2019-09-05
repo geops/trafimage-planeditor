@@ -177,19 +177,18 @@ class Navbar extends React.Component {
                     }}
                     to="/"
                   >
+                    <FormattedMessage id="generic.navbar.Login" />
                     <svg
-                      className="icon is-blue"
+                      className="icon is-small is-blue"
                       width="24"
                       height="24"
-                      viewBox="0 0 42.26 59.55"
-                      fill="blue"
+                      viewBox="0 0 512 512"
                     >
-                      <g data-name="Ebene 2">
-                        <path d="M40.76 29.14H37V15.69a15.69 15.69 0 0 0-31.38 0v13.45H1.5a1.5 1.5 0 0 0-1.5 1.5v21.84a7.08 7.08 0 0 0 7.08 7.07h28.1a7.08 7.08 0 0 0 7.08-7.07V30.64a1.5 1.5 0 0 0-1.5-1.5zM8.58 15.69a12.69 12.69 0 0 1 25.38 0v13.45H8.58zm30.68 36.79a4 4 0 0 1-4.08 4.07H7.08A4 4 0 0 1 3 52.48V32.14h36.26z" />
-                        <path d="M24.58 40.56a3.31 3.31 0 1 0-6.62 0 3.24 3.24 0 0 0 1.79 3L18 49.79h6.62l-1.79-6.34a3.21 3.21 0 0 0 1.75-2.89z" />
-                      </g>
+                      <path
+                        fill="currentColor"
+                        d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"
+                      ></path>
                     </svg>
-                    <FormattedMessage id="generic.navbar.Login" />
                   </Link>
                 )}
               </div>
@@ -234,19 +233,18 @@ class Navbar extends React.Component {
                     }}
                     to="/"
                   >
+                    <FormattedMessage id="generic.navbar.Login" />
                     <svg
-                      className="icon is-blue"
+                      className="icon is-small is-white"
                       width="24"
                       height="24"
-                      viewBox="0 0 42.26 59.55"
-                      fill="white"
+                      viewBox="0 0 512 512"
                     >
-                      <g data-name="Ebene 2">
-                        <path d="M40.76 29.14H37V15.69a15.69 15.69 0 0 0-31.38 0v13.45H1.5a1.5 1.5 0 0 0-1.5 1.5v21.84a7.08 7.08 0 0 0 7.08 7.07h28.1a7.08 7.08 0 0 0 7.08-7.07V30.64a1.5 1.5 0 0 0-1.5-1.5zM8.58 15.69a12.69 12.69 0 0 1 25.38 0v13.45H8.58zm30.68 36.79a4 4 0 0 1-4.08 4.07H7.08A4 4 0 0 1 3 52.48V32.14h36.26z" />
-                        <path d="M24.58 40.56a3.31 3.31 0 1 0-6.62 0 3.24 3.24 0 0 0 1.79 3L18 49.79h6.62l-1.79-6.34a3.21 3.21 0 0 0 1.75-2.89z" />
-                      </g>
+                      <path
+                        fill="currentColor"
+                        d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"
+                      ></path>
                     </svg>
-                    <FormattedMessage id="generic.navbar.Login" />
                   </Link>
                 )}
               </div>
