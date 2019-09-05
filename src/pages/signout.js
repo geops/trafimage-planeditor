@@ -18,8 +18,8 @@ if (
 ) {
   userManager
     .signoutRedirectCallback()
-    .then(() => {
-      onSuccess();
+    .then(user => {
+      onSuccess(user);
     })
     .catch(error => {
       onError(error);
