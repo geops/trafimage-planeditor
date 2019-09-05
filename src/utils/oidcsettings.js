@@ -9,7 +9,7 @@ const getUrl = path => {
 
 const Oidcsettings = {
   authority: "https://sso.mapset.ch/openid",
-  client_id: "023137",
+  client_id: "576922",
   redirect_uri: getUrl("/signin"),
   post_logout_redirect_uri: getUrl("/signout"),
   silent_redirect_uri: getUrl("/silent"),
