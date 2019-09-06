@@ -357,7 +357,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     </div>
                     <hr />
                     <div className="price">
-                      <h2 className="is-bolder">2'700.-</h2>
+                      <h2 className="is-bolder">2'700.–</h2>
                       <span className="subtext">(CHF/Jahr)</span>
                     </div>
                     <EmailButton mode="MINI" />
@@ -390,7 +390,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     </div>
                     <hr />
                     <div className="price">
-                      <h2 className="is-bolder ">5'900.-</h2>
+                      <h2 className="is-bolder ">5'900.–</h2>
                       <span className="subtext">(CHF/Jahr)</span>
                     </div>
                     <EmailButton mode="MIDI" />
@@ -423,7 +423,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     </div>
                     <hr />
                     <div className="price">
-                      <h2 className="is-bolder ">8'400.-</h2>
+                      <h2 className="is-bolder ">8'400.–</h2>
                       <span className="subtext">(CHF/Jahr)</span>
                     </div>
                     <EmailButton mode="MAXI" />
