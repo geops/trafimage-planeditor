@@ -10,7 +10,6 @@ Click here to see the [Tragimage PlanEditor](https://trafimage.mapset.ch/) one-p
 
 
 ## Project Description
-Written by *Thomas Hulley*, following designs from geOps. <br/>
-This is a project being made for geOps - Freiburg, Germany.
+Written by *Thomas Hulley*, following designs from geOps. 
 
 
