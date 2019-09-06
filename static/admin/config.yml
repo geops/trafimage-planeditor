@@ -97,7 +97,7 @@ collections:
             label: "Überschrift", name: "heading", widget: "markdown"
           },
           {
-            label: "Text", name: "text", widget: "text"
+            label: "Text", name: "text", widget: "markdown"
           }
           ]
         }
@@ -108,7 +108,7 @@ collections:
         label: "Kontakt"
         name: "contact"
         fields:
-          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Name", name: "name", widget: "string", required: false}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
   - label: "License"
