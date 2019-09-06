@@ -1,3 +1,17 @@
+// Common style shared by license and benefit section
+@mixin benefitLicenseSharingStyle ($sectionContent,$sectionHeader,$marginBottom)
+  padding-bottom: 5rem
+  & .#{$sectionContent}
+    margin-top: 0rem
+    & .#{$sectionHeader}
+      font-size: 2.5rem
+      margin-top: 0rem
+      margin-bottom: $marginBottom
+    & .cardViewContainer
+      top: calc(7rem - 25vw)
+    & .cardViewSpacer
+      height: calc(20vw - 5rem)
+
 .navbar
   & .navbar-burger
     cursor: pointer
@@ -205,20 +219,12 @@
       height: 25%
       z-index: -1
   .benefitsSection
-    padding-bottom: 5rem
-    & .benefitsSectionContent
-      margin-top: 0rem
-      & .benefitsHeader
-        font-size: 2.5rem
-        margin-top: 0rem
-        margin-bottom: 15rem
-      & .cardViewContainer
-        top: calc(7rem - 25vw)
-      & .cardViewSpacer
-        height: calc(20vw - 5rem)
+     @include benefitLicenseSharingStyle(benefitsSectionContent,benefitsHeader,15rem)
+
   .featureSection
     & h1
       font-size: 2.5rem
+
   .priceSection
     padding-top: calc(5vw + 5rem)
     margin-bottom: 3rem
@@ -232,17 +238,10 @@
     margin-top: calc(-8rem - 10vw)
   .contactSection
     padding-bottom: 0
+
   .licenseSection
-    padding-bottom: 5rem
-    & .licenseSectionContent
-      margin-top: 0rem
-      & .licenseHeader
-        font-size: 2.5rem
-        margin-top: 0rem
-      & .cardViewContainer
-        top: calc(7rem - 25vw)
-      & .cardViewSpacer
-        height: calc(20vw - 5rem)
+    @include benefitLicenseSharingStyle(licenseSectionContent,licenseHeader,null)
+
   .footer
     flex-direction: column
   .footer span
@@ -254,3 +253,5 @@
 @media screen and (max-width: 565px)
   .topSection.main-heading
     height: 3rem
+
+

@@ -14,7 +14,94 @@
 .navbar, .topSection, .priceSection, .footer, .blueBack
   background: linear-gradient(90deg, $primary, $secondary)
 
-//navbar
+// Accordion style shared by benefit, features, and license section
+@mixin commonAccordionStyle ($color,$fontSize)
+  .accordion
+    margin-bottom: 5rem
+    & .accordion-item
+      position: relative
+      border-bottom: 2px solid $greyMid
+      & button
+        -webkit-appearance: none
+        border: none
+        width : 100%
+        text-align: left
+        padding: 0
+      & .item-head
+        font-weight: normal
+        margin: 1rem 0
+        & p
+          display: inline
+          color: $color
+        & .accordionStateImage
+          color: $primary
+          right: 0
+          position: absolute
+      & .content
+        overflow: hidden
+        max-height: 0
+        transition: max-height 1s
+        margin: 0
+        & p
+          font-size: $fontSize
+          width: 85%
+          margin: 1rem 0 2rem 0
+    & .accordion-item.is-expanded
+      & .content
+        display: block
+        max-height: fit-content
+      & .plus
+        display: none
+
+
+// Common style shared by license and benefit section
+@mixin licenseBenefitSharingStyle($sectionContent,$backgroundColor,$cardViewSpacerHeight)
+  position: relative
+  z-index: 1
+  background-color: $backgroundColor
+  padding-bottom: 10rem
+  & .#{$sectionContent}
+    margin-top: -15rem
+    position: relative
+    z-index: 20
+    & h1
+      color: $primary
+    & .cardViewSection
+      position: relative
+    & .cardViewContainer
+      overflow: hidden
+      position: absolute
+      width: 100vw
+      height: calc(100vw * 772 / 1336)
+      max-width: 90rem
+      max-height: calc(90rem * 772 / 1336)
+      top: calc(17rem - 30vw)
+      padding-top: 0rem
+      padding-bottom: 0rem
+      & .cardViewSingle
+        position: absolute
+        z-index: 20
+        right: -35%
+    & .cardViewSpacer
+      height: calc(25vw - #{$cardViewSpacerHeight})
+    & .cardViewer
+      pointer-events: none
+      position: absolute
+      z-index: 100
+      top: -5rem
+      right: 0
+      width: 100%
+      height: 100%
+      & img
+        box-shadow: 0 0 5rem $primary
+        transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
+    & .container
+      position: relative
+      z-index: 10
+
+
+
+// Navbar
 .navbar
   border: none
   display: flex
@@ -58,6 +145,7 @@
       width: 100%
       font-size: .75rem
 
+// Top section
 .topSection
   position: relative
   z-index: 1
@@ -135,89 +223,20 @@
       height: 25%
       z-index: -1!important
 
+// Benefit section
 .benefitsSection 
-  position: relative
-  z-index: 1
-  background-color: $greyLight
-  padding-bottom: 10rem
-  & .benefitsSectionContent
-    margin-top: -15rem
-    position: relative
-    z-index: 20
-    & h1
-      color: $primary
-    & .cardViewSection
-      position: relative
-
-    & .cardViewContainer
-      overflow: hidden
-      position: absolute
-      width: 100vw
-      height: calc(100vw * 772 / 1336)
-      max-width: 90rem
-      max-height: calc(90rem * 772 / 1336)
-      top: calc(17rem - 30vw)
-      padding-top: 0rem
-      padding-bottom: 0rem
-      & .cardViewSingle
-        position: absolute
-        z-index: 20
-        right: -35%
-    & .cardViewSpacer
-      height: calc(25vw - 10rem)
-    & .cardViewer
-      pointer-events: none
-      position: absolute
-      z-index: 100
-      top: -5rem
-      right: 0
-      width: 100%
-      height: 100%
-      & img
-        box-shadow: 0 0 5rem $primary
-        transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
-    & .container
-      position: relative
-      z-index: 10
-    & .benefitsHeader
+  @include licenseBenefitSharingStyle(benefitsSectionContent,$greyLight,10rem)
+  @include commonAccordionStyle(null,1rem)
+  .extends 
+  .benefitsHeader
       font-size: 4rem
       margin-top: 10rem
       margin-bottom: 25rem
-    & .accordion
-      & .accordion-item
-        position: relative
-        border-bottom: 2px solid $greyMid
-        & button
-          -webkit-appearance: none
-          border: none
-          width : 100%
-          text-align: left
-          padding: 0
-        & .item-head
-          font-weight: normal
-          margin: 1rem 0
-          & p
-            display: inline
-          & .accordionStateImage
-            color: $primary
-            right: 0
-            position: absolute
-        & .content
-          overflow: hidden
-          max-height: 0
-          transition: max-height 1s
-          margin: 0
-          & p
-            font-size: 1rem
-            width: 85%
-            margin: 1rem 0 2rem 0
-      & .accordion-item.is-expanded
-        & .content
-          display: block
-          max-height: 300px
-        & .plus
-          display: none
+
+// Feature section
 .featureSection
+  @include commonAccordionStyle(null,1rem)
+  .extends
   position: relative
   z-index: 2
   background-color: $white
@@ -231,7 +250,7 @@
   & h1
     color: $primary
   & p
-    font-size: 1.5rem
+    font-size: 1.4rem
     margin: 2rem 0 3rem 0
     color: $greyDarker
   & .container
@@ -240,42 +259,8 @@
   & .featuresHeader
     position: relative
     padding-top: 2rem
-  & .accordion
-    margin-bottom: 5rem
-    & .accordion-item
-      position: relative
-      border-bottom: 2px solid $greyMid
-      & button
-        -webkit-appearance: none
-        border: none
-        width : 100%
-        text-align: left
-        padding: 0
-      & .item-head
-        font-weight: normal
-        margin: 1rem 0
-        & p
-          display: inline
-        & .accordionStateImage
-          color: $primary
-          right: 0
-          position: absolute
-      & .content
-        overflow: hidden
-        max-height: 0
-        transition: max-height 1s
-        margin: 0
-        & p
-          font-size: 1rem
-          width: 85%
-          margin: 1rem 0 2rem 0
-    & .accordion-item.is-expanded
-      & .content
-        display: block
-        max-height: 300px
-      & .plus
-        display: none
-
+  
+// Price section
 .priceSection
   position: relative
   margin-top: -10rem
@@ -384,88 +369,12 @@
     margin-top: 1rem
     margin-bottom: 1rem
 
+// License section
 .licenseSection 
-  position: relative
-  & .licenseSectionContent
-    margin-top: -15rem
-    position: relative
-    z-index: 20
-    & h1
-      color: $primary
-    & .cardViewSection
-      position: relative
-    & .cardViewContainer
-      overflow: hidden
-      position: absolute
-      width: 100vw
-      height: calc(100vw * 772 / 1336)
-      max-width: 90rem
-      max-height: calc(90rem * 772 / 1336)
-      top: calc(17rem - 30vw)
-      padding-top: 0rem
-      padding-bottom: 0rem
-      & .cardViewSingle
-        position: absolute
-        z-index: 20
-        right: -35%
-    & .cardViewSpacer
-      height: calc(25vw - 90rem)
-    & .cardViewer
-      pointer-events: none
-      position: absolute
-      z-index: 100
-      top: -5rem
-      right: 0
-      width: 100%
-      height: 100%
-      & img
-        box-shadow: 0 0 5rem $primary
-        transform: translateY(-80%) translateX(0%) rotateX(60deg) rotateZ(-50deg) scale(.9, .9)
-    & .container
-      position: relative
-      z-index: 10
-    & .licenseHeader
-      font-size: 4rem
-      margin-top: 1rem
-    & .accordion
-      & .accordion-item
-        position: relative
-        border-bottom: 2px solid $greyMid
-        & button
-          -webkit-appearance: none
-          border: none
-          width : 100%
-          text-align: left
-          padding: 0
-        & .item-head
-          font-weight: normal
-          margin: 1rem 0
-          & p
-            display: inline
-            color: #595c5a
-          & .accordionStateImage
-            color: $primary
-            right: 0
-            position: absolute
-        & .content
-          overflow: hidden
-          max-height: 0
-          transition: max-height 1s
-          margin: 0
-          & p
-            font-size: 0.85rem
-            width: 85%
-            margin: 1rem 0 2rem 0
-            color: #595c5a
-      & .accordion-item.is-expanded
-        & .content
-          display: block
-          max-height: fit-content
-          overflow: auto
-        & .plus
-          display: none
-    
+  @include licenseBenefitSharingStyle(licenseSectionContent,null,90rem)
+  @include commonAccordionStyle(#595c5a,0.85rem)   
 
+// Impressum section
 .impressumSection
   padding-top: 3rem
   color: $greyDarker
@@ -478,7 +387,7 @@
     font-size: 0.85rem
 
 
-//scroller
+// Scroller 
 .scroller
   margin-top: -3rem
   position: absolute
@@ -504,13 +413,13 @@
     position: fixed
     top: 0
 
-// for creating a predictable spacing above the footer after all the relative elements
+// For creating a predictable spacing above the footer after all the relative elements
 .aboveFooter
   width: 100%
   background-color: $white
   height: 3rem
 
-// footer
+// Footer
 .footer
   position: relative
   bottom: 0
@@ -528,7 +437,7 @@
     height: 1.5rem
     margin: 0 1rem
 
-// logo wall
+// Logo wall
 .logoWall
   text-align: end
   margin-left: 50%
@@ -536,7 +445,7 @@
   justify-content: space-around
 
 
-// global styles
+// Global styles
 .cardViewContainer
   height: 100%
   width: 100%
@@ -547,7 +456,7 @@
   height: 100%
   width: 100%
 
-// original viewer styles for converting 2d image into 3d card -- not currently used
+// Original viewer styles for converting 2d image into 3d card -- not currently used
 .cardViewer
   position: relative
   perspective: 50rem
@@ -574,7 +483,7 @@
     opacity: 1
     box-shadow: -2px 5px 5px 0px $greyDarker !important
 
-// global helpers
+// Global helpers
 .greyBack
   background-color: $greyLight
 .whiteBack
