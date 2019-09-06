@@ -304,7 +304,6 @@ export const IndexPageTemplate = ({ locale }) => {
               <FormattedMessage id="content.price description" />
             </p>
             <div className="priceCardArea row">
-              {/* TODO create price box widget and content, refer to geOps for strategy */}
               <div className="col-12 col-sm-6  col-lg-3">
                 <div className="priceCard">
                   <div className="priceCardHeader">
@@ -312,6 +311,9 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="brandName">Trafimage </span>
                       <span className="is-bolder title">Mapset</span>
                       <h2 className="is-bolder">FREE</h2>
+                      <span className="subtext">(CHF/Jahr)<br />
+                      CHF 490.– <br />einmalige Einrichtung
+                      </span>
                     </div>
                     <img className="backgroundImage" src={layout_bg_2} alt="" />
                   </div>
@@ -348,17 +350,19 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         11-200
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">1-10 Bahnhöfe</span>
+                      <span className="is-bolder">1-10 Bahnhöfen *</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder">2'700.–</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <span className="subtext">(CHF/Jahr)<br /><br />
+                      zzgl. CHF 490.– <br />einmalige Einrichtung
+                      </span>
                     </div>
                     <EmailButton mode="MINI" />
                   </div>
@@ -381,17 +385,19 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         201-500
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">11-100 Bahnhöfe</span>
+                      <span className="is-bolder">11-100 Bahnhöfen *</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">5'900.–</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <span className="subtext">(CHF/Jahr)<br /><br />
+                      zzgl. CHF 490.– <br />einmalige Einrichtung
+                      </span>
                     </div>
                     <EmailButton mode="MIDI" />
                   </div>
@@ -414,17 +420,19 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         mehr als 501
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">101-200 Bahnhöfe</span>
+                      <span className="is-bolder">101-200 Bahnhöfen *</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">8'400.–</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <span className="subtext">(CHF/Jahr)<br /><br />
+                      zzgl. CHF 490.– <br />einmalige Einrichtung
+                      </span>
                     </div>
                     <EmailButton mode="MAXI" />
                   </div>
