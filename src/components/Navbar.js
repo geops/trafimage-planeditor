@@ -238,7 +238,7 @@ class Navbar extends React.Component {
                   </Link>
                 ) : (
                   <Link
-                    className="navbar-item"
+                    className="navbar-item is-smaller"
                     onClick={event => {
                       this.login(event);
                     }}
