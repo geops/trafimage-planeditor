@@ -76,7 +76,7 @@ collections:
             label: "Überschrift", name: "heading", widget: "markdown"
           },
           {
-            label: "Text", name: "text", widget: "text"
+            label: "Text", name: "text", widget: "markdown"
           }
           ]
       }
@@ -128,7 +128,7 @@ collections:
             label: "Überschrift", name: "heading", widget: "markdown"
           },
           {
-            label: "Text", name: "text", widget: "text"
+            label: "Text", name: "text", widget: "markdown"
           }
           ]
       }
