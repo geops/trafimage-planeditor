@@ -287,6 +287,11 @@ export const IndexPageTemplate = ({ locale }) => {
                       />
 
 2
+                      <p {{
+                            md.render(feature.text)
+                        }} 
+                      />
+3
 <p>
 <FormattedMessage id="generic.Preise" />
 </p>
