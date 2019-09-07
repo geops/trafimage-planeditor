@@ -71,7 +71,8 @@ export const IndexPageTemplate = ({ locale }) => {
   let md = new Remarkable();
   md.set({
     html: true,
-    breaks: true
+    breaks: true,
+    
   });
   return (
     <div style={{ position: "relative" }}>
@@ -287,14 +288,11 @@ export const IndexPageTemplate = ({ locale }) => {
                       />
 
 
-3
-<p>
-<FormattedMessage id="feature.text" />
-</p>
-3
-<p>
-<FormattedHTMLMessage id="feature.text" />
-</p>
+2
+                      <p dangerouslySetInnerHTML={{
+                            __html: md.render(feature.text)
+                        }} 
+                      />
                     </div>
                   </div>
                 ))}
