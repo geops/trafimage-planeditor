@@ -287,9 +287,9 @@ export const IndexPageTemplate = ({ locale }) => {
                       />
 
 2
-                      <p {{
+                      <p {
                             md.render(feature.text)
-                        }} 
+                        }
                       />
 3
 <p>
