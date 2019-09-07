@@ -321,13 +321,13 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         bis zu
                         <br />
-                        10 Haltestellen *
+                        10 Haltestellen*
                       </span>
                     </div>
                     <hr />
-                    <h2 className="is-bolder no-subtext">gratis</h2>
+                    <h2 className="is-bolder">gratis</h2>
                     <span className="subtext">
-                      <br/>0.– CHF/Jahr, nur CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                      <br/>0.– CHF/Jahr<br />nur CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
                     </span>
                     <EmailButton mode="FREE" />
                   </div>
@@ -355,13 +355,13 @@ export const IndexPageTemplate = ({ locale }) => {
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">1-10 Bahnhöfen *</span>
+                      <span className="is-bolder">1-10<br/>Bahnhöfen*</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder">2'700.–</h2>
                     <span className="subtext">
-                      <br/>2'700.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                      <br/>2'700.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
                     </span>
                     </div>
                     <EmailButton mode="MINI" />
@@ -390,13 +390,13 @@ export const IndexPageTemplate = ({ locale }) => {
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">11-100 Bahnhöfen *</span>
+                      <span className="is-bolder">11-100<br/>Bahnhöfen*</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">5'900.–</h2>
                     <span className="subtext">
-                      <br/>5'900.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                      <br/>5'900.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
                     </span>
                     </div>
                     <EmailButton mode="MIDI" />
@@ -425,13 +425,13 @@ export const IndexPageTemplate = ({ locale }) => {
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">101-200 Bahnhöfen *</span>
+                      <span className="is-bolder">101-200<br/>Bahnhöfen*</span>
                     </div>
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">8'400.–</h2>
                     <span className="subtext">
-                      <br/>8'400.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                      <br/>8'400.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
                     </span>
                     </div>
                     <EmailButton mode="MAXI" />
