@@ -282,22 +282,18 @@ export const IndexPageTemplate = ({ locale }) => {
                     <div className="content">
 1
                       <p dangerouslySetInnerHTML={{
-                            __html: md.render(feature.text)
+                            __html: feature.text
                         }} 
                       />
 
-2
-                      <p {
-                            md.render(feature.text)
-                        }
-                      />
+
 3
 <p>
-<FormattedMessage id="generic.Preise" />
+<FormattedMessage id="feature.text" />
 </p>
 3
 <p>
-<FormattedHTMLMessage id="generic.Preise" />
+<FormattedHTMLMessage id="feature.text" />
 </p>
                     </div>
                   </div>
