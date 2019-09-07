@@ -280,10 +280,24 @@ export const IndexPageTemplate = ({ locale }) => {
                       </h5>
                     </button>
                     <div className="content">
+1
                       <p dangerouslySetInnerHTML={{
                             __html: md.render(feature.text)
                         }} 
                       />
+1
+                      <p {{
+                            md.render(feature.text)
+                        }} 
+                      />
+3
+<p>
+<FormattedMessage id="generic.Preise" />
+</p>
+4
+<p>
+<FormattedHTMLMessage id="generic.Preise" />
+</p>
                     </div>
                   </div>
                 ))}
