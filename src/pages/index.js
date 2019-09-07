@@ -311,9 +311,6 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="brandName">Trafimage </span>
                       <span className="is-bolder title">Mapset</span>
                       <h2 className="is-bolder">FREE</h2>
-                      <span className="subtext">(CHF/Jahr)<br />
-                      CHF 490.– <br />einmalige Einrichtung
-                      </span>
                     </div>
                     <img className="backgroundImage" src={layout_bg_2} alt="" />
                   </div>
@@ -328,7 +325,10 @@ export const IndexPageTemplate = ({ locale }) => {
                       </span>
                     </div>
                     <hr />
-                    <h2 className="is-blue is-bolder no-subtext">gratis</h2>
+                    <h2 className="is-bolder no-subtext">gratis</h2>
+                    <span className="subtext">
+                      <br/>0.– CHF/Jahr, nur CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     <EmailButton mode="FREE" />
                   </div>
                 </div>
@@ -360,9 +360,9 @@ export const IndexPageTemplate = ({ locale }) => {
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder">2'700.–</h2>
-                      <span className="subtext">(CHF/Jahr)<br /><br />
-                      zzgl. CHF 490.– <br />einmalige Einrichtung
-                      </span>
+                    <span className="subtext">
+                      <br/>2'700.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MINI" />
                   </div>
@@ -395,9 +395,9 @@ export const IndexPageTemplate = ({ locale }) => {
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">5'900.–</h2>
-                      <span className="subtext">(CHF/Jahr)<br /><br />
-                      zzgl. CHF 490.– <br />einmalige Einrichtung
-                      </span>
+                    <span className="subtext">
+                      <br/>5'900.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MIDI" />
                   </div>
@@ -430,9 +430,9 @@ export const IndexPageTemplate = ({ locale }) => {
                     <hr />
                     <div className="price">
                       <h2 className="is-bolder ">8'400.–</h2>
-                      <span className="subtext">(CHF/Jahr)<br /><br />
-                      zzgl. CHF 490.– <br />einmalige Einrichtung
-                      </span>
+                    <span className="subtext">
+                      <br/>8'400.– CHF/Jahr zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MAXI" />
                   </div>
@@ -495,11 +495,11 @@ export const IndexPageTemplate = ({ locale }) => {
             </p>
             <p>
               <a href="https://twitter.com/mapsetch">
+                <span className="is-bolder">
+                  <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
+                </span>                
                 <img className="twitter" src={twitter} alt="twitter" />
               </a>
-              <span className="is-bolder">
-                &nbsp;<FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
-              </span>
             </p>
           </div>
         </div>
