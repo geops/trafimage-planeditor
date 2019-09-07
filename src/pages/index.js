@@ -285,16 +285,12 @@ export const IndexPageTemplate = ({ locale }) => {
                             __html: md.render(feature.text)
                         }} 
                       />
-1
-                      <p {{
-                            md.render(feature.text)
-                        }} 
-                      />
-3
+
+2
 <p>
 <FormattedMessage id="generic.Preise" />
 </p>
-4
+3
 <p>
 <FormattedHTMLMessage id="generic.Preise" />
 </p>
