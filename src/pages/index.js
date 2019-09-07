@@ -471,15 +471,15 @@ export const IndexPageTemplate = ({ locale }) => {
             <h1 className="is-bolder contactHeader">
               <FormattedMessage id="generic.Noch Fragen ?" />
             </h1>
-            <h5>
+            <p>
               <FormattedMessage id="content.contact description" />
-            </h5>
+            </p>
             <p>
               <span className="is-bolder">
                 <FormattedMessage id="generic.Ihr persönlicher Kontakt" />
               </span>
               <br />
-              <span className="">{contact.name}</span>
+              {contact.name}
               <br />
               <span>
                 <a href={"mailto:" + contact.email}>{contact.email}</a>
@@ -494,13 +494,12 @@ export const IndexPageTemplate = ({ locale }) => {
               )}
             </p>
             <p>
-              <span className="is-bolder">
-                <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
-              </span>
-              <br />
               <a href="https://twitter.com/mapsetch">
-                <img className="twitter" src={twitter} alt="" />
+                <img className="twitter" src={twitter} alt="twitter" />
               </a>
+              <span className="is-bolder">
+                &nbsp;<FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
+              </span>
             </p>
           </div>
         </div>
