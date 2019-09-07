@@ -14,45 +14,43 @@
 .navbar, .topSection, .priceSection, .footer, .blueBack
   background: linear-gradient(90deg, $primary, $secondary)
 
-// Accordion style shared by benefit, features, and license section
-@mixin commonAccordionStyle ($color,$fontSize)
-  .accordion
-    margin-bottom: 5rem
-    & .accordion-item
-      position: relative
-      border-bottom: 2px solid $greyMid
-      & button
-        -webkit-appearance: none
-        border: none
-        width : 100%
-        text-align: left
-        padding: 0
-      & .item-head
-        font-weight: normal
-        margin: 1rem 0
-        & p
-          display: inline
-          color: $color
-        & .accordionStateImage
-          color: $primary
-          right: 0
-          position: absolute
-      & .content
-        overflow: hidden
-        max-height: 0
-        transition: max-height 1s
-        margin: 0
-        & p
-          font-size: $fontSize
-          width: 85%
-          margin: 1rem 0 2rem 0
-    & .accordion-item.is-expanded
-      & .content
-        display: block
-        max-height: fit-content
-      & .plus
-        display: none
-
+// Accordion style used by benefit, features, and license section
+.accordion
+  margin-bottom: 5rem
+  & .accordion-item
+    position: relative
+    border-bottom: 2px solid $greyMid
+    & button
+      -webkit-appearance: none
+      border: none
+      width : 100%
+      text-align: left
+      padding: 0
+    & .item-head
+      font-weight: normal
+      margin: 1rem 0
+      & p
+        display: inline
+        color: $greyDarker
+      & .accordionStateImage
+        color: $primary
+        right: 0
+        position: absolute
+    & .content
+      overflow: hidden
+      max-height: 0
+      transition: max-height 1s
+      margin: 0
+      & p
+        font-size: $baseFontSize
+        width: 85%
+        margin: 1rem 0 2rem 0
+  & .accordion-item.is-expanded
+    & .content
+      display: block
+      max-height: fit-content
+    & .plus
+      display: none
 
 // Common style shared by license and benefit section
 @mixin licenseBenefitSharingStyle($sectionContent,$backgroundColor,$cardViewSpacerHeight)
@@ -226,7 +224,6 @@
 // Benefit section
 .benefitsSection 
   @include licenseBenefitSharingStyle(benefitsSectionContent,$greyLight,10rem)
-  @include commonAccordionStyle(null,1rem)
   .extends 
   .benefitsHeader
       font-size: 4rem
@@ -235,7 +232,6 @@
 
 // Feature section
 .featureSection
-  @include commonAccordionStyle(null,1rem)
   .extends
   position: relative
   z-index: 2
@@ -250,7 +246,6 @@
   & h1
     color: $primary
   & p
-    font-size: 1.4rem
     margin: 2rem 0 3rem 0
     color: $greyDarker
   & .container
@@ -271,7 +266,6 @@
     color: $white
   & p
     color: $white
-    font-size: 1.5rem
   & h2
     font-size: 2.5rem
   & .container
@@ -339,13 +333,9 @@
         margin: 1rem
       & .blue-btn
         background: linear-gradient(90deg, $primary, $secondary)
-
   & .conditions
-    margin-top: 5rem
     margin-bottom: 5rem
     color: $white
-    & *
-      font-size: .75rem
 
 .contactSection
   margin-top: 0
@@ -372,7 +362,6 @@
 // License section
 .licenseSection 
   @include licenseBenefitSharingStyle(licenseSectionContent,null,90rem)
-  @include commonAccordionStyle(#595c5a,0.85rem)   
 
 // Impressum section
 .impressumSection
@@ -384,7 +373,6 @@
     padding-bottom: 1.5rem
   & p span 
     display: block
-    font-size: 0.85rem
 
 
 // Scroller 
@@ -404,7 +392,7 @@
       color: $greyDark
       transition: color .5s
     & .active
-      color: $red !important
+      color: $greyDarker !important
     & span
       display: block
     & .listNavImage

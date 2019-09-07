@@ -136,7 +136,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     <span>
                       <FormattedMessage id="generic.powered by" />{" "}
                     </span>
-                    <span className="is-bolder">geops</span>
+                    <span className="is-bolder">geOps</span>
                     <span className="is-bolder"> | </span>
                     <span className="is-bolder">evoq</span>
                   </div>
@@ -304,7 +304,6 @@ export const IndexPageTemplate = ({ locale }) => {
               <FormattedMessage id="content.price description" />
             </p>
             <div className="priceCardArea row">
-              {/* TODO create price box widget and content, refer to geOps for strategy */}
               <div className="col-12 col-sm-6  col-lg-3">
                 <div className="priceCard">
                   <div className="priceCardHeader">
@@ -322,11 +321,13 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         bis zu
                         <br />
-                        10 Haltestellen *
+                        10 Haltestellen*
                       </span>
                     </div>
-                    <hr />
-                    <h2 className="is-blue is-bolder no-subtext">gratis</h2>
+                    <h2 className="is-bolder">gratis</h2>
+                    <span className="subtext">
+                      <br/>0.– CHF/Jahr<br />nur CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     <EmailButton mode="FREE" />
                   </div>
                 </div>
@@ -348,17 +349,18 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         11-200
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">1-10 Bahnhöfe</span>
+                      <span className="is-bolder">1-10<br/>Bahnhöfen*</span>
                     </div>
-                    <hr />
                     <div className="price">
-                      <h2 className="is-bolder">2'700.-</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <h2 className="is-bolder">2'700.–</h2>
+                    <span className="subtext">
+                      <br/>2'700.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MINI" />
                   </div>
@@ -381,17 +383,18 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         201-500
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">11-100 Bahnhöfe</span>
+                      <span className="is-bolder">11-100<br/>Bahnhöfen*</span>
                     </div>
-                    <hr />
                     <div className="price">
-                      <h2 className="is-bolder ">5'900.-</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <h2 className="is-bolder ">5'900.–</h2>
+                    <span className="subtext">
+                      <br/>5'900.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MIDI" />
                   </div>
@@ -414,17 +417,18 @@ export const IndexPageTemplate = ({ locale }) => {
                       <span className="is-bolder">
                         mehr als 501
                         <br />
-                        Haltestellen *
+                        Haltestellen
                       </span>
                       <br />
                       <span className="">oder</span>
                       <br />
-                      <span className="is-bolder">101-200 Bahnhöfe</span>
+                      <span className="is-bolder">101-200<br/>Bahnhöfen*</span>
                     </div>
-                    <hr />
                     <div className="price">
-                      <h2 className="is-bolder ">8'400.-</h2>
-                      <span className="subtext">(CHF/Jahr)</span>
+                      <h2 className="is-bolder ">8'400.–</h2>
+                    <span className="subtext">
+                      <br/>8'400.– CHF/Jahr<br />zzgl. CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                    </span>
                     </div>
                     <EmailButton mode="MAXI" />
                   </div>
@@ -463,15 +467,15 @@ export const IndexPageTemplate = ({ locale }) => {
             <h1 className="is-bolder contactHeader">
               <FormattedMessage id="generic.Noch Fragen ?" />
             </h1>
-            <h5>
+            <p>
               <FormattedMessage id="content.contact description" />
-            </h5>
+            </p>
             <p>
               <span className="is-bolder">
                 <FormattedMessage id="generic.Ihr persönlicher Kontakt" />
               </span>
               <br />
-              <span className="">{contact.name}</span>
+              {contact.name}
               <br />
               <span>
                 <a href={"mailto:" + contact.email}>{contact.email}</a>
@@ -486,12 +490,11 @@ export const IndexPageTemplate = ({ locale }) => {
               )}
             </p>
             <p>
-              <span className="is-bolder">
-                <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
-              </span>
-              <br />
               <a href="https://twitter.com/mapsetch">
-                <img className="twitter" src={twitter} alt="" />
+                <span className="is-bolder">
+                  <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
+                </span>                
+                <img className="twitter" src={twitter} alt="twitter" />
               </a>
             </p>
           </div>

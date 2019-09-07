@@ -145,7 +145,7 @@ class Navbar extends React.Component {
                 <span className="h-rule" />
                 {user ? (
                   <Link
-                    className="navbar-item"
+                    className="navbar-item is-smaller"
                     onClick={event => {
                       this.logout(event);
                     }}
@@ -173,7 +173,7 @@ class Navbar extends React.Component {
                   </Link>
                 ) : (
                   <Link
-                    className="navbar-item"
+                    className="navbar-item is-smaller"
                     onClick={event => {
                       this.login(event);
                     }}
@@ -210,7 +210,7 @@ class Navbar extends React.Component {
               <div className="navbar-end has-text-centered">
                 {user ? (
                   <Link
-                    className="navbar-item"
+                    className="navbar-item is-smaller"
                     onClick={event => {
                       this.logout(event);
                     }}
@@ -238,7 +238,7 @@ class Navbar extends React.Component {
                   </Link>
                 ) : (
                   <Link
-                    className="navbar-item"
+                    className="navbar-item is-smaller"
                     onClick={event => {
                       this.login(event);
                     }}
