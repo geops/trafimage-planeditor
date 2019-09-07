@@ -136,7 +136,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     <span>
                       <FormattedMessage id="generic.powered by" />{" "}
                     </span>
-                    <span className="is-bolder">geops</span>
+                    <span className="is-bolder">geOps</span>
                     <span className="is-bolder"> | </span>
                     <span className="is-bolder">evoq</span>
                   </div>
