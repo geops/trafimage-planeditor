@@ -301,7 +301,7 @@ export const IndexPageTemplate = ({ locale }) => {
                       />{
 4
                       <p dangerouslySetInnerHTML={{
-                            __html: {retrun('<a href="https://geops.de">kjjkj</a>"')}
+                            __html: {return('<a href="https://geops.de">kjjkj</a>"')}
                         }} 
                       />
                     </div>
