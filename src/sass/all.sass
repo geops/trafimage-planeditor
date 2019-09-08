@@ -53,12 +53,11 @@
       display: none
 
 // Common style shared by license and benefit section
-@mixin licenseBenefitSharingStyle($sectionContent,$backgroundColor,$cardViewSpacerHeight)
+.accordionBasedSection
   position: relative
   z-index: 1
-  background-color: $backgroundColor
   padding-bottom: 10rem
-  & .#{$sectionContent}
+  & .mainContent
     margin-top: -15rem
     position: relative
     z-index: 20
@@ -80,8 +79,6 @@
         position: absolute
         z-index: 20
         right: -35%
-    & .cardViewSpacer
-      height: calc(25vw - #{$cardViewSpacerHeight})
     & .cardViewer
       pointer-events: none
       position: absolute
@@ -97,6 +94,15 @@
       position: relative
       z-index: 10
 
+// Common style shared by TopSection and Navbar 
+.navbar-item
+  font-weight: $boldish
+  color: $white
+  display: inline
+  line-height: 1.5
+  padding: 0.5rem 0.75rem
+  position: relative
+  vertical-align: middle
 
 
 // Navbar
@@ -116,23 +122,10 @@
     right: -3px
     top: 0
     z-index: -1
-  & .navbar-item
-    font-weight: $boldish
-    color: $white
-    display: inline
-    line-height: 1.5
-    padding: 0.5rem 0.75rem
-    position: relative
-    vertical-align: middle
   & .navbar-end
     justify-content: flex-end
     margin-left: auto
   & .headerBadge
-    & .brandName
-      font-variant: all-small-caps
-      position: relative
-      left: 2rem
-      bottom: -0.75rem
     & .main-heading
       height: 3.5rem
     & .subtext
@@ -147,14 +140,6 @@
 .topSection
   position: relative
   z-index: 1
-  & .navbar-item
-    font-weight: $boldish
-    color: $white
-    display: inline
-    line-height: 1.5
-    padding: 0.5rem 0.75rem
-    position: relative
-    vertical-align: middle
   & .headerBadge
     position: relative
     margin-left: 5rem
@@ -222,38 +207,29 @@
       z-index: -1!important
 
 // Benefit section
-.benefitsSection 
-  @include licenseBenefitSharingStyle(benefitsSectionContent,$greyLight,10rem)
-  .extends 
+.benefitsSection
+  @extend .accordionBasedSection
+  background-color: $greyLight
   .benefitsHeader
       font-size: 4rem
       margin-top: 10rem
       margin-bottom: 25rem
+  .cardViewSpacer
+      height: calc(25vw - 10rem)
 
 // Feature section
 .featureSection
-  .extends
-  position: relative
-  z-index: 2
-  background-color: $white
-  padding-bottom: 1rem
-  margin-bottom: -1px
-  & .backgroundImage
-    top: 100%
-    position: absolute
-    z-index: 10
-    width: 100%
-  & h1
-    color: $primary
-  & p
-    margin: 2rem 0 3rem 0
-    color: $greyDarker
-  & .container
+  @extend .accordionBasedSection
+  .container
     position: relative
     z-index: 10
-  & .featuresHeader
+    margin-top: 18rem
+  .featuresHeader
     position: relative
     padding-top: 2rem
+
+    
+
   
 // Price section
 .priceSection
@@ -337,6 +313,7 @@
     margin-bottom: 5rem
     color: $white
 
+// Contact section
 .contactSection
   margin-top: 0
   position: relative
@@ -360,8 +337,10 @@
     margin-bottom: 1rem
 
 // License section
-.licenseSection 
-  @include licenseBenefitSharingStyle(licenseSectionContent,null,90rem)
+.licenseSection
+  @extend .accordionBasedSection
+  .cardViewSpacer
+      height: calc(25vw - 90rem)
 
 // Impressum section
 .impressumSection

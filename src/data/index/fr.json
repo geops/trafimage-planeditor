@@ -28,6 +28,10 @@
     "Benefits": "Avantages",
     "Im Preis inbegriffen sind:": "Le prix comprend:",
     "License": "License",
-    "Imprint": "Mentions légales"
+    "Imprint": "Mentions légales",
+    "navbar": {
+      "Login": "Einloggen",
+      "Logout": "Logged in as"
+    }
   }
 }

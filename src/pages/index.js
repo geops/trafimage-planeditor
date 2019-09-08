@@ -167,7 +167,7 @@ export const IndexPageTemplate = ({ locale }) => {
           src={layout_bg_1}
           alt=""
         />
-        <div className="benefitsSectionContent">
+        <div className="mainContent">
           <div className="cardViewSection">
             <div className="cardViewContainer">
               <img className="cardViewSingle" src={card_view_single} alt="" />
@@ -232,6 +232,7 @@ export const IndexPageTemplate = ({ locale }) => {
       {/* benefits section */}
       <img className="backgroundImage greyBack" src={layout_bg_2} alt="" />
       <section className="featureSection" id="features">
+        <div class="mainContent">
         <div className="container">
           <div className="rightColumn">
             <h1 className="is-bolder featuresHeader">
@@ -287,6 +288,7 @@ export const IndexPageTemplate = ({ locale }) => {
             </div>
           </div>
         </div>
+        </div>
       </section>{" "}
       {/* specification section */}
       <img
@@ -326,7 +328,7 @@ export const IndexPageTemplate = ({ locale }) => {
                     </div>
                     <h2 className="is-bolder">gratis</h2>
                     <span className="subtext">
-                      <br/>0.– CHF/Jahr<br />nur CHF 490.– einmalige Ein&shy;richtungs&shy;gebühr
+                      <br/>0.– CHF/Jahr<br />nur CHF 490.– <br />einmalige Ein&shy;richtungs&shy;gebühr
                     </span>
                     <EmailButton mode="FREE" />
                   </div>
@@ -502,9 +504,9 @@ export const IndexPageTemplate = ({ locale }) => {
       </section>{" "}
       {/* contact section */}
       <section className="licenseSection" id="license">
-        <div className="licenseSectionContent">
+        <div className="mainContent">
           <div className="container">
-            <h1 className="is-bolder licenseHeader rightColumn">
+            <h1 className="is-bolder rightColumn">
               <FormattedMessage id="generic.License" />
             </h1>
             <div className="cardViewSpacer" />
