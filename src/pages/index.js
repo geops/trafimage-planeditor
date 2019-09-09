@@ -280,7 +280,7 @@ export const IndexPageTemplate = ({ locale }) => {
                       </h5>
                     </button>
                     <div className="content">
-                      <p
+                      <span
                         dangerouslySetInnerHTML={{
                           __html: md.render(feature.text)
                         }}
