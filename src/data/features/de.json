@@ -11,7 +11,7 @@
     },
     {
       "heading": "Dynamische Einbindung der Pläne",
-      "text": "Über einen **einfachen** Link können sie nicht nur die aktuellen Zeichenelemente, sondern auch den Ausschnitt und den Massstab des Plans festlegen. Den Link teilen sie ganz einfach per Mail oder über Social Media. Ihre Adressaten sehen genau denjenigen Plan, den sie erstellt haben.       Den gleichen Link können sie auch in ihre Website einbinden. Wenn sie dazu einen sogenannten IFrame verwenden, ist dies mit wenigen Klicks machbar.       Das Beispiel unten zeigt den HTML-Programmcode, um einen Plan in eine Seite einzubinden.       ```<iframe style=\"width:100%;height:300px;\" src=\"https://geops.sh/154A37952CB6AD95DC\"></iframe>      ```      Als Ergebnis wird dieser Plan angezeigt:      <iframe style=\"width:100%;height:300px;\" src=\"https://geops.sh/154A37952CB6AD95DC\"></iframe>"
+      "text": "Über einen **einfachen** Link können sie nicht nur die aktuellen Zeichenelemente, sondern auch den Ausschnitt und den Massstab des Plans festlegen. Den Link teilen sie ganz einfach per Mail oder über Social Media. Ihre Adressaten sehen genau denjenigen Plan, den sie erstellt haben. \n\nDen gleichen Link können sie auch in ihre Website einbinden. Wenn sie dazu einen sogenannten IFrame verwenden, ist dies mit wenigen Klicks machbar. \n\nDas Beispiel unten zeigt den HTML-Programmcode, um einen Plan in eine Seite einzubinden. \n\n```\n<iframe style=\"width:100%;height:300px;\" src=\"https://geops.sh/154A37952CB6AD95DC\"></iframe>\n\n```\n\nAls Ergebnis wird dieser Plan angezeigt:\n\n<iframe style=\"width:100%;height:300px;\" src=\"https://geops.sh/154A37952CB6AD95DC\"></iframe>"
     },
     {
       "heading": "Export von Bildern",
