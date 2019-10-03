@@ -470,6 +470,11 @@ export const IndexPageTemplate = ({ locale }) => {
                   values={{ br: <br /> }}
                 />
               </p>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: md.render(content.conditions text)
+                }}
+              />
               <p className="is-bolder">
                 <FormattedMessage id="generic.Im Preis inbegriffen sind:" />
               </p>
@@ -479,6 +484,11 @@ export const IndexPageTemplate = ({ locale }) => {
                   values={{ br: <br /> }}
                 />
               </p>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: md.render(content.included in price)
+                }}
+              />
             </div>
           </div>
         </div>
