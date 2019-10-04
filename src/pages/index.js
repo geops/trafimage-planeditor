@@ -472,7 +472,7 @@ export const IndexPageTemplate = ({ locale }) => {
               </p>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: md.render("content.conditions text")
+                  __html: md.render(content."conditions text")
                 }}
               />
               <p className="is-bolder">
@@ -486,7 +486,7 @@ export const IndexPageTemplate = ({ locale }) => {
               </p>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: md.render("content.included in price")
+                  __html: md.render(content."included in price")
                 }}
               />
             </div>
