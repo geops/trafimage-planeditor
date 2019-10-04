@@ -466,7 +466,7 @@ export const IndexPageTemplate = ({ locale }) => {
             <div className="conditions">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: md.render(conten{"conditions text"})
+                  __html: md.render(content["conditions text"])
                 }}
               />
               <p className="is-bolder">
