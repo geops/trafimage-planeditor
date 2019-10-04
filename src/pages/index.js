@@ -464,29 +464,17 @@ export const IndexPageTemplate = ({ locale }) => {
               </div>
             </div>
             <div className="conditions">
-              <p>
-                <FormattedHTMLMessage
-                  id="content.conditions text"
-                  values={{ br: <br /> }}
-                />
-              </p>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: md.render(content."conditions text")
+                  __html: md.render(content["conditions text"])
                 }}
               />
               <p className="is-bolder">
                 <FormattedMessage id="generic.Im Preis inbegriffen sind:" />
               </p>
-              <p>
-                <FormattedHTMLMessage
-                  id="content.included in price"
-                  values={{ br: <br /> }}
-                />
-              </p>
               <span
                 dangerouslySetInnerHTML={{
-                  __html: md.render(content."included in price")
+                  __html: md.render(content["included in price"])
                 }}
               />
             </div>
