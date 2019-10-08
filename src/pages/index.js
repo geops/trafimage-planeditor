@@ -464,19 +464,16 @@ export const IndexPageTemplate = ({ locale }) => {
               </div>
             </div>
             <div className="conditions">
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: md.render(content["conditions text"])
-                }}
-              />
+              <span>
+                <FormattedHTMLMessage id="content.conditions text" />
+              </span>
               <p className="is-bolder">
                 <FormattedMessage id="generic.Im Preis inbegriffen sind:" />
               </p>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: md.render(content["included in price"])
-                }}
-              />
+              <br />
+              <span>
+                <FormattedHTMLMessage id="content.included in price" />
+              </span>
             </div>
           </div>
         </div>
@@ -516,7 +513,11 @@ export const IndexPageTemplate = ({ locale }) => {
               )}
             </p>
             <p>
-              <a href="https://twitter.com/mapsetch" target="_blank">
+              <a
+                href="https://twitter.com/mapsetch"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <span className="is-bolder">
                   <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
                 </span>
