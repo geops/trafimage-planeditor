@@ -15,8 +15,8 @@ import mapset_banner from "../img/Mapset_Logo_RGB_weiss.svg";
 import twitter from "../img/social/Twitter_Logo_Blue.svg";
 
 import mapset_element from "../img/Mapset_Element.svg";
-import card_view_triple from "../../static/img/20180809_Web Screens Perspective PSD Mockup_bearbeitet.png";
-import card_view_single from "../../static/img/20180809_techandall_website_showcase_mockup.png";
+import card_view_triple from "../../static/img/screens_perspective.png";
+import card_view_single from "../../static/img/showcase.png";
 
 // import benefits and features data, for the language needed
 import fr_benefits from "../data/benefits/fr.json";
@@ -464,21 +464,16 @@ export const IndexPageTemplate = ({ locale }) => {
               </div>
             </div>
             <div className="conditions">
-              <p>
-                <FormattedHTMLMessage
-                  id="content.conditions text"
-                  values={{ br: <br /> }}
-                />
-              </p>
+              <span>
+                <FormattedHTMLMessage id="content.conditions text" />
+              </span>
               <p className="is-bolder">
                 <FormattedMessage id="generic.Im Preis inbegriffen sind:" />
               </p>
-              <p>
-                <FormattedHTMLMessage
-                  id="content.included in price"
-                  values={{ br: <br /> }}
-                />
-              </p>
+              <br />
+              <span>
+                <FormattedHTMLMessage id="content.included in price" />
+              </span>
             </div>
           </div>
         </div>
@@ -518,7 +513,11 @@ export const IndexPageTemplate = ({ locale }) => {
               )}
             </p>
             <p>
-              <a href="https://twitter.com/mapsetch" target="_blank">
+              <a
+                href="https://twitter.com/mapsetch"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <span className="is-bolder">
                   <FormattedMessage id="generic.Besuchen Sie uns auf Twitter" />
                 </span>
