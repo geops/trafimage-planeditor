@@ -15,8 +15,8 @@ import mapset_banner from "../img/Mapset_Logo_RGB_weiss.svg";
 import twitter from "../img/social/Twitter_Logo_Blue.svg";
 
 import mapset_element from "../img/Mapset_Element.svg";
-import card_view_triple from "../../static/img/20180809_Web Screens Perspective PSD Mockup_bearbeitet.png";
-import card_view_single from "../../static/img/20180809_techandall_website_showcase_mockup.png";
+import card_view_triple from "../../static/img/screens_perspective.png";
+import card_view_single from "../../static/img/showcase.png";
 
 // import benefits and features data, for the language needed
 import fr_benefits from "../data/benefits/fr.json";
