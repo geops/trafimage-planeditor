@@ -93,7 +93,7 @@ export const IndexPageTemplate = ({ locale }) => {
                   <FormattedMessage id="generic.Kontakt" />
                 </a>
                 <a className="navbar-item" href="#license">
-                  <FormattedMessage id="generic.License" />
+                  <FormattedMessage id="generic.Lizenz" />
                 </a>
               </div>
               <div className="headerDescription pt-5 pt-md-0">
@@ -111,18 +111,11 @@ export const IndexPageTemplate = ({ locale }) => {
                 <div className="alignContainer row">
                   <a
                     href="https://editor.mapset.ch"
-                    target="_blank"
+                    target="editor-mapset"
                     rel="noopener noreferrer"
                   >
                     <button className="btn">
                       <FormattedMessage id="generic.Demo" />
-                    </button>
-                  </a>
-                  <a
-                    href={`mailto:${contact.email}?subject=${contact.emailSubject}`}
-                  >
-                    <button className="btn">
-                      <FormattedMessage id="generic.Anmelden" />
                     </button>
                   </a>
                 </div>
@@ -532,7 +525,7 @@ export const IndexPageTemplate = ({ locale }) => {
         <div className="licenseSectionContent">
           <div className="container">
             <h1 className="is-bolder licenseHeader rightColumn">
-              <FormattedMessage id="generic.License" />
+              <FormattedMessage id="generic.Lizenz" />
             </h1>
             <div className="cardViewSpacer" />
             <div className="accordion rightColumn">

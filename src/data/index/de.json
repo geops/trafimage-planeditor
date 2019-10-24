@@ -26,6 +26,12 @@
       "Disclaimer": "Disclaimer"
     },
     "Benefits": "Benefits",
-    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:"
+    "Im Preis inbegriffen sind:": "Im Preis inbegriffen sind:",
+    "Lizenz": "Lizenz",
+    "Imprint": "Impressum",
+    "navbar": {
+      "Login": "Login",
+      "Logout": "Logged in as"
+    }
   }
 }
