@@ -111,18 +111,11 @@ export const IndexPageTemplate = ({ locale }) => {
                 <div className="alignContainer row">
                   <a
                     href="https://editor.mapset.ch"
-                    target="_blank"
+                    target="editor-mapset"
                     rel="noopener noreferrer"
                   >
                     <button className="btn">
                       <FormattedMessage id="generic.Demo" />
-                    </button>
-                  </a>
-                  <a
-                    href={`mailto:${contact.email}?subject=${contact.emailSubject}`}
-                  >
-                    <button className="btn">
-                      <FormattedMessage id="generic.Anmelden" />
                     </button>
                   </a>
                 </div>
