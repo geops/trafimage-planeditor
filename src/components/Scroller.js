@@ -179,7 +179,7 @@ const Scroller = class extends React.Component {
               <circle fill="currentColor" cx="12" cy="12" r="8" />
             </svg>
             <span>
-              <FormattedMessage id="generic.License" />
+              <FormattedMessage id="generic.Lizenz" />
             </span>
           </a>
         </div>
