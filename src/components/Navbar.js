@@ -140,7 +140,7 @@ class Navbar extends React.Component {
                   href="#license"
                   onClick={() => this.mobileMenuLinkClick("license")}
                 >
-                  <FormattedMessage id="generic.License" />
+                  <FormattedMessage id="generic.Lizenz" />
                 </a>
                 <span className="h-rule" />
                 {user ? (
