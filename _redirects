@@ -1,11 +1,4 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-# Redirect domain aliases to primary domain
-https://www.mapset.ch/* https://trafimage.mapset.ch/:splat 301!
-https://www.mapset.ch/ https://trafimage.mapset.ch/:splat 301!
-
-https://mapset.ch/* https://trafimage.mapset.ch/:splat 301!
-https://mapset.ch/ https://trafimage.mapset.ch/:splat 301!
-
 # Optional: Redirect default Netlify subdomain to primary domain
 https://hungry-khorana-fb6885.netlify.com/* https://trafimage.mapset.ch/:splat 301!
