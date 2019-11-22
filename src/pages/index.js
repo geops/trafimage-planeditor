@@ -460,13 +460,6 @@ export const IndexPageTemplate = ({ locale }) => {
               <span>
                 <FormattedHTMLMessage id="content.conditions text" />
               </span>
-              <p className="is-bolder">
-                <FormattedMessage id="generic.Im Preis inbegriffen sind:" />
-              </p>
-              <br />
-              <span>
-                <FormattedHTMLMessage id="content.included in price" />
-              </span>
             </div>
           </div>
         </div>
