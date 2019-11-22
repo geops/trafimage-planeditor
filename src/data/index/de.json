@@ -26,6 +26,10 @@
     },
     "Benefits": "Benefits",
     "Lizenz": "Lizenz",
-    "Imprint": "Impressum"
+    "Imprint": "Impressum",
+    "navbar": {
+      "Login": "Login",
+      "Logout": "Logged in as"
+    }    
   }
 }
