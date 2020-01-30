@@ -360,9 +360,15 @@
     margin-bottom: 1rem
   & .button 
     padding: 10px 15px
-    border: 1px solid $primary
+    border: 2px solid $primary
+    font-weight: 600
     color: $primary
-    border-radius: 10px
+    border-radius: 40px
+  & .button:hover
+    font-weight: 600
+    color: $white
+    border-radius: 40px
+    background-color: $primary
 
 // License section
 .licenseSection 
@@ -422,6 +428,8 @@
   flex-direction: row
   & .expander
     flex-grow: 1
+    color: white
+  & .footerlink
     color: white
   & .brandName
     font-variant: all-small-caps
