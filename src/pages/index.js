@@ -511,11 +511,10 @@ export const IndexPageTemplate = ({ locale }) => {
               </a>
             </p>
             <a
-                    href="https://editor.mapset.ch"
-                    target="editor-mapset"
+                    href="http://eepurl.com/gRlRvv "
                     rel="noopener noreferrer"
                   >
-                    <button className="btn">
+                    <button className="button">
                       <FormattedMessage id="generic.Newsletter" />
                     </button>
                   </a>
