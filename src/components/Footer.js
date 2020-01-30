@@ -14,6 +14,7 @@ const Footer = class extends React.Component {
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <footer className="footer">
           <div className="expander" />
+            <a href="https://geops.de/datenschutz">Datenschutz</a>
           <div>
             <span className="brandName">Trafimage </span>
             <span className="is-bolder title">Mapset </span>

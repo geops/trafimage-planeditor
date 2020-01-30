@@ -510,6 +510,15 @@ export const IndexPageTemplate = ({ locale }) => {
                 <img className="twitter" src={twitter} alt="twitter" />
               </a>
             </p>
+            <a
+                    href="https://editor.mapset.ch"
+                    target="editor-mapset"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn">
+                      <FormattedMessage id="generic.Newsletter" />
+                    </button>
+                  </a>
           </div>
         </div>
       </section>{" "}
