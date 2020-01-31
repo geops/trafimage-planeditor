@@ -162,7 +162,7 @@
   .benefitsSection
     padding-top: 2rem
     margin-top: -2rem
-    &.cardViewContainer
+    & .cardViewSingle
       right: -30%
  
 
@@ -174,10 +174,12 @@
         right: 0
       & .cardViewSpacer
         height: calc(13rem)
+
+@media screen and (min-width: 2000px)
   .topSection
     & .cardViewContainer
       padding-top: 35rem
-      padding: 0rem
+      padding-bottom: 0rem
 
 @media screen and (min-width: 768px) and (max-width: 991px)
   .topSection
