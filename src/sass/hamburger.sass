@@ -116,15 +116,25 @@
 
 @media screen and (min-width: 768px)
   .aboveBenefitsSection
-    margin-top: -10rem
+    margin-top: -7rem
     position: relative
     z-index: 10
 
 @media screen and (min-width: 992px)
   .aboveBenefitsSection
-    margin-top: -15rem
+    margin-top: -10rem
     position: relative
     z-index: 10
+  .topSection .headerDescription
+    padding-bottom: 15rem
+  .licenseSection
+    padding-top: 15rem
+
+@media screen and (min-width: 1024px)
+  .aboveBenefitsSection
+  margin-top: -14rem
+  position: relative
+  z-index: 10
   .topSection .headerDescription
     padding-bottom: 15rem
   .licenseSection
@@ -155,7 +165,7 @@
   .benefitsSection
     & .benefitsSectionContent
       & .cardViewContainer
-        top: -10rem
+        top: -6rem
       & .cardViewSpacer
         height: calc(13rem)
 
@@ -173,6 +183,7 @@
     & .cardViewContainer
       padding-bottom: 0
       padding-top: 22rem
+      top: calc(4rem - 25vw)
   .benefitsSection
     padding-bottom: 5rem
   .licenseSection
@@ -210,6 +221,7 @@
     & .cardViewContainer
       padding-top: 2rem
       padding-bottom: 0
+      top: calc(4rem - 25vw)
     & .headerDescription .mapsetElementSmall
       position: absolute
       opacity: .25
