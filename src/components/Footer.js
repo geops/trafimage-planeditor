@@ -13,7 +13,8 @@ const Footer = class extends React.Component {
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages}>
         <footer className="footer">
-          <div className="expander" />
+          <div className="expander" ><a className="footerlink" href="https://geops.ch/datenschutz">Datenschutz</a> 
+          </div>
           <div>
             <span className="brandName">Trafimage </span>
             <span className="is-bolder title">Mapset </span>
@@ -27,7 +28,7 @@ const Footer = class extends React.Component {
           <div>
             <img className="logo" src={geOps} alt="" />
             <span>|</span>
-            <img className="logo first" src={evoq} alt="" />
+            <img className="logofirst" src={evoq} alt="" />
           </div>
         </footer>
       </IntlProvider>

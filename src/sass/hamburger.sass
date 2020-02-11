@@ -9,6 +9,7 @@
       margin-bottom: $marginBottom
     & .cardViewContainer
       top: calc(7rem - 25vw)
+      right: 0
     & .cardViewSpacer
       height: calc(20vw - 5rem)
 
@@ -116,15 +117,27 @@
 
 @media screen and (min-width: 768px)
   .aboveBenefitsSection
-    margin-top: -10rem
+    margin-top: -7rem
     position: relative
     z-index: 10
 
 @media screen and (min-width: 992px)
   .aboveBenefitsSection
-    margin-top: -15rem
+    margin-top: -14rem
     position: relative
     z-index: 10
+  .topSection .headerDescription
+    padding-bottom: 15rem
+  .licenseSection
+    padding-top: 15rem
+  .cardViewContainer
+    top: calc(20rem - 30vw)
+
+@media screen and (min-width: 1440px)
+  .aboveBenefitsSection
+  margin-top: -12rem
+  position: relative
+  z-index: 10
   .topSection .headerDescription
     padding-bottom: 15rem
   .licenseSection
@@ -147,17 +160,26 @@
     margin-right: -.75rem
 
   .benefitsSection
-    padding-top: 5rem
-    margin-top: -5rem
+    padding-top: 2rem
+    margin-top: -2rem
+    & .cardViewSingle
+      right: -30%
  
 
 @media screen and (min-width: 1440px)
   .benefitsSection
     & .benefitsSectionContent
       & .cardViewContainer
-        top: -10rem
+        top: -6rem
+        right: 0
       & .cardViewSpacer
         height: calc(13rem)
+
+@media screen and (min-width: 2000px)
+  .topSection
+    & .cardViewContainer
+      padding-top: 35rem
+      padding-bottom: 0rem
 
 @media screen and (min-width: 768px) and (max-width: 991px)
   .topSection
@@ -173,6 +195,8 @@
     & .cardViewContainer
       padding-bottom: 0
       padding-top: 22rem
+      top: calc(6rem - 25vw)
+      right: 0
   .benefitsSection
     padding-bottom: 5rem
   .licenseSection
@@ -208,8 +232,8 @@
       margin-left: 1rem
       width: 50%
     & .cardViewContainer
-      padding-top: 2rem
       padding-bottom: 0
+      right: 0
     & .headerDescription .mapsetElementSmall
       position: absolute
       opacity: .25
@@ -226,7 +250,7 @@
       font-size: 2.5rem
 
   .priceSection
-    padding-top: calc(5vw + 5rem)
+    padding-top: calc(5vw + 15rem)
     margin-bottom: 3rem
     & .priceCard .priceCardHeader
       padding-bottom: 7vw
@@ -250,8 +274,19 @@
     .logo.first
       margin-left: 0
 
-@media screen and (max-width: 565px)
+@media screen and (max-width: 768px)
   .topSection.main-heading
     height: 3rem
+  body
+    max-width: 100vw
+  .expander
+    margin-bottom: 20px
+  .footer
+    & .logo
+      margin: 0rem 1rem 0rem 0rem
+  .cardViewContainer
+    padding-top: 4rem
 
-
+@media screen and (max-width: 1024px)
+  .is-white
+  padding-top: 60px

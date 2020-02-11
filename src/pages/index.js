@@ -510,6 +510,14 @@ export const IndexPageTemplate = ({ locale }) => {
                 <img className="twitter" src={twitter} alt="twitter" />
               </a>
             </p>
+            <a
+                    href="http://eepurl.com/gRlRvv "
+                    rel="noopener noreferrer"
+                  >
+                    <button className="button">
+                      <FormattedMessage id="generic.Newsletter" />
+                    </button>
+                  </a>
           </div>
         </div>
       </section>{" "}
