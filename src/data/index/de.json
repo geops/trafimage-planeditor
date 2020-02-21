@@ -21,11 +21,18 @@
     "powered by": "powered by",
     "Noch Fragen ?": "Noch Fragen ?",
     "Preise": "Preise",
+    "Im Preis inbegriffen sind:": "all",
+    "Newsletter": "Newsletter abonnieren",
     "footer": {
       "Impressum": "Impressum",
       "Disclaimer": "Disclaimer"
     },
     "Benefits": "Benefits",
-    "Im Preis inbegriffen sind:": "all"
+    "Lizenz": "Lizenz",
+    "Imprint": "Impressum",
+    "navbar": {
+      "Login": "Login",
+      "Logout": "Logged in as"
+    }
   }
 }
