@@ -511,7 +511,7 @@ export const IndexPageTemplate = ({ locale }) => {
               </a>
             </p>
             <a
-                    href="http://eepurl.com/gRlRvv "
+                    href="https://geops.sh/mapset"
                     rel="noopener noreferrer"
                   >
                     <button className="button">
