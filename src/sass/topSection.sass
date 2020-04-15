@@ -1,0 +1,78 @@
+// Top section
+.topSection
+  position: relative
+  z-index: 1
+  & .navbar-item
+    font-weight: $boldish
+    color: $white
+    display: inline
+    line-height: 1.5
+    padding: 0.5rem 0.75rem
+    position: relative
+    vertical-align: middle
+  & .headerBadge
+    position: relative
+    margin-left: 5rem
+    & .brandName
+      font-variant: all-small-caps
+      position: relative
+      left: 2rem
+      bottom: -0.75rem
+    & .main-heading
+      height: 5rem
+    & .subtext
+      font-weight: $boldish
+      position: absolute
+      left: 60%
+      top: 4rem
+      width: 100%
+      font-size: .8rem
+  & .cardViewContainer
+    z-index: 1
+    padding-top: 5vh
+    padding-bottom: 25vh
+    & .mapsetElementLarge
+      position: absolute
+      opacity: .25
+      left: 0
+      height: 40%
+  & .cardViewer
+    pointer-events: none
+    & img
+      left: 25%
+      height: 100%
+      width: 100%
+      box-shadow: -4.5rem 6.5rem 30px -3rem $greyDarker
+  & .scrollNav
+    display: flex
+    margin-top: 1rem
+    justify-content: space-between
+    & a
+      font-weight: bold
+  & .headerDescription
+    & h2
+      margin-top: 6rem
+    & p
+      margin-bottom: 2rem
+    & .alignContainer
+      display: flex
+      justify-content: space-around
+    & .btn
+      margin-bottom: 1rem
+      padding: .5rem 1rem
+      color: $white
+      font-weight: bold
+      border: 2px solid white
+      border-radius: 2rem
+      transition: 0.3s ease
+    & .btn:hover
+        background-color: $white
+        color: $secondary
+        transition: 0.3s ease
+    & .mapsetElementSmall
+      position: absolute
+      opacity: .25
+      left: -15%
+      top: 7%
+      height: 25%
+      z-index: -1!important

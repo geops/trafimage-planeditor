@@ -1,0 +1,80 @@
+.priceSection
+  position: relative
+  margin-top: -18rem
+  padding-top: 15rem
+  z-index: 1
+  padding-bottom: 10rem
+  & h1
+    color: $white
+  & p
+    color: $white
+  & h2
+    font-size: 2.5rem
+  & .container
+    position: relative
+    z-index: 10
+  & .discountBadge
+    position: absolute
+    right: 10rem
+    top: -2rem
+    width: calc(100% * 40 / 241.5)
+    height: calc(100% * 40 / 241.5)
+    max-height: 200px
+    max-width: 200px
+  & .priceHeader
+    position: relative
+    padding-top: 2rem
+    margin-top: 5rem
+    padding-bottom: 2rem
+  & .priceCardArea
+    margin-top: 4rem
+  & .priceCard
+    background-color: $white
+    padding: .25rem
+    color: $greyDarker
+    margin-bottom: 2rem
+    & .priceCardHeader
+      position: relative
+      background: linear-gradient(90deg, $primary, $secondary)
+      color: $white
+      & .padder
+        padding: .5rem 3rem 2rem 2rem
+        margin-bottom: -.5rem
+        & .brandName
+          font-variant: all-small-caps
+          font-weight: lighter
+        & .title
+          font-size: .75rem
+        & h2
+          margin-top: -.5rem
+      & .backgroundImage
+        width: 100%
+        position: absolute
+        bottom: -1px
+        margin-top: 1px
+    & .priceCardBody
+      text-align: center
+      & .desc
+        margin-top: 1rem
+        height: 9rem
+      & hr
+        width: 50%
+        color: $greyLight
+      & h2
+        margin-top: 2rem
+        margin-bottom: 0rem
+      & .no-subtext
+        margin-bottom: 2.5rem !important
+      & .btn
+        display: block
+        width: calc(100% - 2rem)
+        background-color: $cyanDark
+        border-radius: 3rem
+        color: $white
+        font-weight: $bold
+        margin: 1rem
+      & .blue-btn
+        background: linear-gradient(90deg, $primary, $secondary)
+  & .conditions
+    margin-bottom: 5rem
+    color: $white

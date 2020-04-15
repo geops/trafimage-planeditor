@@ -1,0 +1,40 @@
+// Accordion style used by benefit, features, and license section
+.accordion
+  margin-top: 3rem
+  margin-bottom: 5rem
+  & .accordion-item
+    position: relative
+    border-bottom: 2px solid $greyMid
+    transition: 0.5s ease
+    & button
+      -webkit-appearance: none
+      border: none
+      width : 100%
+      text-align: left
+      padding: 0
+    & .item-head
+      font-weight: normal
+      margin: 1rem 0
+      & p
+        display: inline
+        color: $greyDarker
+      & .accordionStateImage
+        color: $primary
+        right: 0
+        position: absolute
+    & .content
+      overflow: hidden
+      max-height: 0
+      transition: max-height 1s
+      margin: 0
+      & p
+        font-size: $baseFontSize
+        width: 85%
+        margin: 1rem 0 2rem 0
+  & .accordion-item.is-expanded
+    & .content
+      display: block
+      max-height: fit-content
+      transition: 0.5s ease
+    & .plus
+      display: none
