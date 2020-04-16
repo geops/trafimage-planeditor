@@ -1,7 +1,9 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables"
 @import "~bootstrap/dist/css/bootstrap.min.css"
 
+
 @import "trafimage"
+@import "helpers"
 
 body
   font-family: 'lato', sans-serif
@@ -16,47 +18,6 @@ body
 
 .navbar, .topSection, .priceSection, .footer, .blueBack
   background: linear-gradient(90deg, $primary, $secondary)
-
-// Accordion style used by benefit, features, and license section
-.accordion
-  margin-top: 3rem
-  margin-bottom: 5rem
-  & .accordion-item
-    position: relative
-    border-bottom: 2px solid $greyMid
-    transition: 0.5s ease
-    & button
-      -webkit-appearance: none
-      border: none
-      width : 100%
-      text-align: left
-      padding: 0
-    & .item-head
-      font-weight: normal
-      margin: 1rem 0
-      & p
-        display: inline
-        color: $greyDarker
-      & .accordionStateImage
-        color: $primary
-        right: 0
-        position: absolute
-    & .content
-      overflow: hidden
-      max-height: 0
-      transition: max-height 1s
-      margin: 0
-      & p
-        font-size: $baseFontSize
-        width: 85%
-        margin: 1rem 0 2rem 0
-  & .accordion-item.is-expanded
-    & .content
-      display: block
-      max-height: fit-content
-      transition: 0.5s ease
-    & .plus
-      display: none
 
 // Common style shared by license and benefit section
 @mixin licenseBenefitSharingStyle($sectionContent,$backgroundColor,$cardViewSpacerHeight)
@@ -104,130 +65,6 @@ body
       z-index: 10
 
 
-
-// Navbar
-.navbar
-  border: none
-  display: flex
-  padding: 0
-  min-height: 3.25rem
-  position: relative
-  z-index: 30
-  color: $white
-  margin-bottom: -1px
-  & .backgroundImage
-    position: absolute
-    width: 85%
-    max-width: 1000px
-    right: -3px
-    top: 0
-    z-index: -1
-  & .navbar-item
-    font-weight: $boldish
-    color: $white
-    display: inline
-    line-height: 1.5
-    padding: 0.5rem 0.75rem
-    position: relative
-    vertical-align: middle
-  & .navbar-end
-    justify-content: flex-end
-    margin-left: auto
-  & .headerBadge
-    & .brandName
-      font-variant: all-small-caps
-      position: relative
-      left: 2rem
-      bottom: -0.75rem
-    & .main-heading
-      height: 3.5rem
-    & .subtext
-      font-weight: $bold
-      position: absolute
-      left: 35%
-      top: 4.75rem
-      width: 100%
-      font-size: .75rem
-
-// Top section
-.topSection
-  position: relative
-  z-index: 1
-  & .navbar-item
-    font-weight: $boldish
-    color: $white
-    display: inline
-    line-height: 1.5
-    padding: 0.5rem 0.75rem
-    position: relative
-    vertical-align: middle
-  & .headerBadge
-    position: relative
-    margin-left: 5rem
-    & .brandName
-      font-variant: all-small-caps
-      position: relative
-      left: 2rem
-      bottom: -0.75rem
-    & .main-heading
-      height: 5rem
-    & .subtext
-      font-weight: $boldish
-      position: absolute
-      left: 60%
-      top: 4rem
-      width: 100%
-      font-size: .8rem
-  & .cardViewContainer
-    z-index: 1
-    padding-top: 5vh
-    padding-bottom: 25vh
-    & .mapsetElementLarge
-      position: absolute
-      opacity: .25
-      left: 0
-      height: 40%
-  & .cardViewer
-    pointer-events: none
-    & img
-      left: 25%
-      height: 100%
-      width: 100%
-      box-shadow: -4.5rem 6.5rem 30px -3rem $greyDarker
-  & .scrollNav
-    display: flex
-    margin-top: 1rem
-    justify-content: space-between
-    & a
-      font-weight: bold
-  & .headerDescription
-    & h2
-      margin-top: 6rem
-    & p
-      margin-bottom: 2rem
-    & .alignContainer
-      display: flex
-      justify-content: space-around
-    & .btn
-      margin-bottom: 1rem
-      padding: .5rem 1rem
-      color: $white
-      font-weight: bold
-      border: 2px solid white
-      border-radius: 2rem
-      transition: 0.3s ease
-    & .btn:hover
-        background-color: $white
-        color: $secondary
-        transition: 0.3s ease
-    & .mapsetElementSmall
-      position: absolute
-      opacity: .25
-      left: -15%
-      top: 7%
-      height: 25%
-      z-index: -1!important
-
 // Benefit section
 .benefitsSection 
   @include licenseBenefitSharingStyle(benefitsSectionContent,$greyLight,10rem)
@@ -237,152 +74,11 @@ body
       margin-top: 10rem
       margin-bottom: 25rem
 
-// Feature section
-.featureSection
-  .extends
-  position: relative
-  z-index: 2
-  background-color: $white
-  padding-bottom: 1rem
-  margin-bottom: -1px
-  & .backgroundImage
-    top: 100%
-    position: absolute
-    z-index: 10
-    width: 100%
-  & h1
-    color: $primary
-  & p
-    margin: 2rem 0 3rem 0
-    color: $greyDarker
-  & .container
-    position: relative
-    z-index: 10
-  & .featuresHeader
-    position: relative
-    padding-top: 2rem
-  
-// Price section
-.priceSection
-  position: relative
-  margin-top: -18rem
-  padding-top: 15rem
-  z-index: 1
-  padding-bottom: 10rem
-  & h1
-    color: $white
-  & p
-    color: $white
-  & h2
-    font-size: 2.5rem
-  & .container
-    position: relative
-    z-index: 10
-  & .discountBadge
-    position: absolute
-    right: 10rem
-    top: -2rem
-    width: calc(100% * 40 / 241.5)
-    height: calc(100% * 40 / 241.5)
-    max-height: 200px
-    max-width: 200px
-  & .priceHeader
-    position: relative
-    padding-top: 2rem
-    margin-top: 5rem
-    padding-bottom: 2rem
-  & .priceCardArea
-    margin-top: 4rem
-  & .priceCard
-    background-color: $white
-    padding: .25rem
-    color: $greyDarker
-    margin-bottom: 2rem
-    & .priceCardHeader
-      position: relative
-      background: linear-gradient(90deg, $primary, $secondary)
-      color: $white
-      & .padder
-        padding: .5rem 3rem 2rem 2rem
-        margin-bottom: -.5rem
-        & .brandName
-          font-variant: all-small-caps
-          font-weight: lighter
-        & .title
-          font-size: .75rem
-        & h2
-          margin-top: -.5rem
-      & .backgroundImage
-        width: 100%
-        position: absolute
-        bottom: -1px
-        margin-top: 1px
-    & .priceCardBody
-      text-align: center
-      & .desc
-        margin-top: 1rem
-        height: 9rem
-      & hr
-        width: 50%
-        color: $greyLight
-      & h2
-        margin-top: 2rem
-        margin-bottom: 0rem
-      & .no-subtext
-        margin-bottom: 2.5rem !important
-      & .btn
-        display: block
-        width: calc(100% - 2rem)
-        background-color: $cyanDark
-        border-radius: 3rem
-        color: $white
-        font-weight: $bold
-        margin: 1rem
-      & .blue-btn
-        background: linear-gradient(90deg, $primary, $secondary)
-  & .conditions
-    margin-bottom: 5rem
-    color: $white
-
-.contactSection
-  margin-top: 0
-  position: relative
-  z-index: 0
-  background-color: $white
-  padding-bottom: 2rem
-  color: $greyDarker
-  & .contactHeader
-    padding-top: 5rem
-    font-weight: $bolder
-    color: $primary
-  & h5
-    margin: 2rem 0
-    max-width: 35rem
-  & p
-    margin: 2rem 0
-  & .twitter
-    width: 2rem
-    height: 2rem
-    margin-top: 1rem
-    margin-bottom: 1rem
-  & .button 
-    padding: 10px 15px
-    border: 2px solid $primary
-    font-weight: 600
-    color: $primary
-    transition: 0.3s ease
-    border-radius: 40px
-    margin-bottom: 70px
-  & .button:hover
-    font-weight: 600
-    color: $white
-    border-radius: 40px
-    background-color: $primary
-    transition: 0.3s ease
 
 // License section
 .licenseSection 
   @include licenseBenefitSharingStyle(licenseSectionContent,null,90rem)
+
 
 // Impressum section
 .impressumSection
@@ -394,63 +90,6 @@ body
     padding-bottom: 1.5rem
   & p span 
     display: block
-
-
-// Scroller 
-.scroller
-  margin-top: -3rem
-  position: absolute
-  z-index: 100
-  & .thinColumnScroller
-    z-index: 100 !important
-    position: absolute
-    width: $thinColumnWidth
-    left: 5rem
-    & .navbar-item
-      display: flex
-      margin: 2rem 0
-    & a
-      color: $greyDark
-      transition: color .5s
-    & .active
-      color: $greyDarker !important
-    & span
-      display: block
-    & .listNavImage
-      margin-right: 1rem
-  & .fixed
-    position: fixed
-    top: 0
-
-// For creating a predictable spacing above the footer after all the relative elements
-.aboveFooter
-  width: 100%
-  background-color: $white
-  height: 3rem
-
-// Footer
-.footer
-  position: relative
-  bottom: 0
-  padding: 2rem
-  color: $white
-  display: flex
-  flex-direction: row
-  & .expander
-    flex-grow: 1
-    color: white
-  & .footerlink
-    color: white
-  & .brandName
-    font-variant: all-small-caps
-  & .title
-    font-size: .75rem
-  & .logo
-    height: 1.5rem
-    margin: 0rem 1rem
-  & .logofirst
-    height: 1.5rem
-    margin: 0rem 1rem
 
 // Logo wall
 .logoWall
@@ -470,6 +109,7 @@ body
 .cardViewSingle
   height: 100%
   width: 100%
+
 
 // Original viewer styles for converting 2d image into 3d card -- not currently used
 .cardViewer
@@ -498,66 +138,13 @@ body
     opacity: 1
     box-shadow: -2px 5px 5px 0px $greyDarker !important
 
-// Global helpers
-.greyBack
-  background-color: $greyLight
-.whiteBack
-  background-color: $white
-.is-transparent
-  background: transparent
+@import "navbar"
+@import "topSection"
+@import "feature"
+@import "price"
+@import "contact"
+@import "footer"
 
-.is-bold
-  font-weight: $bold !important
-
-.is-bolder
-  font-weight: $bolder !important
-
-.is-white
-  color: $white
-
-.is-cyan
-  color: $cyanDark
-
-.is-blue
-  color: $primary
-
-.icon
-  position: relative
-  align-items: center
-  display: inline-flex
-  justify-content: center
-  height: 1.5rem
-  width: 1.5rem
-  margin: 0 0 0 .5rem
-  vertical-align: middle
-  top: -2px
-
-
-.icon.is-small
-  height: 1rem
-  width: 1rem
-.icon.is-medium
-  height: 2rem
-  width: 2rem
-.icon.is-large
-  height: 3rem
-  width: 3rem
-
-.is-smaller, .is-smaller *
-  font-size: .75rem !important
-
-.has-text-centered
-  text-align: center !important
-
-.rightColumn
-  margin-left: $thinColumnWidth
-
-.aboveBenefitsSection
-  margin-top: -3rem
-  position: relative
-  z-index: 10
-
-.belowPriceSection
-  margin-top: calc(-2rem - 10%)
-
+@import "scroller"
+@import "accordion"
 @import "hamburger"

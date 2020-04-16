@@ -1,0 +1,24 @@
+.scroller
+  margin-top: -3rem
+  position: absolute
+  z-index: 100
+  & .thinColumnScroller
+    z-index: 100 !important
+    position: absolute
+    width: $thinColumnWidth
+    left: 5rem
+    & .navbar-item
+      display: flex
+      margin: 2rem 0
+    & a
+      color: $greyDark
+      transition: color .5s
+    & .active
+      color: $greyDarker !important
+    & span
+      display: block
+    & .listNavImage
+      margin-right: 1rem
+  & .fixed
+    position: fixed
+    top: 0

@@ -6076,7 +6076,6 @@ fsevents@^1.2.7:
   dependencies:
     bindings "^1.5.0"
     nan "^2.12.1"
-    node-pre-gyp "*"
 
 fsevents@~2.1.1:
   version "2.1.2"
@@ -6211,6 +6210,11 @@ gatsby-plugin-i18n@^1.0.1:
     folktale "^2.0.1"
     graphql "^0.11.7"
     ptz-i18n "^1.0.0"
+
+gatsby-plugin-matomo@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-matomo/-/gatsby-plugin-matomo-0.8.3.tgz#e0e9cc9e60f7e4b157c9964dfc9d444d73bc46ee"
+  integrity sha512-fv6TgD+WsxziZrtmz6sNF4m9FgSyV+8y3R1sobA5hB5OxJyhs/Y4HVo9jCPRHu5VLKQsg4i7LJhWL0ocJiqEWQ==
 
 gatsby-plugin-netlify-cms@^4.1.6:
   version "4.1.40"
