@@ -20,7 +20,7 @@ export default function TrackingDialog () {
         Diese Website nutzt Cookies, um bestmögliche Funktionalität bieten zu können.
         </section>
         <section className="actions">
-          <button onClick={() => { window.location = 'https://geops.ch/node/182?language=en'}}>Mehr Informationen</button>
+          <button onClick={() => { window.location = 'https://geops.ch/node/5?language=de'}}>Mehr Informationen</button>
           <button onClick={acceptTracking}>Akzeptieren</button>
         </section>
       </div>
