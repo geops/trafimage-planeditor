@@ -7,6 +7,8 @@ import EmailButton from "../components/EmailButton";
 import Imprint from "../components/Imprint";
 import userManager from "../utils/userManager";
 
+import TrackingDialog from '../components/TrackingDialog'
+
 import layout_bg_1 from "../img/layoutBG_1.png";
 import layout_bg_2 from "../img/layoutBG_2.png";
 import layout_bg_3 from "../img/layoutBG_3.png";
@@ -75,6 +77,7 @@ export const IndexPageTemplate = ({ locale }) => {
   });
   return (
     <div style={{ position: "relative" }}>
+      <TrackingDialog />
       <section className="topSection">
         <div className="container">
           <div className="row is-white">

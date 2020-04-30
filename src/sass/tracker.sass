@@ -1,0 +1,70 @@
+.tracking-wrapper 
+  font-family: 'lato', sans-serif
+  position: fixed
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 100
+  min-width: 80%
+  display: flex
+  justify-content: center
+  color: #fff
+
+.tracking-window 
+  display:     flex
+  flex-wrap:   wrap
+  align-items: center
+  padding: 0.25rem 1rem
+  font-size:   0.8rem
+  line-height: 1.25rem
+  border-radius: 0.25rem
+  background: linear-gradient(90deg,#1789c9,#63b3f4)
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+  & .text 
+    padding: 1rem 0
+  & button 
+    cursor: pointer
+    padding: 0.25rem 0.75rem
+    font-size: 0.8rem
+    line-height: 1.5
+    color: inherit
+    background-color: inherit
+    border-radius: 2rem
+    transition: .3s ease
+  & button
+    font-weight: 700
+    &:nth-child(1) 
+      margin: 0 0.5rem
+      border: 1px solid transparent
+  & button
+    &:nth-child(2) 
+      border: 2px solid #fff
+  & button 
+    &:hover 
+      color: #63b3f4
+      background-color: #fff
+
+.tracking-actions 
+  display: flex
+  align-items: center
+  & p 
+    font-weight: 600
+    margin-left: 1rem
+
+a 
+  color: inherit
+
+@media (max-width: 900px)
+  .tracking-wrapper 
+    width: 100%
+    transform: none
+    left: 0
+  .tracking-window
+    width: 100%
+    display: block
+    padding-bottom: 0.75rem
+    & button
+      &:nth-child(1) 
+        margin-left: 0
+  .actions 
+    text-align: center
