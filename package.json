@@ -42,7 +42,7 @@
     "react-intl": "^2.9.0",
     "remarkable": "^2.0.0",
     "use-force-update": "^1.0.7",
-    "uuid": "^7.0.0"
+    "uuid": "^8.0.0"
   },
   "keywords": [
     "gatsby"
