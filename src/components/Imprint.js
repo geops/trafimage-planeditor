@@ -5,8 +5,8 @@ function Imprint() {
     <div>
       <p>
         <span>geOps AG </span>
-        <span>Solothurnerstrasse 235</span>
-        <span>CH-4600 Olten</span>
+        <span>Eggstrasse 42</span>
+        <span>CH-4402 Frenkendorf</span>
       </p>
       <p>
         <span>fon +41 61 588 05 05</span>
