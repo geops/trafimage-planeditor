@@ -1,13 +1,18 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import { Error404SVG } from "@geops/geops-ui";
+import Layout from "../components/Layout";
+
+import "../sass/404.sass";
 
 const NotFoundPage = () => (
   <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="notfound-container">
+      <img src={Error404SVG} alt="Error 404 - Page not found" />
+      <a href="/">
+        <button className="btn blue-btn">Startseite</button>
+      </a>
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
